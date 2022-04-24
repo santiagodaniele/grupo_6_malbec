@@ -9,10 +9,10 @@ Las categorías principales son:
 -	Otros: incluye bebidas como el fernet, tequila, packs de bebidas, etc.
 
 Open Bar nace del entusiasmo de futuros programadores, en encabezar nuestro primer gran proyecto. El equipo integrado por las siguientes personas:
--	CANTOS, Federico:
+-	CANTOS, Federico: 33 años, de Luján de Cuyo, Mendoza. Apasionado por la tecnología y los autos, Licenciado en administración de Empresas. Trabaja como Responsable de Finanzas en relación de dependencia en una compañía multinacional y participa en la organización, cronometraje y fiscalización en el Rally de las Bodegas.
 -	BARRERA, Ramiro:  28 años, de la Ciudad Autónoma de Buenos Aires. Actualmente trabajando en el rubro de servicios contra incendios. 
 -	DANIELE, Santiago: 28 años, de CABA, Buenos Aires. Contador Publico y trabaja en relación de dependencia en el área reporting contable de una empresa multinacional.
--	FELICE, Agustin: 41 años de Pergamino, Provincia de Buenos Aires, Profesor de Eduación Física y trabaja como entrenador y orgaizador de eventos de boxeo. 
+-	FELICE, Agustin: 41 años de Pergamino, Provincia de Buenos Aires. Profesor de Eduación Física y trabaja como entrenador y organizador de eventos de boxeo. 
 Hemos visitado distintos comercios electrónicos del rubro, para considerar distintas idea a la hora de desarrollar el proyecto:
 -	Rutini wines: https://tienda.rutiniwines.com/
 -	Grupo Peñaflor: https://vi.grupo-penaflor.com.ar/

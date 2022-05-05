@@ -1,0 +1,26 @@
+{
+  "name": "grupo_6_openbar",
+  "version": "1.0.0",
+  "description": "Open Bar es una tienda que se dedica a la venta de bebidas alcohólicas y productos relacionados. El público al que apunta este proyecto es para personas mayores de 18 años, que estén interesados en suplir su necesidad de la bebida tipo. El objetivo es poder brindar una amplia gama de posibilidades, desde los gustos de cada consumidor y en lo económico.\r Las categorías principales son:\r -\tVinos: dentro de los vinos se pueden encontrar distintos tipos de variedades y marcas.\r -\tCervezas: incluye importadas, artesanales y nacionales. \r -\tWhiskies: incluye americano, irlandés y escoces.\r -\tGin: incluye importados y nacionales.\r -\tRon: incluye las principales marcas importadas.\r -\tVodka: incluye importados y nacionales.\r -\tOtros: incluye bebidas como el fernet, tequila, packs de bebidas, etc.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/santiagodaniele/grupo_6_openbar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiagodaniele/grupo_6_openbar/issues"
+  },
+  "homepage": "https://github.com/santiagodaniele/grupo_6_openbar#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

@@ -1,28 +1,29 @@
 *{
     margin:0px;
-    padding: 10px;;
+    padding:10px;
     box-sizing: border-box;
 }
 a{color: #000;
     text-decoration:none
     }
     a:hover{
-        color:#d42cbe
+        color:#090d8a
     }
 body{
     font-family: 'Koulen', cursive;
 }
 .padre{
+background: whitesmoke;
 display:flex;
 flex-flow:column nowrap;
 }
 .header{
-    background:#1A3C40 ;
+    background:whitesmoke ;
     display:flex;
     flex-flow:column nowrap;
     }
 .menu{
-    background: #EDE6DB;
+    background: whitesmoke;
     display:flex;
     flex-flow: row nowrap;
     height: 100px;
@@ -38,35 +39,36 @@ flex-flow:column nowrap;
     height: 50px;
 }
 .frase{
-    background: white;
+    background: whitesmoke;
     flex:5 1 auto;
     height: 50px;
    text-align: center;
 }
 .iconos{
-    background:  white;
+    background:  whitesmoke;
     flex:1 1 auto;
     height: 50px;
 }
-.menu2{background: #EDE6DB;
+.menu2{background: whitesmoke;
     display:flex;;}
 .barra{
        flex: 1 1 auto;
 }
 .slider{
-    width:95%;
+    background: whitesmoke;
+    width:auto;
     margin:auto;
     overflow:hidden;
 }
 .slider ul{
     display:flex;
     padding:0;
-    width:400%;
+    width: 300%;
     animation: cambio 20s infinite alternate linear;
 }
 .slider li{
     width:100%;
-    list-style:none ;
+    list-style:none;
 }
 .slider img{
 width:100%

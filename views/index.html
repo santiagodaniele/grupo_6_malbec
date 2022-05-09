@@ -1,62 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrito de compras</title>
-<script src="https://kit.fontawesome.com/6d08e04018.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/stylesindex.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <script src="https://kit.fontawesome.com/6d08e04018.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/stylesindex.css">
 </head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
 <body>
-<div class="padre">
-<header class="header">
-    <div class="menu">
-<div class="logo"></div>
-<div class="frase"> Open Bar</div>
-<div class="iconos">
-    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-    <a href="#"><i class="fa-solid fa-address-book"></i></i></a>
-    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-</div>
-</div>
-<div class="menu2">
-<nav class="barra">
-    <a href="#">Vinos</a>
-    <a href="#">Cerveza</a>
-    <a href="#">Whisky</a>
-    <a href="#">Gin</a>
-    <a href="#">Ron</a>
-    <a href="#">Vodka</a>
-    <a href="#">Otros</a>
-    <a href="#">Promociones</a>
-</nav>
-</div>
-</header>
-<div class="slider">
-    <ul>
-        <li><img src="images/ban_6-05_1.jpg" alt="ban_6-05_1"></li>
-        <li><img src="images/beneficios-vinos-18-11.jpg" alt="beneficios-vinos-18-11"></li>
-        <li><img src="/images/beneficios-whiskies-18-11.jpg" alt="beneficios-whiskies-18-11"></li>
-    </ul>
-</div>
-<section class="section">
-    <div class="articulos">
-        <article class="article"></article>
-        <article class="article"></article>
-        <article class="article"></article>
-        <article class="article"></article> 
+    <header class="header-container">
+        <div class="Intro">
+        <div class="Logo"></div>
+        <div class="Nombre"><ul><li class="texto1">OPEN BAR</li>
+            <li class="texto2">AQUELLA BEBIDA QUE BUSCAS, LA ENCONTRAS</li>
+        </ul>
+        </div>
+        <div class="Iconos">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-address-book"></i></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
     </div>
-    <aside class="aside">
-        <div class="cart_summary-sticky"></div>
-    </aside>
-</section>
-<footer class="footer">
-</footer>
+    <div class="menu">
+        <nav class="barra">
+            <a href="#">Vinos</a>
+            <a href="#">Cerveza</a>
+            <a href="#">Whisky</a>
+            <a href="#">Gin</a>
+            <a href="#">Ron</a>
+            <a href="#">Vodka</a>
+            <a href="#">Otros</a>
+            <a href="#">Promociones</a>
+        </nav>
+        </div>
+    </header>
+<!-----------------------------------------=SLIDER=----------------------------------------------------->
+<div class="slider">
+        <ul>
+            <li><img src="images/ban_6-05_1.jpg" alt="ban_6-05_1"></li>
+            <li><img src="images/beneficios-vinos-18-11.jpg" alt="beneficios-vinos-18-11"></li>
+            <li><img src="images/beneficios-whiskies-18-11.jpg" alt="beneficios-whiskies-18-11"></li>
+        </ul>
 </div>
+<!-----------------------------------------=SECTION=----------------------------------------------------->
+<div class="slider">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/FONT DE CAVE.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+<!-----------------------------------------=FOOTER=----------------------------------------------------->
+<footer>
+    <div class="atencion">
+        <div class="columnas">
+        <div class="col-s1">
+        <h2>Horarios</h2>
+        <p><a href="horarios">Ver +</a></p>
+        </div>
+        <div class="col-s1">
+            <h2>Venta telefonica</h2>
+            <p>WhatsApp 15 7090 6999</p>
+            <p>De 9 a 18 hs. <a href="#"><i class="fa-solid fa-phone"></i></a></p>
+            </div>
+            <div class="col-s1">
+                <h2>Preguntas</h2>
+                <p><a href="horarios">Escribinos,</a>  estamos para ayudarte.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="links">
+        <div class="columnas">
+        <div class="col-s2">
+        <h3>Categorias</h3>
+        <ul><li><a href="">Vinos</a></li>
+        <li><a href="">Cerveza</a></li>
+        <li><a href="">Whisky</a></li>
+        <li><a href="">Gin</a></li>
+        <li><a href="">Ron</a></li>
+        <li><a href="">Vodka</a></li>
+        <li><a href="">Otros</a></li>
+        <li><a href="">Promociones</a></li></ul>
+        </div>
+        <div class="col-s1">
+            <h3>Ayuda</h3>
+        <ul><li><a href="">Preguntas frecuentes</a></li>
+        <li><a href="">Envios</a></li>
+        <li><a href="">Terminos y condiciones</a></li>
+        </ul>
+        </div>
+        <div class="col-s1">
+            <ul>
+            <li>
+            <h3>Medios de pagos</h3>
+            <p> <a href="#"><img src="images/tarjetas.png" alt=""></a></p></li>
+            <li><h3>Envianos tu consulta:</h3>
+            <p>tienda@openbar.com</p></li>
+            <li>
+                <ul>
+                <li><h4>Seguinos</h4></li>
+                <li><a href="#"><img src="images/ico-instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="images/ico-facebook.png" alt=""></a></li>
+            </ul></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</footer>
+<div class="probido"><h2>BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</h2></div>
 </body>
 </html>

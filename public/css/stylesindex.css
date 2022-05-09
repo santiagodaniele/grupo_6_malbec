@@ -1,58 +1,62 @@
+/*====GENERAL====*/
 *{
-    margin:0px;
-    padding:10px;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
-}
-a{color: #000;
-    text-decoration:none
-    }
-    a:hover{
-        color:#090d8a
     }
 body{
     font-family: 'Koulen', cursive;
-}
-.padre{
-background: whitesmoke;
-display:flex;
-flex-flow:column nowrap;
-}
-.header{
-    background:whitesmoke ;
-    display:flex;
-    flex-flow:column nowrap;
     }
-.menu{
-    background: whitesmoke;
-    display:flex;
-    flex-flow: row nowrap;
-    height: 100px;
+
+.header-container{
+    flex-wrap: wrap;
     align-items: center;
-    
-}
-.logo{
-    background: url(../images/Logo\ opcion\ 3.jpeg);
+    align-content: center;
+       }
+.Intro{
+    background:white;
+    align-items: center;
+    justify-content: space-between;
+    display:flex;
+    margin:0px;
+    color: black;
+    }
+.Logo{flex:6 1 auto;
+    margin-right: 100px;
+    background: url(../images/Logo\ opcion\ 2.png);
     background-position: center;
     background-attachment: contain;
     background-size: cover;
-    flex:1 1 auto;
-    height: 50px;
+    height: 100px;
+    }
+.Nombre{flex:20 1 auto;
+justify-self:center}
+.Nombre ul{list-style-type:none;
+    text-align: center;
 }
-.frase{
-    background: whitesmoke;
-    flex:5 1 auto;
-    height: 50px;
-   text-align: center;
+.texto1{font-size:50px;
+    margin:5px;}
+    
+.Iconos{flex:0.1 1 auto;
+    align-self: flex-end;
+        }
+
+.Iconos a{
+    color:black;
+    padding: 10px;
 }
-.iconos{
-    background:  whitesmoke;
-    flex:1 1 auto;
-    height: 50px;
+.menu{
+    padding:0px;
+    background:#bca150;
+    font-size:15px;
+    }
+.barra a{
+color: whitesmoke;
+text-decoration:none;
+padding:10px;
 }
-.menu2{background: whitesmoke;
-    display:flex;;}
-.barra{
-       flex: 1 1 auto;
+.barra a:hover{
+color:black;
 }
 .slider{
     background: whitesmoke;
@@ -71,7 +75,7 @@ flex-flow:column nowrap;
     list-style:none;
 }
 .slider img{
-width:100%
+width:100%;
 }
 @keyframes cambio {
     0%{margin-left:0;}
@@ -80,47 +84,4 @@ width:100%
    45%{margin-left:-100%}
    50%{margin-left:-200%}
    70%{margin-left:-200%}
-   75%{margin-left:-300%}
-   100%{margin-left:-300%}
 }
-.section{
-    background:#000;
-    display:flex;
-}
-.articulos{
-    background:#61A4BC;
-    flex: 2 1 auto;
-}
-.article{
-    background:#bcbc61;
-    
-}
-.aside{
-    background:#bc8461; 
-    flex: 1 1 auto;
-}
-.cart_summary-sticky{
-    background:#e63923; 
-}
-.footer{
-    background:#000 ;
-}
-.pie{
-    background:violet;
-}
-
-@media  all and (max-width:800px){
-    .section{
-        flex-direction:column;
-    }
-    .menu{
-        flex-direction:column;
-        height:auto;
-    }
-    .aside{
-        display:flex;
-        justify-content:center;
-    }
-}
-
-/*holaa/

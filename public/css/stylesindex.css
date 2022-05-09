@@ -22,7 +22,6 @@ body{
     color: black;
     }
 .Logo{flex:6 1 auto;
-    margin-right: 100px;
     background: url(../images/Logo\ opcion\ 2.png);
     background-position: center;
     background-attachment: contain;
@@ -51,7 +50,7 @@ justify-self:center}
     font-size:15px;
     }
 .barra a{
-color: whitesmoke;
+color: white;
 text-decoration:none;
 padding:10px;
 }
@@ -59,7 +58,7 @@ padding:10px;
 color:black;
 }
 .slider{
-    background: whitesmoke;
+    background: white;
     width:auto;
     margin:auto;
     overflow:hidden;
@@ -84,4 +83,33 @@ width:100%;
    45%{margin-left:-100%}
    50%{margin-left:-200%}
    70%{margin-left:-200%}
+}
+
+@media  all and (max-width:500px){
+    .header-container{
+        flex-direction:column;
+    }
+    .Nombre{flex: 1 1 auto;
+    size-adjust: auto;
+font-size: smaller;}
+    .menu{
+        flex-direction:column;
+        height:auto;
+        justify-content:center;
+    }
+}
+@media  (min-widht:360) and (max-width:480px){
+    .header-container{
+        flex-direction:column;
+    }
+    .Logo{width: 5px;
+        height: 5px;}
+    .Nombre{flex: 1 1 auto;
+    size-adjust: auto;
+font-size: 10px;}
+    .menu{
+        flex-direction:column;
+        height:auto;
+        justify-content:center;
+    }
 }

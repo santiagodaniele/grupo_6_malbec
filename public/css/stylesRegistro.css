@@ -1,0 +1,127 @@
+*{
+    margin:0px;
+    padding:10px;
+    box-sizing: border-box;
+}
+a{color: #000;
+    text-decoration:none
+    }
+    a:hover{
+        color:#090d8a
+    }
+body{
+    font-family: 'Koulen', cursive;
+}
+.padre{
+background: whitesmoke;
+display:flex;
+flex-flow:column nowrap;
+}
+.header{
+    background:whitesmoke ;
+    display:flex;
+    flex-flow:column nowrap;
+    }
+.menu{
+    background: whitesmoke;
+    display:flex;
+    flex-flow: row nowrap;
+    height: 100px;
+    align-items: center;
+    
+}
+.logo{
+    background: url(../images/Logo\ opcion\ 3.jpeg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    flex:1 1 auto;
+    height: 50px;
+}
+.frase{
+    background: whitesmoke;
+    flex:5 1 auto;
+    height: 50px;
+   text-align: center;
+}
+.iconos{
+    background:  whitesmoke;
+    flex:1 1 auto;
+    height: 50px;
+}
+.menu2{background: whitesmoke;
+    display:flex;;}
+.barra{
+       flex: 1 1 auto;
+}
+.slider{
+    background: whitesmoke;
+    width:auto;
+    margin:auto;
+    overflow:hidden;
+}
+.slider ul{
+    display:flex;
+    padding:0;
+    width: 300%;
+    animation: cambio 20s infinite alternate linear;
+}
+.slider li{
+    width:100%;
+    list-style:none;
+}
+.slider img{
+width:100%
+}
+.datosregistro{
+    background-color: grey
+}
+@keyframes cambio {
+    0%{margin-left:0;}
+   20%{margin-left:0;}
+   25%{margin-left:-100%}
+   45%{margin-left:-100%}
+   50%{margin-left:-200%}
+   70%{margin-left:-200%}
+   75%{margin-left:-300%}
+   100%{margin-left:-300%}
+}
+.section{
+    background:#000;
+    display:flex;
+}
+.articulos{
+    background:#61A4BC;
+    flex: 2 1 auto;
+}
+.article{
+    background:#bcbc61;
+    
+}
+.aside{
+    background:#bc8461; 
+    flex: 1 1 auto;
+}
+.cart_summary-sticky{
+    background:#e63923; 
+}
+.footer{
+    background:#000 ;
+}
+.pie{
+    background:violet;
+}
+
+@media  all and (max-width:800px){
+    .section{
+        flex-direction:column;
+    }
+    .menu{
+        flex-direction:column;
+        height:auto;
+    }
+    .aside{
+        display:flex;
+        justify-content:center;
+    }
+}

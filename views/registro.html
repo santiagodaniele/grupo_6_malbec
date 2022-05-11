@@ -4,51 +4,52 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrito de compras</title>
+<title>Registro</title>
 <script src="https://kit.fontawesome.com/6d08e04018.js" crossorigin="ganonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/stylesindex.css">
+<link rel="stylesheet" href="css/stylesRegistro.css">
 </head>
 <body>
-    <header class="header">
-<div class="padre">
-    <div class="menu">
-<div class="logo"></div>
-<div class="frase"> Open Bar</div>
-<div class="iconos">
-    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-    <a href="#"><i class="fa-solid fa-address-book"></i></i></a>
-    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+  <header class="header-container">
+    <div class="Intro">
+    <div class="Logo"></div>
+    <div class="Nombre"><ul><li class="texto1">OPEN BAR</li>
+        <li class="texto2">AQUELLA BEBIDA QUE BUSCAS, LA ENCONTRAS</li>
+    </ul>
+    </div>
+    <div class="Iconos">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-solid fa-address-book"></i></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
 </div>
-</div>
-<div class="menu2">
-<nav class="barra">
-    <a href="#">Vinos</a>
-    <a href="#">Cerveza</a>
-    <a href="#">Whisky</a>
-    <a href="#">Gin</a>
-    <a href="#">Ron</a>
-    <a href="#">Vodka</a>
-    <a href="#">Otros</a>
-    <a href="#">Promociones</a>
-</nav>
-</div>
+<div class="menu">
+    <nav class="barra">
+        <a href="#">Vinos</a>
+        <a href="#">Cerveza</a>
+        <a href="#">Whisky</a>
+        <a href="#">Gin</a>
+        <a href="#">Ron</a>
+        <a href="#">Vodka</a>
+        <a href="#">Otros</a>
+        <a href="#">Promociones</a>
+    </nav>
+    </div>
 </header>
                     <main>
-                      <div class ="datosregistro">
-                        <h3>DATOS PERSONALES:</h3>
+                        <div class="datospersonales"><h3>DATOS PERSONALES:</h3>
                         <form action="/registro" method="post">
                             <p>
-                                <input type="text" name="nombre" placeholder="Nombre" required></input>
-                                </p>
+                              <input type="text" class= "datos" name="nombre" size="50" placeholder="Nombre" required></input>
+                              </p>
                                 <p>
-                                <input type="text" name="apellido" placeholder="Apellido" required></input>
+                                <input type="text" class= "datos" name="apellido" size="50" placeholder="Apellido" required></input>
                               </p>
                               <p>
-                                <p></div>
+                                <p>
                                     <label>Fecha de nacimiento</label>
                                     </p>
                                     <p>
@@ -99,7 +100,7 @@
                                       <option value="11">Noviembre</option>
                                       <option value="12">Diciembre</option>
                                     </select>
-                                        <input type="text" name="año" required placeholder="Año"></input>
+                                        <input type="text"  class= "datos2" name="año" size="30" required placeholder="Año"></input>
                                   </p>
                                   <label>Tipo de Documento:</label>
                                   </p>
@@ -113,40 +114,107 @@
                                     <option value="DEX">Documento Extranjero</option>
                                 </select>
                                 <p>
-                                    <input type="text" name="numeroDNI" required placeholder="Número de documento"></input>
+                                    <input type="text"  class= "datos" name="numeroDNI" size="50"  required placeholder="Número de documento"></input>
                                   </p>
                                   <h3>DATOS DE ENVÍO:</h3>
                                   <p>
                                     <label>Dirección:</label>
                                     </p>
                                     <p>
-                                    <input type="text" name="direccion" placeholder="Calle" required></input>
-                                    <input type="text" name="Num-direccion" placeholder="Número" required></input>
+                                    <input type="text"  class= "datos3" name="direccion" size="22.5"  placeholder="Calle" required></input>
+                                    <input type="text"  class= "datos3" name="Num-direccion" size="22.5"  placeholder="Número" required></input>
                                     <p>
-                                    <input type="text" name="localidad" placeholder="Localidad" required></input>
+                                    <input type="text"  class= "datos" name="localidad" size="50" placeholder="Localidad" required></input>
                                     </p>
                                     <p>
-                                    <input type="text" name="provincia" placeholder="Provincia" required></input>                                 
+                                    <input type="text"  class= "datos" name="provincia" size="50" placeholder="Provincia" required></input>                                 
                                     </p>
                                   <p>
-                                    <label>Teléfono de contacto:</label>
-                                    <input type="text" name="direccion" required></input>
-                                    </p>
+                                    <label>Teléfono de contacto:</label></p>
+                                    <p><input type="text"  class= "datos" size="50" name="telefono" required></input>
+                                    </p>  
                                   <h3>DATOS DE REGISTRO:</h3>
                                 <p>
-                                <label>E-mail:</label>
-                                <input type="email" name="email" required></input> 
+                                <label>E-mail:</label></p>
+                                <p><input type="email"  class= "datos" size="50" name="email" required></input> 
                               </p>
                               <p>
-                                <label>Contraseña:</label>
-                                <input type="password" name="password" required>
+                                <label>Contraseña:</label></p>
+                              <p>  <input type="password"  class= "datos" size="50" name="password" required>
                               </p>
                               <p>
                                 <button type="submit">REGISTRARME</button>
                                 </p>
+                                <p>
+                                 <div class="checkbox"> <input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input>
+                                  </p>
+                                <p>
+                                  <input type="checkbox" name="newsletter" value="newsletter">Deseo recibir novedades y ofertas</input>
+                                  </p>
+                                </div>
                             </form>
+                          </div>
                         </main>
                         <footer>
-                            </footer>
+                          <div class="atencion">
+                              <div class="columnas">
+                              <div class="col-s1">
+                              <h2>Horarios</h2>
+                              <p><a href="horarios">Ver +</a></p>
+                              </div>
+                              <div class="col-s1">
+                                  <h2>Venta telefonica</h2>
+                                  <p>WhatsApp 15 7090 6999</p>
+                                  <p>De 9 a 18 hs. <a href="#"><i class="fa-solid fa-phone"></i></a></p>
+                                  </div>
+                                  <div class="col-s1">
+                                      <h2>Preguntas</h2>
+                                      <p><a href="horarios">Escribinos,</a>  estamos para ayudarte.
+                                  </p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="links">
+                              <div class="columnas">
+                              <div class="col-s2">
+                              <h3>Categorias</h3>
+                              <ul><li><a href="">Vinos</a></li>
+                              <li><a href="">Cerveza</a></li>
+                              <li><a href="">Whisky</a></li>
+                              <li><a href="">Gin</a></li>
+                              <li><a href="">Ron</a></li>
+                              <li><a href="">Vodka</a></li>
+                              <li><a href="">Otros</a></li>
+                              <li><a href="">Promociones</a></li></ul>
+                              </div>
+                              <div class="col-s1">
+                                  <h3>Ayuda</h3>
+                              <ul><li><a href="">Preguntas frecuentes</a></li>
+                              <li><a href="">Envios</a></li>
+                              <li><a href="">Terminos y condiciones</a></li>
+                              </ul>
+                              </div>
+                              <div class="col-s1">
+                                  <ul>
+                                  <li>
+                                  <h3>Medios de pagos</h3>
+                                  <p> <a href="#"><img src="images/tarjetas.png" alt=""></a></p></li>
+                                  <li><h3>Envianos tu consulta:</h3>
+                                  <p>tienda@openbar.com</p></li>
+                                  <li>
+                                      <ul>
+                                      <li><h4>Seguinos</h4></li>
+                                      <li><a href="#"><img src="images/ico-instagram.png" alt=""></a></li>
+                                      <li><a href="#"><img src="images/ico-facebook.png" alt=""></a></li>
+                                  </ul></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          </div>
+                      </footer>
+                      <div class="probido"><h2>BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</h2></div>  
+                      
+                      </body>
+                      </html>
                 </body>
         </html>

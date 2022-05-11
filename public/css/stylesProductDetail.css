@@ -4,14 +4,60 @@
     box-sizing: border-box;
 }
 
+main section {
+    width: 100%;
+    padding: 10px;
+}
+
+main section article img {
+    width: 100%;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .product_img {
-    width: 20%;
+    width: 30%;
+}
+
+div .productos {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+   }
+
+.nombre-bebida {
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.precio {
+    font-family: serif;
+    font-size: 20px;
+    color: red;
+}
+
+.boton {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: blue;
+    color: white
+
+}
+
+/* 
+.product_img {
+    width: 100%;
 }
 
 .description{
     font-size: 16px;
     font-weight: bold;
+    padding: auto;
     
 }
 .nombreProducto{
@@ -20,15 +66,22 @@
     text-decoration: underline;
 
 }
+.vista-completa {
+    display: flex;
+    width: 100%;
+}
+
 .contenedor {
     display: flex;
+    width: 50%;
     flex-wrap: wrap;
 }
 .main-article{
+    width: 50%;
     font-size: 30px;
 }
 .botones{
     font-size: 30px;
     padding: 10px;
 
-}
+} */

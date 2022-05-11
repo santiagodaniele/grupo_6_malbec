@@ -7,7 +7,7 @@
 body{
     font-family: 'Koulen', cursive;
     }
-
+/*====HEADER====*/
 .header-container{
     flex-wrap: wrap;
     align-items: center;
@@ -22,6 +22,7 @@ body{
     color: black;
     }
 .Logo{flex:6 1 auto;
+    margin-right: 100px;
     background: url(../images/Logo\ opcion\ 2.png);
     background-position: center;
     background-attachment: contain;
@@ -57,6 +58,7 @@ padding:10px;
 .barra a:hover{
 color:black;
 }
+/*====slider====*/
 .slider{
     background: white;
     width:auto;
@@ -85,31 +87,98 @@ width:100%;
    70%{margin-left:-200%}
 }
 
-@media  all and (max-width:500px){
-    .header-container{
-        flex-direction:column;
-    }
-    .Nombre{flex: 1 1 auto;
-    size-adjust: auto;
-font-size: smaller;}
-    .menu{
-        flex-direction:column;
-        height:auto;
-        justify-content:center;
-    }
+/*SECTION------------------------------------------------------------------------------------------*/
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
 }
-@media  (min-widht:360) and (max-width:480px){
-    .header-container{
-        flex-direction:column;
-    }
-    .Logo{width: 5px;
-        height: 5px;}
-    .Nombre{flex: 1 1 auto;
-    size-adjust: auto;
-font-size: 10px;}
-    .menu{
-        flex-direction:column;
-        height:auto;
-        justify-content:center;
-    }
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: black;
+}
+
+.description{
+  margin-top: 20px;
+}
+
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 50px;
+}
+
+main section article i,
+.discount{
+    color: black;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 10px;
+}
+
+.products{display: block;}
+
+.columnas{display: flex;
+justify-content: space-between;
+list-style: none;
+padding: 50px;
+}
+.links ul{list-style: none;}
+
+.col-s1 p{margin-left: 20%;}
+
+.probido h2{
+    display: flex;
+    justify-content: center;
+
 }

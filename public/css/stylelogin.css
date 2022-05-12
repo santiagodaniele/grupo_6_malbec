@@ -5,11 +5,11 @@
   }
   
   body {
-    font-family: 'Koulen';
-    background-image: url('Logo opcion 1.jpg');
-  }
-  
-  .form-login {
+    font-family: 'Koulen', cursive;
+   
+      }
+
+  .formulariologin {
     width: 400px;
     height: 340px;
     background: #787474;
@@ -19,9 +19,10 @@
     padding: 20px 30px;
     border-top: 4px solid #017bab;
     color: white;
+    text-align: center;
   }
   
-  .form-login h5 {
+  .formulariologin h5 {
     margin: 0;
     text-align: center;
     height: 40px;

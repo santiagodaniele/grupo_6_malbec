@@ -89,8 +89,7 @@ width:100%;
 
 /*SECTION------------------------------------------------------------------------------------------*/
 
-div.last-visit,
-div.offers{
+div.last-visit {
     display: flex;
     flex-wrap: wrap;
 }
@@ -128,10 +127,11 @@ main{
 main section article{
     background-color: #fff;    
     margin: 10px 0px;
+    text-align: center;
 }
 
 main section article img{
-    width: 50px;
+    width: 50%;
 }
 
 main section article i,
@@ -165,6 +165,40 @@ article div.main-article{
     position: relative;
     padding: 10px;
 }
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+}
+
 
 .products{display: block;}
 

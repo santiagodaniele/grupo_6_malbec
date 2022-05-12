@@ -1,0 +1,131 @@
+/*====GENERAL====*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+body{
+    font-family: 'Koulen', cursive;
+    }
+/*====HEADER====*/
+.header-container{
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+       }
+.Intro{
+    background:white;
+    align-items: center;
+    justify-content: space-between;
+    display:flex;
+    margin:0px;
+    color: black;
+    }
+.Logo{flex:6 1 auto;
+    margin-right: 100px;
+    background: url(../images/Logo\ opcion\ 2.png);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    height: 100px;
+    }
+.Nombre{flex:20 1 auto;
+justify-self:center}
+.Nombre ul{list-style-type:none;
+    text-align: center;
+}
+.texto1{font-size:50px;
+    margin:5px;}
+    
+.Iconos{flex:0.1 1 auto;
+    align-self: flex-end;
+        }
+
+.Iconos a{
+    color:black;
+    padding: 10px;
+}
+.menu{
+    padding:0px;
+    background:#bca150;
+    font-size:15px;
+    }
+.barra a{
+color: white;
+text-decoration:none;
+padding:10px;
+}
+.barra a:hover{
+color:black;
+}
+
+
+/*SECTION------------------------------------------------------------------------------------------*/
+
+.form1 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+table{
+    justify-content: space-between;
+    
+}
+.productos{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: 0 20px 0 20px;
+    align-items: center;
+    text-align: center;
+
+    }
+    table tr td img{
+        width: 150px;
+        padding-right: 20px;
+        margin:center ;
+    }
+
+    table tr td {
+        text-align: center;
+        margin:center ;
+    }
+
+    .boton-suma-resta{
+        display: flex;
+        flex-direction: row;
+    }
+
+.sum{
+width: 40px;
+height: 40px;
+background-color:#bca150;
+color: black;
+align-items: center;
+text-align: center;
+padding-top: 7px;
+}
+    
+.totalcompras{left: 1000px;}
+
+
+/*-----------------FOOTER------*/
+.columnas{display: flex;
+justify-content: space-between;
+list-style: none;
+padding: 50px;
+}
+.links ul{list-style: none;}
+
+.col-s1 p{margin-left: 20%;}
+
+.probido h2{
+    display: flex;
+    justify-content: center;
+    
+    
+}

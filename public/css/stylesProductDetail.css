@@ -1,47 +1,187 @@
+/*====GENERAL====*/
 *{
     margin: 0px;
     padding: 0px;    
     box-sizing: border-box;
 }
 
-main section {
-    width: 100%;
-    padding: 10px;
-}
+body{font-family: 'Koulen', cursive;
+    background-color: whitesmoke;}
 
-main section article img {
-    width: 100%;
-}
+
+/*====HEADER====*/
+
+.header-container{
+    background-color: black;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+    }
+    
+    .Item1{
+        border: 1px solid black;
+        color:black;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        margin: 5px;
+        justify-content: center;
+    }
+    .logo{width: 100px;}
+    .Item2{
+        flex: 0.8 3;
+        border: 1px solid black;
+        color:black;
+        width: 120px;
+        height: 120px;
+        margin: 5px;
+        display: flex;
+        color: whitesmoke;
+        }
+    
+    .frase{margin:auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .texto1{margin:auto;
+        font-size:50px}
+    
+    .Item3{
+        border: 1px solid black;
+        color:black;
+        display: flex;
+        align-self: flex-end;
+        margin:5px;
+    }
+    .Item3 a{
+        color:whitesmoke;
+        padding: 0.5px;
+        align-self: flex-end;
+        padding: 5px;
+        }
+    
+    .buscar-texto{
+    text-align: center;
+    height: 25px;
+    }
+    .cuenta{
+        text-align:end;
+        text-decoration:none;
+    }
+    
+    /*====NAV====*/
+    .barra{
+        padding:0px;
+        background:orange;
+        font-size:15px;
+        align-items: center;
+        border: solid rgba(0, 0, 0, 0.053);
+        }
+    .barra a{
+    align-items: center;
+    color: black;
+    text-decoration:none;
+    padding:10px;
+    }
+    .barra a:hover{
+    color:whitesmoke;
+    }
+    /*====slider====*/
+    .slider{
+        background: whitesmoke;
+        width:auto;
+        margin:auto;
+        overflow:hidden;
+    }
+    .slider ul{
+        display:flex;
+        padding:0;
+        width: 300%;
+        animation: cambio 20s infinite alternate linear;
+    }
+    .slider li{
+        width:100%;
+        list-style:none;
+    }
+    .slider img{
+    width:100%;
+    }
+    @keyframes cambio {
+        0%{margin-left:0;}
+       20%{margin-left:0;}
+       25%{margin-left:-100%}
+       45%{margin-left:-100%}
+       50%{margin-left:-200%}
+       70%{margin-left:-200%}
+    }
+
+    /* body*/
+
+    main {
+        font-family: serif;
+        width: 100%;
+        padding: 20px;
+        
+    }
+
+    main section {
+        border-style:hidden;
+        padding: 10px;
+        width: 100%;
+        
+    }
+
+    main section div {
+        border-style: none;
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        position: relative;
+    }
+
+    main section div article { 
+        display: flex;
+        border-style: none;       
+        width: 50%;
+        padding: 10px;
+        justify-content: center;
+
+    }   
+    
+    .info {
+        display: flex;
+        border-style: none;
+        flex-direction: column;
+        width: 50%;
+    }
 
 .productos {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-}
+    }
 
 .product_img {
-    width: 100%;
+    width: 50%;
+    border-style: groove;        
 }
 
-div .productos {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-   }
-
 .nombre-bebida {
-    font-family: serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
 }
 
 .precio {
-    font-family: serif;
-    font-size: 20px;
+    font-size: 30px;
     color: red;
 }
 
-.boton {
+.boton-compra {
+    width: 30%;
     font-size: 20px;
     padding: 10px;
     border-radius: 5%;
@@ -49,6 +189,52 @@ div .productos {
     color: white
 
 }
+
+.description{
+    font-size: 20px;
+    font-weight: bold;
+    padding: auto;
+}
+
+@media (min-width: 361px){
+
+    main {
+        margin: 20px;
+    }
+   
+    main section div article {
+        width: 50%;
+    }
+    
+    main section div article{
+        width: 45%;
+    }
+
+    
+    .description {
+        font-size: 16px;
+    }
+
+   
+}
+
+@media (min-width: 769px){
+    main section div article{
+        width: 50%;
+    }
+}
+
+    @media (min-width: 1024px){
+
+    
+    }
+    .description {
+        font-size: 20px;
+
+    }
+
+    
+
 
 /* 
 .product_img {
@@ -86,3 +272,61 @@ div .productos {
     padding: 10px;
 
 } */
+
+/* footer*/
+
+.pie-pagina{
+    width: 100%;
+    background: orange;
+    color: black;
+    font-size: smaller;
+    border-top: double rgba(0, 0, 0, 0.87);
+}
+
+.pie-pagina .grupo-1{
+width: auto;
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-gap: 50px;
+padding: 5px 0px;
+margin-top: 30px;
+}
+
+.pie-pagina2{
+    width: 100%;
+    background: orange;
+    color: black;
+    font-size: smaller;
+    border-top: double rgba(0, 0, 0, 0.87);
+}
+.pie-pagina2 .grupo-1{
+    width: 1300px;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 5px 0px;
+    margin-top: 30px;
+    list-style: none
+    }
+a{text-decoration: none;
+    color: black;
+   
+    }
+.pie-pagina .grupo-1 a:hover{
+    color:whitesmoke;
+        }
+
+li{list-style: none;}
+
+.probido h2{
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: white;
+    width: auto;
+
+}

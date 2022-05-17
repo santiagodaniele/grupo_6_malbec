@@ -2,7 +2,7 @@ const path = require('path')
 
 const controlador = {
     index : (req, res) => {
-        res.sendFile(path.resolve('src/views/main.html'))
+        res.sendFile(path.resolve('src/views/login.html'))
     },
     // carrito : (req, res) => {
     //     res.sendFile(path.resolve('src/views/carrito.html'))

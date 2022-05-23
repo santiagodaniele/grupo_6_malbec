@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Login</title>
+    <script src="https://kit.fontawesome.com/6d08e04018.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/stylesindex.css">
+    <link rel="stylesheet" href="css/stylelogin.css">
+</head>
+<body>
+    <%- include ('./partials/header') %>
+        <main>
+       <section class="formulariologin"><h5>Iniciar sesión</h5>
+        <p>
+            <input class="controls" type="text" name="usuario" size="20" placeholder="Usuario">
+            </p>
+        <p>
+            <input class="controls" type="password" name="contrasena" size="20" placeholder="Contraseña">
+            </p>
+         <p>  
+            <input class="buttons" type="submit" name="" value="Ingresar">
+            </p> 
+            <p>
+                <div class="checkbox"> <input type="checkbox" name="terms" value="terms" required>Recordarme</input>
+                 </p>
+        <p>
+            <a href="#">¿Olvidaste tu Contraseña?</a>
+            </p>
+        </section>
+      
+    </main>
+    <%- include ('./partials/footer') %> 
+</html>

@@ -16,29 +16,7 @@
     <link rel="stylesheet" href="css/stylesindex.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
-
-<body>
-    <header class="header-container">
-<div class="Item1"><img src="images/logo opcion 1.gif" alt="" class="logo"></div>
-<div class="Item2"><ul class="frase">
-    <li class="texto1">OPEN BAR</li>
-    <li class="texto2">AQUELLA BEBIDA QUE BUSCAS, LA ENCONTRAS</li>
-</ul></div>
-<div class="Item3">
-    <input type="text" class="buscar-texto" placeholder="Busqueda">
-    <a href="#" class="boton"><i class="fa-solid fa-magnifying-glass"></i></a>
-    <a href="/login" class="acceso"><i class="fa-solid fa-address-book"></i></i></a>
-    <a href="/carrito" class="shopping"><i class="fa-solid fa-cart-shopping"></i></a>
-    <div class><a class="cuenta" href="/registro">Crear cuenta</a></div> 
-</div>
-    
-</header>
-    <nav class="barra">
-        <a href="#">Vinos</a>
-            <a href="#">Cerveza</a>
-            <a href="#">Spirits</a>
-            <a href="#">Promociones</a>
-    </nav>
+<%- include ('./partials/header') %>
 
 <!-----------------------------------------=SLIDER=----------------------------------------------------->
 <div class="slider">
@@ -126,63 +104,4 @@
 
 
     <!-----------------------------------------=FOOTER=----------------------------------------------------->
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-                <div class="box">
-                    <h3>Horarios</h3>
-                    <a href="horarios">Ver +</a>
-                </div>
-                <div class="box">
-                    <h3>Venta telefonica</h3>
-                    <p>WhatsApp 15 7090 6999</p>
-                    <p>De 9 a 18 hs. <a href="#"><i class="fa-solid fa-phone"></i></a></p>
-                </div>
-                <div class="box">
-                    <h3>Preguntas</h3>
-                    <p><a href="horarios">Escribinos,</a> estamos para ayudarte.
-                    </p>
-                </div>
-                </div>
-    </footer>
-    <footer class="pie-pagina2">
-    <div class="grupo-1">
-    <div class="box2">
-        <h3>Categorias</h3>
-            <ul><li><a href="">Vinos</a></li>
-            <li><a href="">Cerveza</a></li>
-            <li><a href="">Spirits</a></li>
-            <li><a href="">Promociones</a></li></ul>
-    </div>
-    <div class="box">
-        <h3>Ayuda</h3>
-            <ul><li><a href="">Preguntas frecuentes</a></li>
-            <li><a href="">Envios</a></li>
-            <li><a href="">Terminos y condiciones</a></li>
-            </ul>
-            </div>
-    <div class="box">
-        <ul>
-            <li>
-                <h3>Medios de pagos</h3>
-                <p> <a href="#"><img src="images/tarjetas.png" alt=""></a></p>
-            </li>
-            <li>
-                <h3>Envianos tu consulta:</h3>
-                <p>tienda@openbar.com</p>
-            </li>
-            <li>
-                <ul>
-                    <li>
-                        <h4>Seguinos</h4>
-                    </li>
-                    <li><a href="#"><img src="images/ico-instagram.png" alt=""></a></li>
-                    <li><a href="#"><img src="images/ico-facebook.png" alt=""></a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    </div>
-</footer>
-<div class="probido"><h2>BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</h2></div>  
-</body>
-</html>
+    <%- include ('./partials/footer') %>

@@ -14,33 +14,7 @@
     <link rel="stylesheet" href="css/stylescarrito.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
-<body>
-    <header class="header-container">
-        <div class="Intro">
-        <div class="Logo"></div>
-        <div class="Nombre"><ul><li class="texto1">OPEN BAR</li>
-            <li class="texto2">AQUELLA BEBIDA QUE BUSCAS, LA ENCONTRAS</li>
-        </ul>
-        </div>
-        <div class="Iconos">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#login"><i class="fa-solid fa-address-book"></i></i></a>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-    </div>
-    <div class="menu">
-        <nav class="barra">
-            <a href="#">Vinos</a>
-            <a href="#">Cerveza</a>
-            <a href="#">Whisky</a>
-            <a href="#">Gin</a>
-            <a href="#">Ron</a>
-            <a href="#">Vodka</a>
-            <a href="#">Otros</a>
-            <a href="#">Promociones</a>
-        </nav>
-        </div>
-    </header>
+    <%- include ('./partials/header') %>
 <!-----------------------------------------=CARRITO=----------------------------------------------------->
 
 <div class="carrito-productos">
@@ -79,7 +53,8 @@
 
 
 <!-----------------------------------------=FOOTER=----------------------------------------------------->
-    <footer>
+<%- include ('./partials/footer') %>
+    <!-- <footer>
         <div class="atencion">
             <div class="columnas">
             <div class="col-s1">
@@ -136,4 +111,4 @@
         </div>
         </div>
     </footer>
-    <div class="probido"><h2>BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</h2></div>
+    <div class="probido"><h2>BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</h2></div> -->

@@ -4,7 +4,7 @@ const mainController = require("../controllers/mainController");
 
 const router = express.Router();
 
-router.get("/", mainController.index);
+router.get("/", mainController.main);
 
 
 module.exports = router;

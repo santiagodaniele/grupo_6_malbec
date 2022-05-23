@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto</title>
+    <script src="https://kit.fontawesome.com/6d08e04018.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylesProductDetail.css">
+
+</head>
+
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+<%- include ('./partials/header') %>
+
+    <main>
+        <section>
+            <h3>Detalle de Producto</h3>
+            <br>
+            <br>
+            <div class="productos">
+                <article>
+                    <img src="images/img-cerveza-corona.jpg" alt="Corona" class="product_img">
+                </article>
+                <article class="info">
+                    <p class="nombre-bebida">Corona</p>
+                    <br>
+                    <p class="precio">$180</p>
+                    <br>
+                    <div>
+                    <input type="button" value="-">
+                    <input type="number">
+                    <input type="button" value="+">
+                </div>
+                    <br>
+                    <br>
+                    <button class="boton-compra" type="submit">Comprar</button>
+                    <br>
+                    <br>
+                    <span class="description">Retiro GRATIS en sucursal</span>
+                    <br>
+                    <span class="description">Envíos a todo el país</span>
+                </article>
+            </div>
+            <div>
+                <p class="description">
+                    Descripción:
+                    <br>
+                    - "Graduación Alcohólica: 5%"
+                    <br>
+                    - "Presenta un color amarillo claro y brillante"
+                    <br>
+                    - "De espuma blanca y consistente"
+                    <br>
+                    - "De cuerpo medio, fresca, balanceada y muy fácil de beber"
+                </p>
+            </div>
+
+
+
+        </section>
+        </main>
+
+        <%- include ('./partials/footer') %> 
+      
+</html>

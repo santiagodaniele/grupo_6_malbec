@@ -17,7 +17,7 @@ app.use (express.static('public'));
 
 
 app.use('/', mainRouter);
-app.use('/carrito', userRouter);
+app.use('/user', userRouter);
 app.use('/product', productRouter);
 app.use('/admin', adminRouter);
 

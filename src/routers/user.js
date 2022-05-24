@@ -4,7 +4,7 @@ const userController = require("../controllers/userController");
 
 const router = express.Router();
 
-router.get("/", userController.carrito);
+router.get("/carrito", userController.carrito);
 
 
 module.exports = router;

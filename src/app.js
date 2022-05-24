@@ -5,10 +5,9 @@ const path = require ('path');
 const app = express();
 
 const mainRouter = require ('./routers/main');
-const loginRouter = require ('./routers/login');
-const carritoRouter = require ('./routers/carrito');
-const registroRouter = require ('./routers/registro');
-const productDetailRouter = require ('./routers/productDetail');
+const userRouter = require ('./routers/user');
+const productRouter = require ('./routers/product');
+const adminRouter = require ('./routers/admin')
 
 app.set('views', path.resolve(__dirname, './views'));
 
@@ -16,11 +15,14 @@ app.set ('view engine', 'ejs');
 
 app.use (express.static('public'));
 
-app.use('/registro', registroRouter);
+
 app.use('/', mainRouter);
-app.use('/login', loginRouter);
-app.use('/carrito', carritoRouter);
-app.use('/productDetail', productDetailRouter);
+app.use('/register', mainRouter);
+app.use('/login', mainRouter);
+app.use('/carrito', userRouter);
+app.use('/product', productRouter);
+app.use('/upload', adminRouter);
+app.use('/', adminRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

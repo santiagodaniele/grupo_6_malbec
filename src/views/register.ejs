@@ -1,46 +1,14 @@
 <!DOCTYPE html>
-<html>
-
- <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registro</title>
-<script src="https://kit.fontawesome.com/6d08e04018.js" crossorigin="ganonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+<head>
+    <title>Register</title>
+<%- include ('./partials/head') %>
 <link rel="stylesheet" href="css/stylesRegistro.css">
 </head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+<%- include ('./partials/header') %>
 <body>
- <!-- <header class="header-container">
-    <div class="Intro">
-    <div class="Logo"></div>
-    <div class="Nombre"><ul><li class="texto1">OPEN BAR</li>
-        <li class="texto2">AQUELLA BEBIDA QUE BUSCAS, LA ENCONTRAS</li>
-    </ul>
-    </div>
-    <div class="Iconos">
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="#"><i class="fa-solid fa-address-book"></i></i></a>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-    </div>
-</div>
-<div class="menu">
-    <nav class="barra">
-        <a href="#">Vinos</a>
-        <a href="#">Cerveza</a>
-        <a href="#">Whisky</a>
-        <a href="#">Gin</a>
-        <a href="#">Ron</a>
-        <a href="#">Vodka</a>
-        <a href="#">Otros</a>
-        <a href="#">Promociones</a>
-    </nav>
-    </div>
-</header> -->
-  <%- include ('./partials/header') %>
                     <main>
                         <div class="datospersonales"><h3>DATOS PERSONALES:</h3>
                         <form action="/registro" method="post">
@@ -157,6 +125,8 @@
                             </form>
                           </div>
                         </main>
+                        </body>
                         <!-----------------------------------------=FOOTER=----------------------------------------------------->
-<%- include ('./partials/footer') %>    
+<%- include ('./partials/footer') %>
+</html>    
                         

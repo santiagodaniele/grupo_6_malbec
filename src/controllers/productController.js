@@ -1,9 +1,12 @@
 const path = require('path')
 
-const controlador = {
+const productController = {
     product : (req, res) => {
         res.render('product')
     },
+    productList : (req, res) => {
+        res.render('productList')
+    },
 }
 
-module.exports = controlador;
+module.exports = productController;

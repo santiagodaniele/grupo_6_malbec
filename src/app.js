@@ -17,12 +17,9 @@ app.use (express.static('public'));
 
 
 app.use('/', mainRouter);
-app.use('/register', mainRouter);
-app.use('/login', mainRouter);
 app.use('/carrito', userRouter);
 app.use('/product', productRouter);
-app.use('/upload', adminRouter);
-app.use('/', adminRouter);
+app.use('/admin', adminRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

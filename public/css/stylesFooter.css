@@ -43,10 +43,17 @@ a{text-decoration: none;
 .pie-pagina .grupo-1 a:hover{
     color:whitesmoke;
         }
-
+.tarjetas{display:flex;
+        }
+        
+.tarjetas a{margin-right: 10px;}
 li{list-style: none;}
 
-.seguinos{display:flex;}
+.pie-pagina2 .grupo-1 a:hover{
+    color:whitesmoke;
+        }
+
+
 
 .probido h2{
     display: flex;
@@ -54,5 +61,8 @@ li{list-style: none;}
     background: black;
     color: white;
     width: auto;
-
+    font-size:13px;
+   margin: auto;
 }
+
+h3{font-size: 18px;}

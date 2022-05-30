@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+<head>
+    <title>Editar producto</title>
+<%- include ('../partials/head') %>
+<link rel="stylesheet" href="../css/stylesABMProduct.css">
+</head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+<%- include ('../partials/header') %>
+<body>
+        <main>
+       <section class="formulariologin"><h5>Formulario de edición de productos</h5>
+        <p>
+        <label>Categoría</label><select name="categoria" required>
+            <option value="vacio"></option>
+            <option value="Vinos">Vinos</option>
+            <option value="Cervezas">Cervezas</option>
+            <option value="Spirits"'>Spirits</option>
+        </select>
+        <label>Precio: </label>
+        <input class="controls" type="text" name="precio">
+        <label>Descuento: </label>
+        <input class="controls" type="text" name="descuento">
+        </p>
+        <p>
+            <label>Nombre del producto: </label>
+            <input class="controls" type="text" name="product-name">          
+            </p>
+        <p>
+            <label>Marca: </label>
+            <input class="controls" type="text" name="marca">
+            <label>Variedad: </label>
+            <input class="controls" type="text" name="variedad">    
+            <label>Año: </label>
+            <input class="controls" type="text" name="año">  
+            <label>Stock: </label>
+            <input class="controls" type="text" name="stock">  
+            </p>
+         <p> 
+            <label>Foto: </label>
+            <input class="buttons" type="file" name="subir-archivo" accept=".jpg" value="Seleccionar archivo">
+            </p> 
+            <p>
+            <label>Descripción: </label>
+            </p>
+            <p>
+            <input class="controls" type="text" name="descripcion">      
+        </p>   
+        <p>
+            <button type="submit">EDITAR</button>
+            </p>
+            </div>
+       
+            </section>
+        </section>
+      
+    </main>
+    <%- include ('../partials/footer') %> 
+</html>

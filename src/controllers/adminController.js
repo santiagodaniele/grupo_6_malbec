@@ -2,10 +2,10 @@ const path = require('path')
 
 const adminController = {
     upload : (req, res) => {
-        res.render('upload')
+        res.render('./products/upload')
     },
     edit : (req, res) => {
-        res.render('edit')
+        res.render('./products/edit')
     },
 }
 

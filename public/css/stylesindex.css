@@ -3,7 +3,7 @@ body{font-family: 'Koulen', cursive;
     background-color: whitesmoke;}
 
 /*====HEADER====*/
-
+/* 
 .header-container{
 background-color: black;
 display: flex;
@@ -83,7 +83,7 @@ padding:10px;
 }
 .barra a:hover{
 color:whitesmoke;
-}
+} */
 /*====slider====*/
 .slider{
     background: whitesmoke;
@@ -227,7 +227,7 @@ article div.main-article{
 
 
 .products{display: block;}
-
+/* 
 .pie-pagina{
     width: 100%;
     background: orange;
@@ -282,4 +282,4 @@ li{list-style: none;}
     color: white;
     width: auto;
 
-}
+} */

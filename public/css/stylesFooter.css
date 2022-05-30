@@ -46,6 +46,8 @@ a{text-decoration: none;
 
 li{list-style: none;}
 
+.seguinos{display:flex;}
+
 .probido h2{
     display: flex;
     justify-content: center;

@@ -134,7 +134,10 @@ article div.main-article{
     .discount{
         width: 50%;
     }
+    
 }
+@media (max-width: 450px){
+.slider{display: none;}}
 
 @media (min-width: 769px){
     main section div.products article{

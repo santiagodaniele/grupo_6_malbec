@@ -4,23 +4,35 @@
 <link rel="stylesheet" href="../css/stylesHeader.css">
 
 <!-----------------------------------------=HEADER=----------------------------------------------------->
-<header class="header-container">
-<div class="Item1"><a href= "/"><img src="../images/img-logo-open-bar.gif" alt="" class="logo"></a></div>
-<div class="Item2"><ul class="frase">
-    <li class="texto1">OPEN BAR</li>
-    <li class="texto2">AQUELLA BEBIDA QUE BUSCAS, LA ENCONTRAS</li>
-</ul></div>
-<div class="Item3">
-    <input type="text" class="buscar-texto" placeholder="Busqueda">
-    <a href="#" class="boton"><i class="fa-solid fa-magnifying-glass"></i></a>
-    <a href="/login" class="acceso"><i class="fa-solid fa-address-book"></i></i></a>
-    <a href="/user/cart" class="shopping"><i class="fa-solid fa-cart-shopping"></i></a>
-    <div class><a class="cuenta" href="/register">Crear cuenta</a></div> 
-</div>
-    </header>
-    <nav class="barra">
-        <a href="/product/list">Vinos</a>
+<header>
+
+    <div class="header-1">
+
+        <a href="/" class="logo"><img src="../images/img-logo-open-bar.gif" alt="" class="logo"></a>
+                <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="¿Qué estás buscando?">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="/product/list">Vinos</a>
             <a href="/product/list">Cervezas</a>
             <a href="/product/list">Spirits</a>
             <a href="/product/list">Promociones</a>
-    </nav>
+        </nav>
+
+        <div class="icons">
+            <a href="/user/cart" class="fa-solid fa-cart-shopping"></a>
+            <a href="/login" class="fas fa-user-circle"></a>
+            <a href="/register"><button class="crear-cuenta">Crear cuenta</button></a>
+        </div>
+
+    </div>
+
+</header>

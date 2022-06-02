@@ -2,22 +2,13 @@
 a{text-decoration: none;
     color: black;}
    
-
-.probido h2{
-    display: flex;
-    justify-content: center;
-    background: black;
-    color: white;
-    width: auto;
-    font-size:13px;
-   margin: auto;
-}
+.footer{ border-top: .1rem solid rgba(0,0,0,.1);}
 
 .footer .box-container{
     display: flex;
     gap:1.5rem;
     flex-wrap: wrap;
-  }
+     }
   
   .footer .box-container .box{
     padding:1rem 0;
@@ -35,7 +26,7 @@ a{text-decoration: none;
   
   .footer .box-container .box h3{
     font-size: 1.5rem;
-    color:var(--black);
+    
   }
   
   .footer .box-container .box p{
@@ -68,9 +59,18 @@ a{text-decoration: none;
     font-size: 1.2rem;
     text-decoration: none;
   }
+  .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background:var(--orange);
+    color:#fff;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+  }
   
   .footer .credit span{
-    color:var(--orange);
     text-decoration: none;
   }
   

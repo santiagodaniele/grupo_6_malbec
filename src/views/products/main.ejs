@@ -22,15 +22,17 @@
         <section class="last-visit">
             <h3>DESTACADOS</h3>
             <div class="products">
+                <% productsMain.destacados.forEach(element =>{  %>
                 <article>
-                    <img src="../images/img-tinto-malbec-fond-de-cave.jpg" alt="FondDeCave" class="product_img">
+                    <img src="../images/<%= element.image %>" alt="FondDeCave" class="product_img">
                     <div class="main-article">
-                        <p class="price">$998,19</p>
-                        <p class="discount">30% off</p>
-                        <h4 class="description">Fond de Cave Reserva</h4>
+                        <p class="price">$<%= element.price %></p>
+                        <p class="discount"><%= element.discount %>% off</p>
+                        <h4 class="description"><%= element.name %></h4>
                     </div>
                 </article>
-                <article>
+                <% }) %>
+                <!-- <article>
                     <img src="../images/img-tinto-malbec-impuro.jpg" alt="Impuro" class="product_img">
                     <div class="main-article">
                         <p class="price">$834,80</p>
@@ -87,7 +89,7 @@
                         <p class="discount">5% off</p>
                         <h4 class="description">Schofferhofer 550Ml</h4>
                     </div>
-                </article>
+                </article> -->
             </div>
         </section>
     </main>

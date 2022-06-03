@@ -62,7 +62,7 @@ color: white;
   
   .footer .credit{
     padding:2.5rem 1rem;
-    border-top: .1rem solid rgba(0,0,0,.1);
+    border-top: .01rem solid white;
     margin-top: 1rem;
     text-align: center;
     font-size: 1.2rem;

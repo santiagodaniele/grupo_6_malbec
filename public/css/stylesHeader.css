@@ -55,6 +55,7 @@
   .header-1 .search-box-container{
     display: flex;
     height:5rem;
+    margin-left: 12rem;
   }
   
   .header-1 .search-box-container #search-box{
@@ -82,6 +83,16 @@
     background:var(--orange);
   }
   
+.slogan{text-align: center;
+color:white;
+list-style: none;
+}
+
+.slogan h1{font-weight: 600;}
+.slogan h5{font-weight: 500;
+
+}
+
   .header-2{
     background:orange;
     font-weight: bold;
@@ -203,6 +214,13 @@
       width:100%;
       margin-top: 2rem;
     }
-  
+    .header-1 .search-box-container{
+      
+      margin-left: 0.1rem;
+    }
     
+  }
+
+  @media(max-width:800px){
+  .slogan{display: none;}
   }

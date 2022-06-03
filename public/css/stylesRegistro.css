@@ -1,189 +1,125 @@
-/*====GENERAL====*/
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    }
-body{
-    font-family:'Roboto', sans-serif
-    }
-/*====HEADER====*/
-.header-container{
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-       }
-.Intro{
-    background:white;
-    align-items: center;
-    justify-content: space-between;
-    display:flex;
-    margin:0px;
-    color: black;
-    }
-.Logo{flex:6 1 auto;
-    margin-right: 100px;
-    background: url(../images/Logo\ opcion\ 2.png);
-    background-position: center;
-    background-attachment: contain;
-    background-size: cover;
-    height: 100px;
-    }
-.Nombre{flex:20 1 auto;
-justify-self:center}
-.Nombre ul{list-style-type:none;
-    text-align: center;
-}
-.texto1{font-size:50px;
-    margin:5px;}
+        
+  }
+  
+  body {
+    font-family:'Roboto', sans-serif;
     
-.Iconos{flex:0.1 1 auto;
-    align-self: flex-end;
-        }
+    
+   
+      }
 
-.Iconos a{
-    color:black;
-    padding: 10px;
-}
-.menu{
-    padding:0px;
-    background:#bca150;
-    font-size:15px;
-    }
-.barra a{
-color: white;
-text-decoration:none;
-padding:10px;
-}
-.barra a:hover{
-color:black;
-}
-/*====slider====*/
-.slider{
-    background: white;
-    width:auto;
-    margin:auto;
-    overflow:hidden;
-}
-.slider ul{
-    display:flex;
-    padding:0;
-    width: 300%;
-    animation: cambio 20s infinite alternate linear;
-}
-.slider li{
-    width:100%;
-    list-style:none;
-}
-.slider img{
-width:100%;
-}
-@keyframes cambio {
-    0%{margin-left:0;}
-   20%{margin-left:0;}
-   25%{margin-left:-100%}
-   45%{margin-left:-100%}
-   50%{margin-left:-200%}
-   70%{margin-left:-200%}
-}
-
-/*SECTION------------------------------------------------------------------------------------------*/
-
-div.last-visit,
-div.offers{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.price{
-    font-size: 18px;
-    width: 30%;
-}
-
-.discount{
-    width: 70%;
-}
-
-.discount,
-.description{
-    font-size: 16px;
-    font-weight: normal;
-}
-
-h3,
-.description{
-    color: black;
-}
-
-.description{
-  margin-top: 20px;
-}
-
-
-main{
-    width: 90%;
-    margin: 0 auto;
-}
-
-main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
-}
-
-main section article img{
-    width: 50px;
-}
-
-main section article i,
-.discount{
-    color: black;
-}
-
-main section article i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-
-main section h3{
-    margin: 20px 0px;
-}
-
-article div.main-article{
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-    padding: 10px;
-}
-
-.products{display: block;}
-
-.columnas{display: flex;
-justify-content: space-between;
-list-style: none;
-padding: 50px;
-}
-.links ul{list-style: none;}
-
-.col-s1 p{margin-left: 20%;}
-
-.probido h2{
-    display: flex;
-    justify-content: center;
-
-}
-.datospersonales{
+  .datospersonales {
+    width: 400px;
+    height: 340px;
+    background: rgba(248, 244, 244, 0.94);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 1200px;
+    padding: 20px 30px;    
+    color: rgb(12, 12, 12);
     text-align: center;
-   margin-top: 40px;
-   margin-bottom: 40px;
-}
+    
+  }
+  
+  .datospersonales h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+  }
+   
+  .datos {
+    width: 100%;
+    border: 1px solid #0e0e0e;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background: #f1e8dd;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .content-select select{
+    width: 20%;
+    border: 1px solid #0e0e0e;
+    margin-bottom: 15px; 
+    padding: 5px 10px;
+    background: #f1e8dd;
+    font-size: 14px; 
+    font-weight: bold;
+   } 
+   .content-select2 select{
+    width: 30%;
+    border: 1px solid #0e0e0e;
+    margin-bottom: 15px; 
+    padding: 5px 10px;
+    background: #f1e8dd;
+    font-size: 14px; 
+    font-weight: bold;
+   } 
+
+  .datos2 {
+    width: 100%;
+    border: 1px solid #0e0e0e;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background: #f1e8dd;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .datos3 {
+    width: 100%;
+    border: 1px solid #0e0e0e;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background: #f1e8dd;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .datospersonales p{
+    
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+    
+  .buttons {
+    width: 100%;
+    height: 40px;
+    background: black;
+    /* background: #6b6c6c; */
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  
+  .checkbox {
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    
+  }
+  
+  /* .formulariologin a {
+    
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    text-decoration: underline;
+  } */
+  .button {
+    width: 100%;
+    height: 40px;
+    background: black;    
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }

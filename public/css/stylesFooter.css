@@ -2,7 +2,12 @@
 a{text-decoration: none;
     color: black;}
    
-.footer{ border-top: .1rem solid rgba(0,0,0,.1);}
+.footer{ border-top: .1rem solid rgba(0,0,0,.1);
+margin-top: 30px;
+/* background: #f1e8dd; */
+background: black;
+color: white;
+}
 
 .footer .box-container{
     display: flex;
@@ -22,16 +27,19 @@ a{text-decoration: none;
     width:4rem;
     line-height: 4rem;
     text-align: center;
+    
   }
   
   .footer .box-container .box h3{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: white;
     
   }
   
   .footer .box-container .box p{
-    font-size: 1.3rem;
-    color:#666;
+    font-size: 1.5rem;
+    /* color:#666; */
+    color: white;
     padding:.7rem 0;
   }
   
@@ -42,8 +50,9 @@ a{text-decoration: none;
   .footer .box-container .box .links a{
     display: block;
     padding:.5rem 0;
-    font-size: 1rem;
-    color:#333;
+    font-size: 1.5rem;
+    /* color:#333; */
+    color: white;
     text-decoration: none;
   }
   

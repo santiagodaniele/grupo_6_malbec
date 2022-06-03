@@ -10,7 +10,7 @@
 <%- include ('../partials/header') %>
 <body>
                     <main>
-                        <div class="datospersonales"><h3>DATOS PERSONALES:</h3>
+                      <section class="datospersonales"><h5>DATOS PERSONALES:</h5>
                         <form action="/registro" method="post">
                             <p>
                               <input type="text" class= "datos" name="nombre" size="50" placeholder="Nombre" required></input>
@@ -20,10 +20,11 @@
                               </p>
                               <p>
                                 <p>
-                                    <label>Fecha de nacimiento</label>
+                                   <label>Fecha de nacimiento</label>
                                     </p>
                                     <p>
-                                    <select name="dia">
+                                      <div class="content-select">
+                                      <select name="dia">                                        
                                       <option value="1">1</option>
                                       <option value="2">2</option>
                                       <option value="3">3</option>
@@ -55,7 +56,8 @@
                                       <option value="29">29</option>
                                       <option value="30">30</option>
                                       <option value="31">31</option>                           
-                                    </select>
+                                    </select></div>
+                                    <div class="content-select2">                               
                                     <select name="mes">
                                       <option value="1">Enero</option>
                                       <option value="2">Febrero</option>
@@ -69,12 +71,14 @@
                                       <option value="10">Octubre</option>
                                       <option value="11">Noviembre</option>
                                       <option value="12">Diciembre</option>
-                                    </select>
+                                    </select></div>  
                                         <input type="text"  class= "datos2" name="año" size="30" required placeholder="Año"></input>
                                   </p>
+                                  <p>
                                   <label>Tipo de Documento:</label>
                                   </p>
                                   <p>
+                                  <div class="content-select2"> 
                                   <select name="documento" required> 
                                     <option value="vacio"></option>
                                     <option value="DNI">Documento Nacional de Identidad</option>
@@ -82,17 +86,17 @@
                                     <option value="LE">Libreta de enrolamiento</option>
                                     <option value="LC">Libreta Cívica</option>
                                     <option value="DEX">Documento Extranjero</option>
-                                </select>
+                                </select></div>
                                 <p>
                                     <input type="text"  class= "datos" name="numeroDNI" size="50"  required placeholder="Número de documento"></input>
                                   </p>
-                                  <h3>DATOS DE ENVÍO:</h3>
+                                  <h5>DATOS DE ENVÍO:</h5>
                                   <p>
                                     <label>Dirección:</label>
                                     </p>
                                     <p>
-                                    <input type="text"  class= "datos3" name="direccion" size="22.5"  placeholder="Calle" required></input>
-                                    <input type="text"  class= "datos3" name="Num-direccion" size="22.5"  placeholder="Número" required></input>
+                                    <input type="text"  class= "datos3" name="direccion" size="50"  placeholder="Calle" required></input>
+                                    <input type="text"  class= "datos3" name="Num-direccion" size="50"  placeholder="Número" required></input>
                                     <p>
                                     <input type="text"  class= "datos" name="localidad" size="50" placeholder="Localidad" required></input>
                                     </p>
@@ -103,7 +107,7 @@
                                     <label>Teléfono de contacto:</label></p>
                                     <p><input type="text"  class= "datos" size="50" name="telefono" required></input>
                                     </p>  
-                                  <h3>DATOS DE REGISTRO:</h3>
+                                  <h5>DATOS DE REGISTRO:</h5>
                                 <p>
                                 <label>E-mail:</label></p>
                                 <p><input type="email"  class= "datos" size="50" name="email" required></input> 
@@ -113,18 +117,17 @@
                               <p>  <input type="password"  class= "datos" size="50" name="password" required>
                               </p>
                               <p>
-                                <button type="submit">REGISTRARME</button>
+                                <input class= "button" type="submit" name="" value="Registrarme" >
                                 </p>
                                 <p>
-                                 <div class="checkbox"> <input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input>
+                                  <input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input>
                                   </p>
                                 <p>
                                   <input type="checkbox" name="newsletter" value="newsletter">Deseo recibir novedades y ofertas</input>
                                   </p>
-                                </div>
+                                </section>
                             </form>
-                          </div>
-                        </main>
+                          </main>
                         </body>
                         <!-----------------------------------------=FOOTER=----------------------------------------------------->
 <%- include ('../partials/footer') %>

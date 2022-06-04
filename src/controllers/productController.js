@@ -6,8 +6,9 @@ const products = JSON.parse(fileProducts)
 
 const productController = {
     product : (req, res) => {
-        res.render('./products/product')
-    },
+        const product = products.find(element => element.id == req.params.id)
+        res.render('./products/product', {product})
+    }, 
     productList : (req, res) => {
         const data = {
            vinosBlancos: products.filter(element => element.category === "vinos-blancos"),

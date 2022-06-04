@@ -25,72 +25,14 @@
             <div class="products">
                 <% productsMain.destacados.forEach(element =>{  %>
                 <article>
-                    <img src="../images/<%= element.image %>" alt="FondDeCave" class="product_img">
+                    <img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img">
                     <div class="main-article">
                         <p class="price">$<%= element.price %></p>
                         <p class="discount"><%= element.discount %>% off</p>
                         <h4 class="description"><%= element.name %></h4>
                     </div>
                 </article>
-                <% }) %>
-                <!-- <article>
-                    <img src="../images/img-tinto-malbec-impuro.jpg" alt="Impuro" class="product_img">
-                    <div class="main-article">
-                        <p class="price">$834,80</p>
-                        <p class="discount">35% off</p>
-                        <h4 class="description">Impuro</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="../images/img-tinto-cabernet-fincas-notables.jpg" alt="Fincas" class="product_img">
-                    <div class="main-article">
-
-                        <p class="price">$2.873,67</p>
-                        <p class="discount">30% off</p>
-                        <h4 class="description">Fincas Notables</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="../images/img-spirit-whisky-jameson.jpg" alt="Jameson" class="product_img">
-                    <div class="main-article">
-                        <p class="price">$3.150</p>
-                        <p class="discount">10% off</p>
-                        <h4 class="description">Jameson 750Ml</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="../images/img-spirit-whisky-jack-daniels.jpg" alt="Jack Daniels" class="product_img">
-                    <div class="main-article">
-                        <p class="price">$5.500</p>
-                        <p class="discount">5% off</p>
-                        <h4 class="description">Jack Daniels 750Ml</h4>
-                    </div>
-                </article>
-                <article>
-                    <a href="/product"><img src="../images/img-cerveza-rubia-corona.jpg" alt="Corona"
-                            class="product_img"></img></a>
-                    <div class="main-article">
-                        <p class="price">$330</p>
-                        <p class="discount">10% off</p>
-                        <h4 class="description">Corona 350Ml</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="../images/img-cerveza-rubia-galicia.jpg" alt="Galicia" class="product_img">
-                    <div class="main-article">
-                        <p class="price">$550</p>
-                        <p class="discount">5% off</p>
-                        <h4 class="description">Galicia 355Ml</h4>
-                    </div>
-                </article>
-                <article>
-                    <img src="../images/img-cerveza-rubia-schofferhofer.jpg" alt="Schofferhofer" class="product_img">
-                    <div class="main-article">
-                        <p class="price">$530</p>
-                        <p class="discount">5% off</p>
-                        <h4 class="description">Schofferhofer 550Ml</h4>
-                    </div>
-                </article> -->
+                <% }) %>                
             </div>
         </section>
     </main>

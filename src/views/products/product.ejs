@@ -6,58 +6,54 @@
 <%- include ('../partials/head') %>
 <link rel="stylesheet" href="css/stylesProductDetail.css">
 </head>
+<body>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
-<body>
-    <main>
-        <section>
-            <h3>Detalle de Producto</h3>
-            <br>
-            <br>
-            <div class="productos">
+
+
+    <div class="contenedor">
+        <div class="subcotenedor1">
+            <h2 class="titulo">Detalle de Producto: NOMBRE DEL PRODUCTO</h2>
+        </div>
+        <div class="subcontenedor2">
+            <div class="subcontenedor-imagen">
+                <img src="../images/img-cerveza-rubia-corona.jpg" alt="Corona" class="product_img">
+            </div>
+            <div class="subcontenedor-data">
                 <article>
-                    <img src="../images/img-cerveza-rubia-corona.jpg" alt="Corona" class="product_img">
+                    <h2 class="nombre-bebida">NOMBRE DEL PRODUCTO</h2>
+                    <p class="precio">
+                        <span>$PRECIO</span>
+                        <br>
+                        <span>DESCUENTO % OFF</span>
+                    </p>
+                    <br>
+                    <p class="cantidad">
+                        <input type="button" value="-">
+                        <input type="number" >
+                        <input type="button" value="+">
+                    </p>
+                    <br>
+                    <p>
+                        <button class="boton" type="submit">Agregar al Carrito</button>
+                    </p>
+                    <br>
+                    <span class="envio">Retiro GRATIS en sucursal</span>
+                    <br>
+                    <span class="envio">Envíos a todo el país</span>
                 </article>
-                <article class="info">
-                    <p class="nombre-bebida">Corona</p>
-                    <br>
-                    <p class="precio">$180</p>
-                    <br>
-                    <div>
-                    <input type="button" value="-">
-                    <input type="number">
-                    <input type="button" value="+">
-                </div>
-                    <br>
-                    <br>
-                    <button class="boton-compra" type="submit">Comprar</button>
-                    <br>
-                    <br>
-                    <span class="description">Retiro GRATIS en sucursal</span>
-                    <br>
-                    <span class="description">Envíos a todo el país</span>
-                </article>
+
             </div>
-            <div>
-                <p class="description">
-                    Descripción:
-                    <br>
-                    - "Graduación Alcohólica: 5%"
-                    <br>
-                    - "Presenta un color amarillo claro y brillante"
-                    <br>
-                    - "De espuma blanca y consistente"
-                    <br>
-                    - "De cuerpo medio, fresca, balanceada y muy fácil de beber"
-                </p>
-            </div>
-
-
-
-        </section>
-        </main>
-        </body>
+        </div>
+        <div class="subcontenedor3">
+            <p>
+                <span class="description">DESCRIPTION: Esta data viene del JSON DATA.</span>
+            </p>
+        </div>
+    </div>
+        
 
         <%- include ('../partials/footer') %> 
+    </body>
       
 </html>

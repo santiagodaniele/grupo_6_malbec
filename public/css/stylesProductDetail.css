@@ -1,123 +1,99 @@
-/*====GENERAL====*/
-*{
+* {
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;    
-    box-sizing: border-box;
+    box-sizing: border-box;       
 }
-
-body{font-family:'Roboto', sans-serif;
-    background-color: whitesmoke;}
-
-    /* body*/
-
-    main {
-        font-family: serif;
-        width: 100%;
-        padding: 20px;
-        
-    }
-
-    main section {
-        border-style:hidden;
-        padding: 10px;
-        width: 100%;
-        
-    }
-
-    main section div {
-        border-style: none;
-        display: flex;
-        width: 100%;
-        padding: 10px;
-        position: relative;
-    }
-
-    main section div article { 
-        display: flex;
-        border-style: none;       
-        width: 50%;
-        padding: 10px;
-        justify-content: center;
-
-    }   
-    
-    .info {
-        display: flex;
-        border-style: none;
-        flex-direction: column;
-        width: 50%;
-    }
-
-.productos {
+.contenedor {
     display: flex;
-    flex-wrap: wrap;
-    }
-
-.product_img {
-    width: 50%;
-    border-style: groove;        
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+    width: 90vw;
+    height: 50vh;
+    margin-bottom: 100px;
 }
-
-.nombre-bebida {
-    font-size: 40px;
+.subcotenedor1 {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: 10px;        
+}
+.titulo {
+    font-size: 18px;
     font-weight: bold;
 }
 
-.precio {
-    font-size: 30px;
-    color: red;
-}
-
-.boton-compra {
-    width: 30%;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5%;
-    background-color: blue;
-    color: white
-
-}
-
-.description{
-    font-size: 20px;
-    font-weight: bold;
+.subcontenedor2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    border-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: auto;
 }
 
-@media (min-width: 361px){
-
-    main {
-        margin: 20px;
-    }
-   
-    main section div article {
-        width: 50%;
-    }
-    
-    main section div article{
-        width: 45%;
-    }
-
-    
-    .description {
-        font-size: 16px;
-    }
-
-   
+.subcontenedor3 {
+    flex-direction: row;
 }
 
-@media (min-width: 769px){
-    main section div article{
-        width: 50%;
-    }
+.subcontenedor-imagen {
+    display: flex;
+    border-style: none;
+    margin: 10px;
+    width: 50%;
+           
 }
 
-    @media (min-width: 1024px){
+.product_img{
+    width: 30%;
+    height: 90%;
+    margin: auto;
+}
 
+.subcontenedor-data {
+    display: flex;
+    border-style: none;
+    margin: 10px;
     
-    }
-    .description {
-        font-size: 20px;
+}
 
-    }
+.nombre-bebida {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.precio {
+    font-size: 16px;
+}
 
+.description {
+    font-size: 14px;
+    font-weight: 100;
+    font-style: italic;
+    
+}
+.cantidad {
+    height: 20px;
+}
+.boton {
+    height: 30px;
+    width: 200px;
+    border-radius: 10%;
+    background-color: orange;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.envio {
+    font-size: 16px;
+    font-weight: 50;
+    font-style: oblique;
+}

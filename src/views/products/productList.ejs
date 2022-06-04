@@ -16,7 +16,7 @@
             <div class="products">
                 <% products.vinosTintos.forEach(element =>{  %>
                 <article>
-                    <img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img">
+                    <a href="product/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
                     <div class="main-article">
                         <p class="price">$<%= element.price%></p>
                         <p class="discount"><%= element.discount%>% OFF</p>
@@ -29,7 +29,7 @@
             <div class="products">
                 <% products.vinosBlancos.forEach(element =>{  %>
                 <article>
-                    <img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img">
+                    <a href="product/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
                     <div class="main-article">
                         <p class="price">$<%= element.price %></p>
                         <p class="discount"><%= element.discount %>% OFF</p>
@@ -42,7 +42,7 @@
             <div class="products">
                 <% products.cervezas.forEach(element =>{  %>
                 <article>
-                    <img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img">
+                    <a href="product/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
                     <div class="main-article">
                         <p class="price">$<%= element.price %></p>
                         <p class="discount"><%= element.discount %>% OFF</p>
@@ -55,7 +55,7 @@
             <div class="products">
             <% products.spirits.forEach(element =>{  %>
                 <article>
-                    <img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img">
+                    <a href="product/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
                     <div class="main-article">
                         <p class="price">$<%= element.price %></p>
                         <p class="discount"><%= element.discount %>% OFF</p>

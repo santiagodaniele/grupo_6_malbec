@@ -2,7 +2,7 @@
 <html lang="en">
 <!-----------------------------------------=HEAD=------------------------------------------------------->
 <head>
-    <title>Lista de productos</title>
+    <title>Vinos</title>
 <%- include ('../partials/head') %>
 <link rel="stylesheet" href="css/stylesindex.css">
 </head>
@@ -37,32 +37,6 @@
                     </div>
                 </article>
                 <% }) %>
-            </div>
-            <h3 id="cervezas">CERVEZAS</h3>
-            <div class="products">
-                <% products.cervezas.forEach(element =>{  %>
-                <article>
-                    <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
-                    <div class="main-article">
-                        <p class="price">$<%= element.price %></p>
-                        <p class="discount"><%= element.discount %>% OFF</p>
-                        <h4 class="description"><%= element.name %></h4>
-                    </div>
-                </article>
-                <% }) %>
-            </div>
-            <h3 id="spirits">SPIRITS </h3>
-            <div class="products">
-            <% products.spirits.forEach(element =>{  %>
-                <article>
-                    <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
-                    <div class="main-article">
-                        <p class="price">$<%= element.price %></p>
-                        <p class="discount"><%= element.discount %>% OFF</p>
-                        <h4 class="description"><%= element.name %></h4>
-                    </div>
-                </article>
-            <% }) %>
             </div>
         </section>
     </main>

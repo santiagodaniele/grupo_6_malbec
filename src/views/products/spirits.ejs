@@ -2,43 +2,30 @@
 <html lang="en">
 <!-----------------------------------------=HEAD=------------------------------------------------------->
 <head>
-    <title>Home</title>
+    <title>Spirits</title>
 <%- include ('../partials/head') %>
+<link rel="stylesheet" href="css/stylesindex.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
-<body>
 <%- include ('../partials/header') %>
-<!-----------------------------------------=SLIDER=----------------------------------------------------->
-<div class="slider">
-    <ul>
-    <li><img src="images/ban_6-05_1.jpg" alt="ban_6-05_1"></li>
-    <li><img src="images/beneficios-vinos-18-11.jpg" alt="beneficios-vinos-18-11"></li>
-    <li><img src="images/beneficios-whiskies-18-11.jpg" alt="beneficios-whiskies-18-11"></li>
-</ul>
-
-</div>
 
     <!-----------------------------------------=SECTION=----------------------------------------------------->
     <main>
         <section class="last-visit">
-            <h3>DESTACADOS</h3>
+            <h3 id="spirits">SPIRITS </h3>
             <div class="products">
-                <% productsMain.destacados.forEach(element =>{  %>
+            <% products.spirits.forEach(element =>{  %>
                 <article>
-                    <a href="product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
+                    <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
                     <div class="main-article">
                         <p class="price">$<%= element.price %></p>
-                        <p class="discount"><%= element.discount %>% off</p>
+                        <p class="discount"><%= element.discount %>% OFF</p>
                         <h4 class="description"><%= element.name %></h4>
                     </div>
                 </article>
-                <% }) %>                
+            <% }) %>
             </div>
         </section>
     </main>
-
-
     <!-----------------------------------------=FOOTER=----------------------------------------------------->
     <%- include ('../partials/footer') %>
-</body>
-</html>

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-----------------------------------------=HEAD=------------------------------------------------------->
+
 <head>
     <title>Subir archivo</title>
-<%- include ('../partials/head') %>
-<link rel="stylesheet" href="../css/stylesABMProduct.css">
+    <%- include ('../partials/head') %>
+        <link rel="stylesheet" href="/css/stylesABMProduct.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
-<body>
+
+    <body>
         <main>
-       <section class="formulariologin"><h5>Formulario de carga de productos</h5>
-        <p>
-        <label>Categoría</label><select name="categoria" required>
-            <option value="vacio"></option>
-            <option value="Vinos">Vinos</option>
-            <option value="Cervezas">Cervezas</option>
-            <option value="Spirits"'>Spirits</option>
+            <section class="formulariologin">
+                <h5>Formulario de carga de productos</h5>
+                <p>
+                <form method="POST" action="" enctype= "multipart/form-data">
+                    <label>Categoría</label><select name="categoria" required>
+                        <option value="vacio"></option>
+                        <option value="Vinos">Vinos</option>
+                        <option value="Cervezas">Cervezas</option>
+                        <option value="Spirits"'>Spirits</option>
         </select>
         <label>Precio: </label>
         <input class="controls" type="text" name="precio">
@@ -45,16 +49,14 @@
             <label>Descripción: </label>
             </p>
             <p>
-            <input class="controls" type="text" name="descripcion">      
+            <input class="controls" type="textarea" name="descripcion">      
         </p>   
         <p>
             <button type="submit">AGREGAR</button>
             </p>
             </div>
-       
+            </form>
             </section>
-        </section>
-      
     </main>
-    <%- include ('../partials/footer') %> 
+    <%- include ('../partials/footer') %>
 </html>

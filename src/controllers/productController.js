@@ -18,6 +18,25 @@ const productController = {
         }
         res.render('./products/productList', {products:data})
     },
+    vinos : (req, res) => {
+        const vinos = {
+            vinosBlancos: products.filter(element => element.category === "vinos-blancos"),
+            vinosTintos: products.filter(element => element.category === "vinos-tintos"),
+        }
+        res.render('./products/vinos', {products:vinos})
+    },
+        cervezas : (req, res) => {
+        const cervezas = {
+        cervezas: products.filter(element => element.category === "cervezas"),
+        }
+        res.render('./products/cervezas', {products:cervezas})
+    },
+        spirits : (req, res) => {
+        const spirits = {
+        spirits: products.filter(element => element.category === "spirits") 
+        }
+        res.render('./products/spirits', {products:spirits})
+    },
 }
 
 module.exports = productController;

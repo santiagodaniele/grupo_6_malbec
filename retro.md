@@ -26,3 +26,15 @@ Mas de: seguir apoyando a los integrantes que les cuesta incorporar algunos conc
 Seguir haciendo: seguir con la dinámica de trabajo, seguir juntandonos semanalmente y seguir comunicados a traves del grupo de wasap.
 Menos de: dejar tareas hasta ultimo momento
 Dejar de: en este punto no encontramos falencia evidente.
+
+Retrospectiva Sprint 3:
+Durante este tercer sprint, siguio fluyendo la comunicacion entre los 4 y nos mantuvimos mas conectados tanto por el grupo de wasap como asi tambien en las reuniones
+que nos propusimos hacer dos veces a la semana.
+Aprovechamos tambien las  aplicaciones practicas de las clasese en vivo, y se nota que los 4 estamos super comprometidos en avanzar en el proyecto e ir aprendiendo tanto los conocimientos de las clases como la exprienecia que va teniendo cada uno haciendo algunas tareas repetidas.
+
+Metodología Estrella de Mar:
+Empezar a hacer: darle mayor importancia al tablero de Trello.
+Mas de: incorporar los nuevos conocimientos
+Seguir haciendo: seguir comprometidos con el proyecto, mantener la dinamica y la comunicacion.
+Menos de: creo que en este punto no vimos grandes difiultades
+Dejar de: sin comentarios

@@ -10,53 +10,63 @@
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
 
-    <body>
-        <main>
-            <section class="formulariologin">
-                <h5>Formulario de carga de productos</h5>
-                <p>
-                <form method="POST" action="" enctype= "multipart/form-data">
-                    <label>Categoría</label><select name="categoria" required>
-                        <option value="vacio"></option>
-                        <option value="Vinos">Vinos</option>
-                        <option value="Cervezas">Cervezas</option>
-                        <option value="Spirits"'>Spirits</option>
-        </select>
-        <label>Precio: </label>
-        <input class="controls" type="text" name="precio">
-        <label>Descuento: </label>
-        <input class="controls" type="text" name="descuento">
+
+<body>
+    <main>
+        <section class="formulariologin">
+            <h5>Formulario de carga de productos</h5>
+            <p>
+            <form action="/admin/create" method="POST" enctype= "multipart/form-data">
+                <label for="category" >Categoría:</label>
+                <select name="category" id="category" required  class="controls">
+                    <option value="">Elegí</option>
+                    <option value="vinos-tintos">Vinos Tintos</option>
+                    <option value="vinos-blancos">Vinos Blancos</option>
+                    <option value="cervezas">Cervezas</option>
+                    <option value="spirits">Spirits</option>
+    </select>
+    <label for="price">Precio:</label>
+    <input  type="text" id="price" name="price" placeholder="Ej: 5678" class="controls">
+    <label for="discount">Descuento: </label>
+    <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="controls">
+    </p>
+    <p>
+        <label for="name">Nombre: </label>
+        <input  type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes" class="controls">
+        <label for="subCategory">SubCategoría:</label>
+            <select name="subCategory" id="subCategory" class="controls">
+                <option value="">Elegí</option>
+                <option value="destacados">Destacados</option>
+                <option value="ultimos-agregados">Utlimos agregados</option>
+                <option value="en-oferta">En Oferta</option>
+            </select>          
         </p>
+    <p>
+        <label for="bodega">Marca: </label>
+        <input  type="text" id="bodega" name="bodega" placeholder="Ej: Quilmes" class="controls">
+        <label for="variedad">Variedad: </label>
+        <input  type="text" id="variedad" name="variedad" placeholder="Ej: Rubia" class="controls">    
+        <label for="anio">Año: </label>
+        <input  type="text" id="anio" name="anio" class="controls">  
+        <label for="stock">Stock: </label>
+        <input  type="text" id="stock" name="stock" class="controls">  
+        </p>
+     <p> 
+        <label for="image">Foto: </label>
+        <input name="image" id="image" class="buttons" type="file"></input>
+        </p> 
         <p>
-            <label>Nombre del producto: </label>
-            <input class="controls" type="text" name="product-name">          
-            </p>
-        <p>
-            <label>Marca: </label>
-            <input class="controls" type="text" name="marca">
-            <label>Variedad: </label>
-            <input class="controls" type="text" name="variedad">    
-            <label>Año: </label>
-            <input class="controls" type="text" name="año">  
-            <label>Stock: </label>
-            <input class="controls" type="text" name="stock">  
-            </p>
-         <p> 
-            <label>Foto: </label>
-            <input class="buttons" type="file" name="subir-archivo" accept=".jpg" value="Seleccionar archivo">
-            </p> 
-            <p>
-            <label>Descripción: </label>
-            </p>
-            <p>
-            <input class="controls" type="textarea" name="descripcion">      
-        </p>   
-        <p>
-            <button type="submit">AGREGAR</button>
-            </p>
-            </div>
-            </form>
-            </section>
-    </main>
-    <%- include ('../partials/footer') %>
+        <label for="description">Descipción:</label>
+        <textarea name="description" id="description" class="description"></textarea>
+        </p>       
+    <p>
+        <button type="submit" class="botton">AGREGAR</button>
+        </p>
+        </div>
+        </form>
+        </section>
+</main>
+<%- include ('../partials/footer') %>
+</body>
+
 </html>

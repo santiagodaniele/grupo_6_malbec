@@ -13,9 +13,9 @@
         <section class="formulariologin">
             <h5>Formulario de edición de productos</h5>
             <p>
-            <form action="/admin/product/edit" method="¿?" enctype= "multipart/form-data">
-                <label for="category" >Categoría:</label>
-                <select name="category" id="category" required  class="controls">
+            <form action="/admin/edit/<%= bebidaEditar.id%>?_method=PUT" method="POST" enctype= "multipart/form-data" >
+                <label for="category" required >Categoría:</label>
+                <select name="category" id="category" class="controls">
                     <option value="">Elegí</option>
                     <option value="vinos-tintos">Vinos Tintos</option>
                     <option value="vinos-blancos">Vinos Blancos</option>
@@ -23,13 +23,13 @@
                     <option value="spirits">Spirits</option>
     </select>
     <label for="price">Precio:</label>
-    <input  type="text" id="price" name="price" placeholder="Ej: 5678" class="controls">
-    <label for="discount">Descuento: </label>
+    <input  type="text" id="price" name="price" placeholder="Ej: 5678" required class="controls">
+    <label for="discount" required >Descuento: </label>
     <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="controls">
     </p>
     <p>
         <label for="name">Nombre: </label>
-        <input  type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes" class="controls">
+        <input  type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes" required class="controls">
         <label for="subCategory">SubCategoría:</label>
             <select name="subCategory" id="subCategory" class="controls">
                 <option value="">Elegí</option>
@@ -53,17 +53,32 @@
         <input name="image" id="image" class="buttons" type="file"></input>
         </p> 
         <p>
-        <label for="description">Descipción:</label>
+        <label for="description" required >Descipción:</label>
         <textarea name="description" id="description" class="description"></textarea>
-        </p>       
+        </p>
+         <!--Aquí solicito la imagen-->
+         <div>
+            <figure>
+                <img  class="img-view" src="/images/<%= bebidaEditar.image%>" alt="bebida <%= bebidaEditar.name%>">
+            </figure>
+            <input type="hidden"  name="oldImagen"  value="<%= bebidaEditar.image%>" >
+            <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+            <input type="file" name="image" >
+            <!--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="imagen" required value=""> 
+
+            <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
+          </div>
+
     <p>
         <button type="submit" class="botton">Editar</button>
+        <button><a href="/admin/administrar" class="volver">Volver</a></button>
         </p>
+        
         </div>
         </form>
         </section>
 </main>
-<%- include ('../partials/footer') %>
+
 </body>
 
 </html>

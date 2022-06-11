@@ -3,7 +3,7 @@
 <!-----------------------------------------=HEAD=------------------------------------------------------->
 
 <head>
-    <title>Producto</title>
+    <title>Detalle de Producto</title>
     <%- include ('../partials/head') %>
         <link rel="stylesheet" href="/css/stylesProductDetail.css">
 </head>
@@ -14,58 +14,43 @@
 
         <div class="contenedor">
             <div class="subcotenedor1">
-                <h2 class="titulo">Detalle de Producto: <%= product.name %>
+                <h2 class="titulo">Detalle de Producto: <%= miBebida.name %>
                 </h2>
             </div>
             <div class="subcontenedor2">
                 <div class="subcontenedor-imagen">
-                    <img src="/images/<%= product.image %>" alt="Corona" class="product_img">
+                    <img src="/images/<%= miBebida.image %>" alt="Corona" class="product_img">
                 </div>
                 <div class="subcontenedor-data">
                     <article>
                         <h3 class="bodega">
-                            <%= product.bodega %>
+                            <%= miBebida.bodega %>
                         </h3>
                         <h2 class="nombre-bebida">
-                            <%= product.name %>
+                            <%= miBebida.name %>
                         </h2>
                         <h2 class="variedad">
-                            <%= product.variedad %>
+                            <%= miBebida.variedad %>
                         </h2>
                         <p class="precio">
-                            <span>$ <%= product.price%></span>
+                            <span>$ <%= miBebida.price%></span>
                             <br>
                             <span>
-                                <%= product.discount%>% OFF
+                                <%= miBebida.discount%>% OFF
                             </span>
-                        </p>
-                        <br>
-                        <p class="cantidad">
-                            <input type="button" value="-">
-                            <input type="number">
-                            <input type="button" value="+">
-                        </p>
-                        <br>
-                        <p>
-                            <button class="boton" type="submit">Agregar al Carrito</button>
-                        </p>
-                        <br>
-                        <span class="envio">Retiro GRATIS en sucursal</span>
-                        <br>
-                        <span class="envio">Envíos a todo el país</span>
+                        </p>                        
                     </article>
 
                 </div>
             </div>
             <div class="subcontenedor3">
                 <p>
-                    <span class="description">Descripción: <%= product.description%></span>
+                    <span class="description">Descripción: <%= miBebida.description%></span>
                 </p>
             </div>
+            <button><a href="/admin/administrar" class="volver">Volver</a></button>
+            
         </div>
-
-
-        <%- include ('../partials/footer') %>
 </body>
 
 </html>

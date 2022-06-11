@@ -16,18 +16,19 @@ app.use (methodOverride("_method")); // Pasar poder pisar el method="POST" en el
 app.set('views', path.resolve(__dirname, './views'));
 app.set ('view engine', 'ejs');
 
-// ************ Route System require and use() ************
-const mainRouter = require ('./routers/main');
-const userRouter = require ('./routers/user');
-const productRouter = require ('./routers/product');
-const adminRouter = require ('./routers/admin');
+// ************ Route System require ************
+const mainRoutes = require ('./routes/main');
+const userRoutes = require ('./routes/user');
+const productRoutes = require ('./routes/product');
+const adminRoutes = require ('./routes/admin');
 
-app.use('/', mainRouter);
-app.use('/user', userRouter);
-app.use('/product', productRouter);
-app.use('/admin', adminRouter);
+// ************  use Routes() ************
+app.use('/', mainRoutes);
+app.use('/user', userRoutes);
+app.use('/product', productRoutes);
+app.use('/admin', adminRoutes);
 
-
+// ************ up server ************
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log('Servidor iniciado en el puerto: ' + port);

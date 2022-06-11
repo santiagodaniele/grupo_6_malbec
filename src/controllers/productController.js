@@ -5,9 +5,9 @@ const products = JSON.parse(fileProducts)
 
 
 const productController = {
-    product : (req, res) => {
+    productDetail : (req, res) => {
         const product = products.find(element => element.id == req.params.id)
-        res.render('./products/product', {product})
+        res.render('./products/productDetail', {product})
     }, 
     productList : (req, res) => {
         const data = {

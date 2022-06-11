@@ -4,8 +4,12 @@ const fileProducts = fs.readFileSync(path.resolve("src/data/productDataBase.json
 const products = JSON.parse(fileProducts)
 
 const adminController = {
+    index: (req,res) => {
+        let bebidas = products;
+        res.render('./admin/administrar', {bebidas})
+    },
     create : (req, res) => {
-        res.render('./products/create')
+        res.render('./admin/create')
     },
     store: (req, res) => {
         console.log(req.body)
@@ -27,10 +31,44 @@ const adminController = {
         fs.writeFileSync(path.resolve("src/data/productDataBase.json"), JSON.stringify(products, null, " "));
         res.redirect("/product/list");//me redirige como pide el ejercicio, a la ruta /productos
         },//("/product/" + newProduct.id) esto seria si quiero ir al detalle
+        show: (req,res) =>{
+            let miBebida;
+            products.forEach(bebida => {
+                if(bebida.id == req.params.id){
+                    miBebida = bebida;
+                }
+                
+            });
+            res.render('./admin/detail', {miBebida})
+        },
 
     edit : (req, res) => {
-        res.render('./products/edit')
+        const modoId = req.params.id;
+        let bebidaEditar = products.find(bebida => bebida.id == modoId);
+        res.render('./admin/edit', {bebidaEditar});
     },
+    update: (req,res) =>{
+        req.body.id = req.params.id;
+        req.body.image = req.file ? req.file.filename : req.body.oldImagen;
+        let bebidasUpdate = products.map(bebida =>{
+            if(bebida.id == req.body.id){
+                return bebida = req.body;
+            }
+            return bebida;
+        })
+        let bebidaActualizar = JSON.stringify(bebidasUpdate,null,2);
+        fs.writeFileSync(path.resolve(__dirname,'../data/productDataBase.json'),bebidaActualizar);
+        res.redirect('/admin/administrar');
+
+},
+destroy: (req,res) =>{
+    const bebidaDeleteId = req.params.id;
+    const bebidasFinal = products.filter(bebida => bebida.id != bebidaDeleteId);
+    let bebidasGuardar = JSON.stringify(bebidasFinal,null,2)
+    fs.writeFileSync(path.resolve(__dirname, '../data/productDataBase.json'),bebidasGuardar);
+    res.redirect('/admin/administrar');
+
+}
 }
 
 module.exports = adminController;

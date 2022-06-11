@@ -8,7 +8,7 @@ const mainController = {
         const data = {
         destacados: productsMain.filter(element => element.subCategory === "destacados")
     }
-        res.render('./products/main', {productsMain:data})
+        res.render('main', {productsMain:data})
     },
     login : (req, res) => {
             res.render('./users/login')

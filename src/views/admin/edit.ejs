@@ -14,9 +14,9 @@
             <h5>Formulario de edición de productos</h5>
             <p>
             <form action="/admin/edit/<%= bebidaEditar.id%>?_method=PUT" method="POST" enctype= "multipart/form-data" >
-                <label for="category" required >Categoría:</label>
-                <select name="category" id="category" class="controls">
-                    <option value="">Elegí</option>
+                <label for="category"  >Categoría:</label>
+                <select name="category" id="category" required class="controls">
+                    <option disabled selected>Selecciona una opción</option>
                     <option value="vinos-tintos">Vinos Tintos</option>
                     <option value="vinos-blancos">Vinos Blancos</option>
                     <option value="cervezas">Cervezas</option>
@@ -30,7 +30,7 @@
     <p>
         <label for="name">Nombre: </label>
         <input  type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes" required class="controls">
-        <label for="subCategory">SubCategoría:</label>
+        <label for="subCategory" required >SubCategoría:</label>
             <select name="subCategory" id="subCategory" class="controls">
                 <option value="">Elegí</option>
                 <option value="destacados">Destacados</option>
@@ -48,10 +48,10 @@
         <label for="stock">Stock: </label>
         <input  type="text" id="stock" name="stock" class="controls">  
         </p>
-     <p> 
+     <!-- <p> 
         <label for="image">Foto: </label>
         <input name="image" id="image" class="buttons" type="file"></input>
-        </p> 
+        </p>  -->
         <p>
         <label for="description" required >Descipción:</label>
         <textarea name="description" id="description" class="description"></textarea>

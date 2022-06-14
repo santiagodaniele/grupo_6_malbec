@@ -10,7 +10,7 @@
 <%- include ('../partials/header') %>
 <body>
     <main>
-        <section class="formulariologin">
+        <section class="formularioedit">
             <h5>Formulario de edición de productos</h5>
             <p>
             <form action="/admin/edit/<%= bebidaEditar.id%>?_method=PUT" method="POST" enctype= "multipart/form-data" >
@@ -52,10 +52,14 @@
         <label for="image">Foto: </label>
         <input name="image" id="image" class="buttons" type="file"></input>
         </p>  -->
+       <br>
+       
         <p>
         <label for="description" required >Descipción:</label>
         <textarea name="description" id="description" class="description"></textarea>
         </p>
+        <br>
+        <br>
          <!--Aquí solicito la imagen-->
          <div>
             <figure>
@@ -69,8 +73,10 @@
             <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
           </div>
 
-    <p>
-        <button type="submit" class="botton">Editar</button>
+          <br>
+          <br>
+          <p>
+        <button type="submit" class="button2">Editar</button>
         <button><a href="/admin/administrar" class="volver">Volver</a></button>
         </p>
         

@@ -8,34 +8,54 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  
-     
+       
 }
 
-.formulariologin {
+.formularioedit {
   width: 900px;
   height: 340px;
-  background: rgba(248, 244, 244, 0.94);
-  /* background: #787474; */
+  background: rgba(248, 244, 244, 0.94);  
   margin: auto;
   margin-top: 50px;
   margin-bottom: 300px;
-  /* box-shadow: 7px 13px 37px #000; */
-  padding: 20px 30px;
-  
+  padding: 20px 30px;  
   color: rgb(12, 12, 12);
   text-align: center;
 
   
 }
-
-.formulariologin h5 {
+.formulariocreate {
+  width: 900px;
+  height: 340px;
+  background: rgba(248, 244, 244, 0.94);  
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 300px;
+  padding: 20px 30px;  
+  color: rgb(12, 12, 12);
+  text-align: center;}
+  
+.formularioAdmin {
   margin: 0;
   text-align: center;
   height: 40px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #000;
-  font-size: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1.5px solid #000;
+  font-size: 30px;
+  
+}
+
+table {
+  background-color: #f1e8dd;
+}
+h5{
+  margin: 0;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 80px;
+  border-bottom: 1.5px solid #000;
+  font-size: 30px;
+   
 }
 
 .controls {
@@ -48,55 +68,38 @@ body {
   font-weight: bold;
 }
 
-.buttons {
+.button {
   width: 100%;
   height: 40px;
   background: black;
-  /* background: #6b6c6c; */
   border: none;
   color: white;
   margin-bottom: 16px;
 }
-
-/* .form-login p{
+.button2 {
+  width: 200px;
   height: 40px;
-  text-align: center;
-  border-bottom: 1px solid;
-} */
-
-/* .form-login a {
-  
+  background: black;
+  border: none;
+  border-radius: 10px;
   color: white;
-  text-decoration: none;
-  font-size: 14px;
-} */
+  margin-bottom: 16px;
+}
 
-/* .form-login a:hover {
-  text-decoration: underline;
-  color: white;
-  
-} */
 
 .description{
-  background-color: lightgrey;
+  background-color:  #f1e8dd;
   width: 900px;
   height: 100px;
 }
-.botton {
-  width: 120px;
-  height: 60px;
-  background-color: orange;
-  color: #000;
-  font-weight: bold;
-  border-radius: 50px;
-  font-size: 20;
-}
+
 .volver {
   font-size: 20px;
   color: black;
   font-weight: bold;
   align-items: center;
   text-decoration: none;
+  color: rgb(63, 62, 62)
   
 }
 

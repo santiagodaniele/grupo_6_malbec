@@ -1,8 +1,7 @@
 
-a{text-decoration: none;
-    color: black;}
+
    
-.footer{ border-top: .1rem solid rgba(0,0,0,.1);
+.footer{ border-top: .1rem solid whitesmoke;
 margin-top: 30px;
 /* background: #f1e8dd; */
 background: black;
@@ -33,8 +32,9 @@ color: white;
   .footer .box-container .box h3{
     font-size: 1.8rem;
     color: white;
-    
-  }
+    font-weight: 700;
+    width: 100%;
+    }
   
   .footer .box-container .box p{
     font-size: 1.5rem;

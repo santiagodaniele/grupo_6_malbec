@@ -11,66 +11,58 @@
 <%- include ('../partials/header') %>
 
 
-<body>
-    <main>
-        <section class="formulariocreate">
-            <h5>Formulario de carga de productos</h5>
-            <p>
-            <form action="/admin/create" method="POST" enctype= "multipart/form-data">
-                <label for="category" >Categoría:</label>
-                <select name="category" id="category" required  class="controls">
-                    <option value="">Elegí</option>
-                    <option value="vinos-tintos">Vinos Tintos</option>
-                    <option value="vinos-blancos">Vinos Blancos</option>
-                    <option value="cervezas">Cervezas</option>
-                    <option value="spirits">Spirits</option>
-    </select>
-    <label for="price">Precio:</label>
-    <input  type="text" id="price" name="price" placeholder="Ej: 5678" class="controls">
-    <label for="discount">Descuento: </label>
-    <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="controls">
-    </p>
-    <p>
-        <label for="name">Nombre: </label>
-        <input  type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes" class="controls">
-        <label for="subCategory">SubCategoría:</label>
-            <select name="subCategory" id="subCategory" class="controls">
-                <option value="">Elegí</option>
-                <option value="destacados">Destacados</option>
-                <option value="ultimos-agregados">Utlimos agregados</option>
-                <option value="en-oferta">En Oferta</option>
-            </select>          
-        </p>
-    <p>
-        <label for="bodega">Marca: </label>
-        <input  type="text" id="bodega" name="bodega" placeholder="Ej: Quilmes" class="controls">
-        <label for="variedad">Variedad: </label>
-        <input  type="text" id="variedad" name="variedad" placeholder="Ej: Rubia" class="controls">    
-        <label for="anio">Año: </label>
-        <input  type="text" id="anio" name="anio" class="controls">  
-        <label for="stock">Stock: </label>
-        <input  type="text" id="stock" name="stock" class="controls">  
-        </p>
-        <br>
-        <br>
-        <p> 
-        <label for="image">Foto: </label>
-        <input name="image" id="image" class="buttons" type="file"></input>
-        </p> 
-        <p>
-        <label for="description">Descipción:</label>
-        <textarea name="description" id="description" class="description"></textarea>
-        </p>       
-        <br>
-        <br>
-        <p>
-        <button type="submit" class="button2">AGREGAR</button>
-        <button><a href="./administrar" class="volver" >Volver</a></button>
-        </p>
-        </div>
-        </form>
-        </section>
-</main>
-</body>
+    <body>
+        <main>
+            <section class="formulariocreate">
+                <h5>FORMULARIO DE CARGA DE PRODUCTOS</h5>
+                <form action="/admin/create" method="POST" enctype="multipart/form-data">
+                    <label class="col-sm-3 col-form-label is-required" for="category"><span>Categoría:</span></label>
+                    <select name="category" id="category" required class="content-select2">
+                        <option value="">Elegí</option>
+                        <option value="vinos-tintos">Vinos Tintos</option>
+                        <option value="vinos-blancos">Vinos Blancos</option>
+                        <option value="cervezas">Cervezas</option>
+                        <option value="spirits">Spirits</option>
+                    </select>
+                    <label class="col-sm-3 col-form-label is-required" for="price"><span>Precio:</span></label>
+                    <input type="text" id="price" name="price" placeholder="Ej: 5678" >
+                    <label class="col-sm-3 col-form-label is-required" for="discount"><span>Descuento:</span></label>
+                    <input type="text" id="discount" name="discount" placeholder="Ej: 15" >
+                    <label class="col-sm-3 col-form-label is-required" for="name"><span>Nombre:</span></label>
+                    <input type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes">
+                    <label class="col-sm-3 col-form-label is-required" for="subCategory"><span>SubCategoría:</span></label>
+                    <select name="subCategory" id="subCategory" class="content-select2">
+                        <option value="">Elegí</option>
+                        <option value="destacados">Destacados</option>
+                        <option value="ultimos-agregados">Utlimos agregados</option>
+                        <option value="en-oferta">En Oferta</option>
+                    </select>
+
+                    <label class="col-sm-3 col-form-label is-required" for="bodega"><span>Marca:</span></label>
+                    <input type="text" id="bodega" name="bodega" placeholder="Ej: Quilmes" >
+                    <label class="col-sm-3 col-form-label is-required" for="variedad"><span>Variedad:</span></label>
+                    <input type="text" id="variedad" name="variedad" placeholder="Ej: Rubia" >
+                    <label class="col-sm-3 col-form-label is-required" for="anio"><span>Año:</span></label>
+                    <input type="text" id="anio" name="anio" >
+                    <label class="col-sm-3 col-form-label is-required" for="stock"><span>Stock:</span></label>
+                    <input type="text" id="stock" name="stock" >
+                    <br>
+                    <br>
+                    <label class="col-sm-3 col-form-label is-required" for="image"><span>Foto:</span></label>
+                    <br>
+                    <input name="image" id="image" class="buttons" type="file"></input>
+                    <br>
+                    <br>
+                    <label class="col-sm-3 col-form-label is-required" for="description"><span>Descripción:</span></label>
+                    <textarea name="description" id="description" class="description"></textarea>
+                    <br>
+                    <br>
+                    <button type="submit" class="button2">AGREGAR</button>
+                    <button class="button2"><a class="volver" href="./administrar">Volver</a></button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
 
 </html>

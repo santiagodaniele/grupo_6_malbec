@@ -6,10 +6,10 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-
 }
 
-.formularioedit {
+
+/* .formularioedit {
   width: 900px;
   height: 340px;
   background: rgba(248, 244, 244, 0.94);
@@ -21,19 +21,8 @@ body {
   text-align: center;
 
 
-}
+} */
 
-.formulariocreate {
-  width: 900px;
-  height: 340px;
-  background: rgba(248, 244, 244, 0.94);
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 300px;
-  padding: 20px 30px;
-  color: rgb(12, 12, 12);
-  text-align: center;
-}
 
 .formularioAdmin {
   margin: 0;
@@ -42,7 +31,6 @@ body {
   margin-bottom: 50px;
   border-bottom: 1.5px solid #000;
   font-size: 30px;
-
 }
 
 article a{
@@ -54,7 +42,78 @@ table {
   font-size: 14px;
 }
 
-.controls {
+
+.formularioedit h5,.formulariocreate h5 {
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 5px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #c5c5c5
+  }
+
+span{
+  font-size: 13px;
+}
+
+.is-required:after {
+  font-size: 13px;
+  content: '*';
+  margin-left: 3px;
+  color: red;
+  font-weight: bold;
+}
+
+textarea,input[type=text],[type=email],[type=password],.content-select2 {
+  background: #f1e8dd;
+  background-clip: padding-box;
+  border: 1px solid #c2c2c2;
+  border-radius: 1px;
+  margin: 0 0 5px;
+  font-size: 14px;
+  height: 32px;
+  line-height: 1.428571429;
+  padding: 0 9px;
+  vertical-align: baseline;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+select{
+  font-size: 13px;
+  height: 32px;
+  margin: 0 0 5px;
+  padding: 0 9px;
+  border: 1px solid #c2c2c2;
+  border-radius: 1px;
+  line-height: 1.428571429;
+  background: #f1e8dd;
+}
+
+div{
+  text-align: center;
+}
+
+.button2{
+  width: 100%;
+    height: 40px;
+    font-weight: 700;
+    background: #000;
+    border-radius: 5px;
+    border: transparent;
+    font-family: initial;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: white;
+    margin: 5px;
+}
+.volver{
+  text-decoration: none;
+  color: whitesmoke;
+}
+/* .controls {
   width: 100px;
   border: 1px solid #0e0e0e;
   margin-bottom: 15px;
@@ -62,9 +121,9 @@ table {
   background: #f1e8dd;
   font-size: 14px;
   font-weight: bold;
-}
+} */
 
-.button {
+/* .button {
   width: 100%;
   height: 40px;
   background: black;
@@ -81,10 +140,10 @@ table {
   border-radius: 10px;
   color: white;
   margin-bottom: 16px;
-}
+} */
 
 
-.description {
+/* .description {
   background-color: #f1e8dd;
   width: 900px;
   height: 100px;
@@ -97,7 +156,7 @@ table {
   align-items: center;
   text-decoration: none;
   color: rgb(63, 62, 62)
-}
+} */
 
 @media(max-width:451px){
   .formularioAdmin{font-size: 24px;}}

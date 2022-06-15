@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-----------------------------------------=HEAD=------------------------------------------------------->
+
 <head>
     <title>Editar producto</title>
-<%- include ('../partials/head') %>
-<link rel="stylesheet" href="/css/stylesABMProduct.css">
+    <%- include ('../partials/head') %>
+        <link rel="stylesheet" href="/css/stylesABMProduct.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
-<%- include ('../partials/header') %>
+
 <body>
-    <main>
-        <section class="formularioedit">
-            <h5>Formulario de edición de productos</h5>
-            <p>
-            <form action="/admin/edit/<%= bebidaEditar.id%>?_method=PUT" method="POST" enctype= "multipart/form-data" >
-                <label for="category"  >Categoría:</label>
-                <select name="category" id="category" required class="controls">
-                    <option value="vinos-tintos">Vinos Tintos</option>
-                    <option value="vinos-blancos">Vinos Blancos</option>
-                    <option value="cervezas">Cervezas</option>
-                    <option value="spirits">Spirits</option>
-    </select>
-    <label for="price">Precio:</label>
-    <input  type="text" id="price" name="price" placeholder="Ej: 5678" required class="controls">
-    <label for="discount" required >Descuento: </label>
-    <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="controls">
-    </p>
-    <p>
-        <label for="name">Nombre: </label>
-        <input  type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes" required class="controls">
-        <label for="subCategory" required >SubCategoría:</label>
-            <select name="subCategory" id="subCategory" class="controls">
-                <option value="">Elegí</option>
-                <option value="destacados">Destacados</option>
-                <option value="ultimos-agregados">Utlimos agregados</option>
-                <option value="en-oferta">En Oferta</option>
-            </select>          
-        </p>
-    <p>
-        <label for="bodega">Marca: </label>
-        <input  type="text" id="bodega" name="bodega" placeholder="Ej: Quilmes" class="controls">
-        <label for="variedad">Variedad: </label>
-        <input  type="text" id="variedad" name="variedad" placeholder="Ej: Rubia" class="controls">    
-        <label for="anio">Año: </label>
-        <input  type="text" id="anio" name="anio" class="controls">  
-        <label for="stock">Stock: </label>
-        <input  type="text" id="stock" name="stock" class="controls">  
-        </p>
-     <!-- <p> 
+    <%- include ('../partials/header') %>
+        <main>
+            <section class="formularioedit">
+                <form action="/admin/edit/<%= bebidaEditar.id%>?_method=PUT" method="POST"
+                    enctype="multipart/form-data">
+                    <h5>FORMULARIO DE EDICIÓN DE PRODUCTOS:</h5>
+                    <label class="col-sm-3 col-form-label is-required" for="category"><span>
+                            Categoría</span></label>
+                    <select class="content-select2" name="category" id="category" required>
+                        <option value="vinos-tintos">Vinos Tintos</option>
+                        <option value="vinos-blancos">Vinos Blancos</option>
+                        <option value="cervezas">Cervezas</option>
+                        <option value="spirits">Spirits</option>
+                    </select>
+                    <label class="col-sm-3 col-form-label is-required" for="price"><span>
+                            Precio</span></label>
+                    <input type="text" id="price" name="price" placeholder="Ej: 5678" required>
+                    <label class="col-sm-3 col-form-label is-required" for="discount" required><span>
+                            Descuento</span></label>
+                    <input type="text" id="discount" name="discount" placeholder="Ej: 15">
+                    <label class="col-sm-3 col-form-label is-required" for="name" required><span>
+                            Nombre:</span></label>
+                    <input type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes" required>
+
+                    <label class="col-sm-3 col-form-label is-required" for="subCategory"
+                        required><span>SubCategoría:</span></label>
+                    <select class="content-select2" name="subCategory" id="subCategory">
+                        <option value="">Elegí</option>
+                        <option value="destacados">Destacados</option>
+                        <option value="ultimos-agregados">Utlimos agregados</option>
+                        <option value="en-oferta">En Oferta</option>
+                    </select>
+
+                    <label class="col-sm-3 col-form-label is-required" for="bodega"><span>Marca: </span></label>
+                    <input type="text" id="bodega" name="bodega" placeholder="Ej: Quilmes">
+                    <label class="col-sm-3 col-form-label is-required" for="variedad"><span>Variedad:</span></label>
+                    <input type="text" id="variedad" name="variedad" placeholder="Ej: Rubia">
+                    <label class="col-sm-3 col-form-label is-required" for="anio"><span>Año:</span></label>
+                    <input type="text" id="anio" name="anio">
+                    <label class="col-sm-3 col-form-label is-required" for="stock"><span>Stock:</span></label>
+                    <input type="text" id="stock" name="stock">
+
+                    <!-- <p> 
         <label for="image">Foto: </label>
         <input name="image" id="image" class="buttons" type="file"></input>
         </p>  -->
-       <br>
-       
-        <p>
-        <label for="description" required >Descipción:</label>
-        <textarea name="description" id="description" class="description"></textarea>
-        </p>
-        <br>
-        <br>
-         <!--Aquí solicito la imagen-->
-         <div>
-            <figure>
-                <img  class="img-view" src="/images/<%= bebidaEditar.image%>" alt="bebida <%= bebidaEditar.name%>">
-            </figure>
-            <input type="hidden"  name="oldImagen"  value="<%= bebidaEditar.image%>" >
-            <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
-            <input type="file" name="image" >
-            <!--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="imagen" required value=""> 
+                    <br>
+                    <label class="col-sm-3 col-form-label is-required" for="description"
+                        required><span>Descipción:</span></label>
+                    <textarea name="description" id="description" class="description"></textarea>
+                    <br>
+                    <br>
+                    <!--Aquí solicito la imagen-->
+                    <div>
+                        <figure>
+                            <img class="img-view" src="/images/<%= bebidaEditar.image%>"
+                                alt="bebida <%= bebidaEditar.name%>">
+                        </figure>
+                        <input type="hidden" name="oldImagen" value="<%= bebidaEditar.image%>">
+                        <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+                        <input type="file" name="image">
+                        <!--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="imagen" required value=""> 
 
             <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
-          </div>
+                    </div>
 
-          <br>
-          <br>
-          <p>
-        <button type="submit" class="button2">Editar</button>
-        <button><a href="/admin/administrar" class="volver">Volver</a></button>
-        </p>
-        
-        </div>
-        </form>
-        </section>
-</main>
+                    <br>
+                    <br>
+                    <p>
+                        <button type="submit" class="button2">Editar</button>
+                        <button class="button2"><a class="volver" href="/admin/administrar">Volver</a></button>
+                    </p>
+
+                    </div>
+                </form>
+            </section>
+        </main>
 
 </body>
 

@@ -152,9 +152,11 @@ list-style: none;
   
   @media(max-width:991px){
   
-    .header-1,
-    .header-2{
+    .header-1{
       padding:2rem;
+    }
+    .header-2{
+      padding:0.2rem;
     }
   
     

@@ -37,6 +37,11 @@ div.last-visit {
     flex-wrap: wrap;
 }
 
+.title{
+    font-size: 2.3em;
+    color: rgba(0, 0, 0, 0.733);
+    }
+
 .price{
     font-size: 18px;
     width: 30%;
@@ -124,7 +129,7 @@ article div.main-article{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-    }
+        }
     
     main section div.products article{
         width: 45%;

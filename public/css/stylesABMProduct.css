@@ -2,39 +2,39 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-       
+
 }
 
 .formularioedit {
   width: 900px;
   height: 340px;
-  background: rgba(248, 244, 244, 0.94);  
+  background: rgba(248, 244, 244, 0.94);
   margin: auto;
   margin-top: 50px;
   margin-bottom: 300px;
-  padding: 20px 30px;  
+  padding: 20px 30px;
   color: rgb(12, 12, 12);
   text-align: center;
 
-  
+
 }
+
 .formulariocreate {
   width: 900px;
   height: 340px;
-  background: rgba(248, 244, 244, 0.94);  
+  background: rgba(248, 244, 244, 0.94);
   margin: auto;
   margin-top: 50px;
   margin-bottom: 300px;
-  padding: 20px 30px;  
+  padding: 20px 30px;
   color: rgb(12, 12, 12);
-  text-align: center;}
-  
+  text-align: center;
+}
+
 .formularioAdmin {
   margin: 0;
   text-align: center;
@@ -42,20 +42,16 @@ body {
   margin-bottom: 50px;
   border-bottom: 1.5px solid #000;
   font-size: 30px;
-  
+
+}
+
+article a{
+  font-size: 14px;
 }
 
 table {
   background-color: #f1e8dd;
-}
-h5{
-  margin: 0;
-  text-align: center;
-  height: 40px;
-  margin-bottom: 80px;
-  border-bottom: 1.5px solid #000;
-  font-size: 30px;
-   
+  font-size: 14px;
 }
 
 .controls {
@@ -76,6 +72,7 @@ h5{
   color: white;
   margin-bottom: 16px;
 }
+
 .button2 {
   width: 200px;
   height: 40px;
@@ -87,8 +84,8 @@ h5{
 }
 
 
-.description{
-  background-color:  #f1e8dd;
+.description {
+  background-color: #f1e8dd;
   width: 900px;
   height: 100px;
 }
@@ -100,6 +97,10 @@ h5{
   align-items: center;
   text-decoration: none;
   color: rgb(63, 62, 62)
-  
 }
 
+@media(max-width:451px){
+  .formularioAdmin{font-size: 24px;}}
+
+  @media(max-width:451px){
+    .formularioAdmin{font-size: 20px;}}

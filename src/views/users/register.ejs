@@ -5,7 +5,7 @@
 <head>
   <title>Register</title>
   <%- include ('../partials/head') %>
-    <link rel="stylesheet" href="css/stylesRegistro.css">
+    <link rel="stylesheet" href="/css/stylesRegistro.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
@@ -13,23 +13,38 @@
   <body>
     <main>
       <section class="datospersonales">
-        <form action="/registro" method="post">
-          <h5>INFORMACIÓN PERSONAL:</h5>
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
+          <h5>DATOS DE REGISTRO:</h5>
           <label class="col-sm-3 col-form-label is-required"><span>
               Nombre</span></label>
-          <input type="text" id="firstname" name="firstname" value="" title="Nombre"
-            class="input-text  validate-length maximum-length-20  required-entry" autocomplete="off"
-            aria-required="true">
+          <input type="text"
+          name="firstname" 
+          class="input-text validate-length maximum-length-20  required-entry
+          <% locals.errors && errors.firstname ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.firstname : null %>">
+          <% if(locals.errors && errors.firstname) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.firstname.msg %>
+            </div>
+          <% } %>
           <label class="col-sm-3 col-form-label is-required"><span>
               Apellido</span></label>
-          <input type="text" id="lastname" name="lasttname" value="" title="Apellido"
-            class="input-text  validate-length maximum-length-20  required-entry" autocomplete="off"
-            aria-required="true">
-          <label class="col-sm-3 col-form-label is-required"><span>
+          <input type="text" 
+          name="lastname" 
+          class="input-text  validate-length maximum-length-20  required-entry
+          <% locals.errors && errors.lastname ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.lastname : null %>">
+          <% if(locals.errors && errors.lastname) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.lastname.msg %>
+            </div>
+          <% } %>
+          <!-- <label class="col-sm-3 col-form-label is-required"><span>
               Fecha de Nacimiento</span></label>
           <div class="content-select">
             <div class="dia-content">
-              <select name="dia">
+              <select name="day">
+                <option value=""></option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -62,9 +77,15 @@
                 <option value="30">30</option>
                 <option value="31">31</option>
               </select>
-            </div>
+              <% if(locals.errors && errors.day) { %>
+                <div class= 'aviso-error'>
+                <%=  errors.day.msg %>
+                </div>
+              <% } %>         
+            </div>           
             <div class="mes-content">
-              <select name="mes">
+              <select name="month">
+                <option value=""></option>
                 <option value="1">Enero</option>
                 <option value="2">Febrero</option>
                 <option value="3">Marzo</option>
@@ -78,46 +99,135 @@
                 <option value="11">Noviembre</option>
                 <option value="12">Diciembre</option>
               </select>
+              <% if(locals.errors && errors.month) { %>
+                <div class= 'aviso-error'>
+                <%=  errors.month.msg %>
+                </div>
+              <% } %>
             </div>
           </div>
-          <input type="text" id="year" name="year" value="" title="Año" placeholder="Año"
-            class="input-text  validate-length maximum-length-20  required-entry" autocomplete="off"
-            aria-required="true">
-          <label class="col-sm-3 col-form-label is-required"><span>
+          <input type="text" id="year" 
+          name="year" placeholder="Año"
+          class="input-text  validate-length maximum-length-20  required-entry"
+          value="<%= locals.oldData ? oldData.year : null %>">>
+          <% if(locals.errors && errors.year) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.year.msg %>
+            </div>
+          <% } %> -->
+          <!-- <label class="col-sm-3 col-form-label is-required"><span>
               Tipo de Documento</span></label>
-          <select class="content-select2" name="documento" required>
+          <select class="content-select2" name="documentType">
+            <option value=""></option>
             <option value="DNI">Documento Nacional de Identidad</option>
             <option value="P">Pasaporte</option>
             <option value="LE">Libreta de enrolamiento</option>
             <option value="LC">Libreta Cívica</option>
             <option value="DEX">Documento Extranjero</option>
           </select>
-          <input type="text" id="dni" name="dni" value="" title="numeroDNI" placeholder="Número de Documento"
-            class="input-text  validate-length maximum-length-20  required-entry" autocomplete="off"
-            aria-required="true">
-          <p>
+          <% if(locals.errors && errors.documentType) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.documentType.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="document" placeholder="Número de Documento sin puntos" 
+          class="input-text  validate-length maximum-length-20  required-entry"
+          value="<%= locals.oldData ? oldData.document : null %>">>
+          <% if(locals.errors && errors.document) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.document.msg %>
+            </div>
+          <% } %> -->
+          <!-- <p>
           <h5>DATOS DE ENVÍO:</h5>
           </p>
           <label class="col-sm-3 col-form-label is-required"><span>
               Dirección</span></label>
-          <input type="text" class="datos3" name="direccion" placeholder="Calle" required></input>
-          <input type="text" class="datos3" name="Num-direccion" placeholder="Número" required></input>
-          <input type="text" class="datos" name="localidad" placeholder="Localidad" required></input>
-          <input type="text" class="datos" name="provincia" placeholder="Provincia" required></input>
+          <input type="text"  
+          name="street" 
+          placeholder="Calle"
+          class="datos3<% locals.errors && errors.street ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.street : null %>">></input>
+          <% if(locals.errors && errors.street) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.street.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="number" placeholder="Número" 
+          class="datos3 <% locals.errors && errors.number ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.number : null %>">></input>
+          <% if(locals.errors && errors.number) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.number.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="location" placeholder="Localidad"
+          class="datos <% locals.errors && errors.location ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.location : null %>">></input>
+          <% if(locals.errors && errors.location) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.location.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="province" placeholder="Provincia"
+          class="datos <% locals.errors && errors.province ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.province : null %>">></input>
+          <% if(locals.errors && errors.province) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.province.msg %>
+            </div>
+          <% } %>
           <label class="col-sm-3 col-form-label is-required"><span>
               Telefono de contacto</span></label>
-          <input type="text" class="datos" size="50" name="telefono" required></input>
-          <p>
+          <input type="text" 
+          size="50" name="phone"
+          class="datos <% locals.errors && errors.phone ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.phone : null %>">></input>
+          <% if(locals.errors && errors.phone) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.phone.msg %>
+            </div>
+          <% } %> -->
+          <!-- <p>
           <h5>DATOS DE REGISTRO:</h5>
-          </p>
+          </p> -->
           <label class="col-sm-3 col-form-label is-required"><span>
               Email</span></label>
-          <input type="email" class="datos" size="50" name="email" required></input>
+          <input type="email" 
+          size="50" name="email"
+          class="datos <% locals.errors && errors.email ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.email : null %>">></input>
+          <% if(locals.errors && errors.email) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.email.msg %>
+            </div>
+          <% } %>
           <label class="col-sm-3 col-form-label is-required"><span>
               Contraseña</span></label>
-          <input type="password" class="datos" size="50" name="password" required>
-          <p><input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input></p>
-          <p><input type="checkbox" name="newsletter" value="newsletter">Deseo recibir novedades y ofertas</input></p>
+          <input type="password" 
+          size="50" name="password"
+          class="datos <% locals.errors && errors.password ? 'is invalid' : null %>">
+          <% if(locals.errors && errors.password) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.password.msg %>
+            </div>
+          <% } %>
+          <br>
+          <p>
+            <label class="avatar"><b>Imagen de perfil:</b></label>
+            <input class="avatar" type='file' name='avatar'>
+            <% if(locals.errors && errors.avatar) { %>
+              <div class= 'aviso-error'>
+              <%=  errors.avatar.msg %>
+              </div>
+            <% } %>
+          </p>
+          <!-- <p><input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input></p>
+          <p><input type="checkbox" name="newsletter" value="newsletter">Deseo recibir novedades y ofertas</input></p> -->
           <button type="submit" class="create-account" title="Crear cuenta"><span>Crear cuenta</span></button>
         </form>
       </section>

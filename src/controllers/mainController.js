@@ -9,13 +9,7 @@ const mainController = {
         destacados: productsMain.filter(element => element.subCategory === "destacados")
     }
         res.render('main', {productsMain:data})
-    },
-    login : (req, res) => {
-            res.render('./users/login')
-    },
-    register : (req, res) => {
-        res.render('./users/register')
-    },
+    }    
     }
 
 module.exports = mainController;

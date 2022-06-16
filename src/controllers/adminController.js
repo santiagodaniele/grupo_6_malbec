@@ -29,8 +29,8 @@ const adminController = {
         };
         products.push(newProduct); //agrego el nuevo elemento al array//
         fs.writeFileSync(path.resolve("src/data/productDataBase.json"), JSON.stringify(products, null, " "));
-        res.redirect("/product/list");//me redirige como pide el ejercicio, a la ruta /productos
-        },//("/product/" + newProduct.id) esto seria si quiero ir al detalle
+        res.redirect("/product/list");
+        },
         show: (req,res) =>{
             let miBebida;
             products.forEach(bebida => {

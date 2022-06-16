@@ -83,6 +83,17 @@ select{
     margin: 5px;
 }
 
+.aviso-error {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.avatar {
+  font-size: 14px;
+  background: orange;
+
+}
+
 @media(min-width:760px){
 
   .datospersonales h5 {

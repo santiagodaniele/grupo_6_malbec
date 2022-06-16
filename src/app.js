@@ -18,13 +18,13 @@ app.set ('view engine', 'ejs');
 
 // ************ Route System require ************
 const mainRoutes = require ('./routes/main');
-const userRoutes = require ('./routes/user');
+const usersRoutes = require ('./routes/users');
 const productRoutes = require ('./routes/product');
 const adminRoutes = require ('./routes/admin');
 
 // ************  use Routes() ************
 app.use('/', mainRoutes);
-app.use('/user', userRoutes);
+app.use('/users', usersRoutes);
 app.use('/product', productRoutes);
 app.use('/admin', adminRoutes);
 

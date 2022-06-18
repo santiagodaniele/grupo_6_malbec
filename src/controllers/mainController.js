@@ -9,7 +9,16 @@ const mainController = {
         destacados: productsMain.filter(element => element.subCategory === "destacados")
     }
         res.render('main', {productsMain:data})
-    }    
+    },
+    contact : (req, res) => {
+        res.render('contact')
+    },
+    aboutUs : (req, res) => {
+        res.render('aboutUs')
+    },
+    faq : (req, res) => {
+        res.render('faq')
+    }             
     }
 
 module.exports = mainController;

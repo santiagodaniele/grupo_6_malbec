@@ -8,32 +8,36 @@
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
-
-<!-----------------------------------------=SECTION=---------------------------------------------------->
 <body>
         <main>
        <section class="formulariologin"><h5>Iniciar sesión</h5>
+        <form action="/users/login" method="POST" >
         <p>
-            <input class="controls" type="text" name="usuario" size="20" placeholder="Usuario">
+            <input class="controls" type="email" name="email" size="20" placeholder="Email">
+            <% if(locals.errors && errors.email) { %>
+                <div class= 'aviso-error'>
+                <%=  errors.email.msg %>
+                </div>
+              <% } %>
             </p>
         <p>
-            <input class="controls" type="password" name="contraseña" size="20" placeholder="Contraseña">
-            </p>
+            <input class="controls" type="password" name="password" size="20" placeholder="Contraseña">
+        </p>
          <p>  
-            <input class="buttons" type="submit" name="" value="Ingresar">
+            <input type="submit" value="Login" class="buttons">
             </p> 
-            <p>
-                <imput class="checkbox"> <input type="checkbox" name="terms" value="terms" required>Recordarme
-                 </p>
+            <p><label class="checkbox">
+                <input type="checkbox" name="remember_user">Recordarme
+            </label>
+                 </p> 
             <p>
                 <div>
                     <a href="#">¿Olvidaste tu Contrasena?</a>
             </p></div>
         
-            </section>
+        </form>
         </section>
       
     </main>
-<!-----------------------------------------=FOOTER=----------------------------------------------------->
     <%- include ('../partials/footer') %> 
 </html>

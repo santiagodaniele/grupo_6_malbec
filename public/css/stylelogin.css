@@ -66,4 +66,8 @@
     text-decoration: underline;
   }
   
+  .aviso-error {
+    font-size: 14px;
+    color: #FF0000;
+  }
   

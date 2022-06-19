@@ -1,38 +1,11 @@
 [
-    {
-     "id": 1,
-     "firstName": "Ramiro",
-     "lastName": "Barrera",
-     "email": "ramirobarrera31@gmail.com",
-     "password": "123456",
-     "category": "",
-     "avatar": ""
-    },
-    {
-     "id": 2,
-     "firstName": "Agustin",
-     "lastName": "Felice",
-     "email": "agustinfelice@gmail.com",
-     "password": "123456",
-     "category": "null",
-     "avatar": ""
-    },
-    {
-     "id": 3,
-     "firstName": "Federico",
-     "lastName": "Cantos",
-     "email": "fedecantos@gmail.com",
-     "password": "123456",
-     "category": "null",
-     "avatar": ""
-    },
-    {
-     "id": 4,
-     "firstName": "Santiago",
-     "lastName": "Daniele",
-     "email": "santiagodaniele@gmail.com",
-     "password": "123456",
-     "category": "null",
-     "avatar": ""
-    }
-   ]
+ {
+  "id": 1,
+  "category": "usuario",
+  "firstname": "Agustin",
+  "lastname": "Felice",
+  "email": "agustinfelice@hotmail.com",
+  "password": "$2b$10$weyALDtsBICFffFYaZfyHu8X.6/NevFdkpTokn/aT.DNMCocUlFMy",
+  "avatar": "avatar-1655579215667.jpg"
+ }
+]

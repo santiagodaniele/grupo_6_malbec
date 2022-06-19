@@ -28,14 +28,38 @@
             <a href="/product/vinos">Vinos</a>
             <a href="/product/cervezas">Cervezas</a>
             <a href="/product/spirits">Spirits</a>
+            <% if (locals.isLogged) { %>
             <a href="/admin/administrar">Administrar</a>
+            <% } %>
 
         </nav>
 
         <div class="icons">
             <a href="/users/cart" class="fa-solid fa-cart-shopping"></a>
+            <% if (locals.isLogged) { %>
+            <a>
+            <!-- <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
+                <img src="/images/users/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+                <span class="usuario"> Hola <%= locals.userLogged.firstname  %></span>
+                <a href="/users/profile" > <span class="usuario-menu">Mi Perfil</span> </a>
+                <a href="/users/logout" ><span class="usuario-menu">Logout</span></a>
+            </a>
+            <!-- <a>
+                    <li class="lista-usuario" ><a href="/users/profile" > <span class="usuario-menu">My Profile</span> </a></li>
+                    <li class="lista-usuario" ><a href="/users/logout" ><span class="usuario-menu">Logout</span></a></li>
+                </a> -->
+            </ul>
+                   
+            <!-- </a><ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/user/profile">My profile</a>
+                <li><hr class="dropdown-divider"></li>
+                <a class="dropdown-item" href="/user/logout">Logout</a>
+            </ul> -->
+            <% } else { %>
+
             <a href="/users/login" class="fas fa-user-circle"></a>
             <a href="/users/register"><button class="crear-cuenta">Crear cuenta</button></a>
+            <% } %>
         </div>
 
     </div>

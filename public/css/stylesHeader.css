@@ -138,7 +138,15 @@ list-style: none;
     cursor: pointer;
     display: none;
   }
-  
+  .usuario {
+    font-size: 2rem;
+  }
+  .usuario-menu{
+    font-size: 2rem;
+  }
+  .lista-usuario {
+    list-style: none;
+  }
   
   /* media queries  */
   

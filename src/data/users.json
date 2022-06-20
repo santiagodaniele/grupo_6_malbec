@@ -7,5 +7,14 @@
   "email": "agustinfelice@hotmail.com",
   "password": "$2b$10$weyALDtsBICFffFYaZfyHu8X.6/NevFdkpTokn/aT.DNMCocUlFMy",
   "avatar": "avatar-1655579215667.jpg"
+ },
+ {
+  "id": 2,
+  "category": "usuario",
+  "firstname": "Ramiro",
+  "lastname": "Barrera",
+  "email": "ramirobarrera31@gmail.com",
+  "password": "$2b$10$6WPeaoX17HwuDNjjhsdWzurKrw8mnlCGJ6l20wU5gnqpDMnKO2yXS",
+  "avatar": "avatar-1655730959675.jpg"
  }
 ]

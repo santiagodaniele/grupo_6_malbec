@@ -96,28 +96,34 @@
     "image": "img-blanco-sauvignon-don-david.jpg"
   },
   {
-    "id": 9,
-    "name": "Hefeweizen Dunkel 0,5L",
-    "variedad": "Dunkelweizen",
-    "bodega": "SCHÖFFERHOFER",
-    "price": 735,
-    "discount": 20,
     "category": "cervezas",
+    "price": "735",
+    "discount": "20",
+    "name": "Hefeweizen Dunkel 0,5L",
     "subCategory": "destacados",
+    "bodega": "SCHÖFFERHOFER",
+    "variedad": "Dunkelweizen",
+    "anio": "2021",
+    "stock": "20",
     "description": "Aroma a plátano afrutado, levemente torrefacto. Su color es de un marrón turbio achocolatado sobre el que se posa elegantemente una nube de espuma blanquecina que se funde con el color. Una vez en la boca denota un sabor cítrico con leves tintes de chocolate, sin excesivo cuerpo, que mantiene una composición burbujeante y espumosa en la boca y regala un final ácido característico.",
-    "image": "img-cerveza-negra-schofferhofer.jpg"
+    "oldImagen": "img-cerveza-negra-schofferhofer.jpg",
+    "id": "9",
+    "image": "image-1655733715488.jpg"
   },
   {
-    "id": 10,
-    "name": "Grolsh",
-    "variedad": "Rubia",
-    "bodega": "Grolsh",
-    "price": 398,
-    "discount": 20,
     "category": "cervezas",
+    "price": "398",
+    "discount": "20",
+    "name": "Grolsch",
     "subCategory": "destacados",
+    "bodega": "Grolsch",
+    "variedad": "Rubia",
+    "anio": "2021",
+    "stock": "10",
     "description": "Grolsch es una cerveza Premium lager holandesa que cuenta con 400 años de historia. Si bien se comenzó a fabricar en el país, esta versión sigue fabricándose en Holanda, conservando toda la esencia de la marca. De color dorado, esta cerveza tiene dos variedades de lúpulo que le otorgan sabor y aroma que se traducen en frescura.",
-    "image": "img-cerveza-rubia-grolsch.jpg"
+    "oldImagen": "img-cerveza-rubia-grolsch.jpg",
+    "id": "10",
+    "image": "image-1655732332963.jpg"
   },
   {
     "id": 11,
@@ -129,7 +135,7 @@
     "category": "cervezas",
     "subCategory": "",
     "description": "Existen muchas cervezas doradas y refrescantes. Pero frutadas y con destellos finales de lúpulo, sólo hay un estilo: la Kölsch. En Antares rescatamos la antigua receta de la cerveza favorita de los bebedores en Colonia, Alemania, y la honramos desde 1998. En nuestra cocina, su legado sigue intacto.",
-    "image": "img-cerveza-rubia-kolsch.jpg"
+    "image": "antareskolschok.jpg"
   },
   {
     "id": 12,
@@ -192,16 +198,19 @@
     "image": "img-cerveza-rubia-galicia.jpg"
   },
   {
-    "id": 17,
-    "name": "Gin Tanqueray Dry",
-    "variedad": "Gin",
-    "bodega": "TANQUERAY",
-    "price": 3.128,
-    "discount": 20,
     "category": "spirits",
+    "price": "3128",
+    "discount": "20",
+    "name": "Gin Tanqueray Dry",
     "subCategory": "destacados",
+    "bodega": "Tanqueray",
+    "variedad": "Gin",
+    "anio": "2021",
+    "stock": "20",
     "description": "Es una ginebra de enebro con sabores distintivos de enebro a pino y fina ralladura de limón. Son estos botánicos perfectamente equilibrados de enebro, cilantro, angélica y regaliz los que crean una base clásica para cada cóctel de ginebra sin dominarlo.",
-    "image": "img-spirit-gin-tanqueray.jpg"
+    "oldImagen": "img-spirit-gin-tanqueray.jpg",
+    "id": "17",
+    "image": "image-1655733172217.jpg"
   },
   {
     "id": 18,

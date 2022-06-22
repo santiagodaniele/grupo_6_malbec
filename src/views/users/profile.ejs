@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+
+<head>
+  <title>Perfil</title>
+  <%- include ('../partials/head') %>
+    <link rel="stylesheet" href="/public/css/styleProfile.css">
+</head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+<%- include ('../partials/header') %>
+<body>	
+	<!-- Container -->
+	<div class="contenedor">
+		<div>
+			<div>
+				<h2>Hola <%= user.firstname %> <%= user.lastname %></h2>
+				<img src="/images/users/<%= user.avatar %>" width="300" height="300">
+				<br>
+				<br>
+				<div class="alert alert-success"> <%= user.email %> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //Container -->
+	
+    <%- include ('../partials/footer') %>
+</body>
+</html>

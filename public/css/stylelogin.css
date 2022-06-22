@@ -84,3 +84,8 @@
     width: 100%;
   }
   }
+  .aviso-error {
+    font-size: 14px;
+    color: #FF0000;
+  }
+  

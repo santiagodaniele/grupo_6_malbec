@@ -9,11 +9,10 @@ body {
 }
 
 .datospersonales h5 {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 20px;
   padding-top: 5px;
   margin: 0 0 10px;
-  border-bottom: 1px solid #c5c5c5
+  border-bottom: 1px solid #000
   }
 
 span{
@@ -31,7 +30,7 @@ span{
 input[type=text],[type=email],[type=password],.content-select2 {
   background: #f1e8dd;
   background-clip: padding-box;
-  border: 1px solid #c2c2c2;
+  border: 1px solid #0e0e0e;
   border-radius: 1px;
   margin: 0 0 5px;
   font-size: 14px;
@@ -73,7 +72,6 @@ select{
     background: #000;
     border-radius: 5px;
     border: transparent;
-    font-family: initial;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -90,7 +88,7 @@ select{
 
 .avatar {
   font-size: 14px;
-  background: orange;
+  background: rgb(203, 194, 178);
 
 }
 

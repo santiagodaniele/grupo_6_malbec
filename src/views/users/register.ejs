@@ -5,6 +5,7 @@
 <head>
   <title>Register</title>
   <%- include ('../partials/head') %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylesRegistro.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
@@ -14,7 +15,7 @@
     <main>
       <section class="datospersonales">
         <form action="/users/register" method="POST" enctype="multipart/form-data">
-          <h5>DATOS DE REGISTRO:</h5>
+          <h5>Datos de registro:</h5>
           <label class="col-sm-3 col-form-label is-required"><span>
               Nombre</span></label>
           <input type="text"
@@ -228,6 +229,7 @@
           </p>
           <!-- <p><input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input></p>
           <p><input type="checkbox" name="newsletter" value="newsletter">Deseo recibir novedades y ofertas</input></p> -->
+          
           <button type="submit" class="create-account" title="Crear cuenta"><span>Crear cuenta</span></button>
         </form>
       </section>

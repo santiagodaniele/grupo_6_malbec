@@ -3,23 +3,24 @@
 <!-----------------------------------------=HEAD=------------------------------------------------------->
 
 <head>
-  <title>Perfil</title>
-  <%- include ('../partials/head') %>
-    <link rel="stylesheet" href="/public/css/styleProfile.css">
+    <title>Editar producto</title>
+    <%- include ('../partials/head') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styleProfile.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
-<%- include ('../partials/header') %>
-<body>	
+<body>
+	<%- include ('../partials/header') %>	
 	<!-- Container -->
 	<div class="contenedor">
-		<div>
-			<div>
-				<h2>Hola <%= user.firstname %> <%= user.lastname %></h2>
+		<div class="contenedor1">
+			<div class="contenedor2">
+				<h2 class="nombre">Hola <%= user.firstname %> <%= user.lastname %></h2>
 				<img src="/images/users/<%= user.avatar %>" width="300" height="300">
 				<br>
 				<br>
-				<div class="alert alert-success"> <%= user.email %> </div>
-			</div>
+				<div class="email"> <%= user.email %> </div>
+			</div>					
 		</div>
 	</div>
 	<!-- //Container -->

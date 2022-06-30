@@ -1,14 +1,41 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    
-  }
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
  
   .contenedor {
-    display: block;
-    margin: 10px;
+      text-align: center;
+   display: block;
+   margin: 10px;
   }
 
+  .contendor1 {
+    display: row;
+  }
+
+  .contendor2 {
+    display: column;
+  }
+
+  .nombre{
+    font-size: 20px;
+  }
+
+  .email {
+      font-size: 20px;
+  }
+
+  .volver {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 5%;
+
+  }
 
   

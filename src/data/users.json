@@ -16,5 +16,14 @@
   "email": "ramirobarrera31@gmail.com",
   "password": "$2b$10$6WPeaoX17HwuDNjjhsdWzurKrw8mnlCGJ6l20wU5gnqpDMnKO2yXS",
   "avatar": "avatar-1655730959675.jpg"
+ },
+ {
+  "id": 3,
+  "category": "usuario",
+  "firstname": "Santiago",
+  "lastname": "Daniele",
+  "email": "santiago_daniele@hotmail.com",
+  "password": "$2b$10$tNoIPkLxsYPuYANm2ZzSReyp7zgn.auND5i61p54ksodeeJmWfO/.",
+  "avatar": "avatar-1655740654430.jpg"
  }
 ]

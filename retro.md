@@ -38,3 +38,23 @@ Mas de: incorporar los nuevos conocimientos
 Seguir haciendo: seguir comprometidos con el proyecto, mantener la dinamica y la comunicacion.
 Menos de: creo que en este punto no vimos grandes difiultades
 Dejar de: sin comentarios
+
+Retrospectiva Sprint 4:
+Durante este sprint seguimos manteniendo una buena comunicación, pudimos hacer una buena distribución de tareas y aprovechar los tiempos de cada uno para cumplir con el proyecto. Aprovechamos mucho las clases en vivo y las asincrónicas para poder cumplir con los entregables. Utilizamos pair programming y tuvimos muy buen resultado para con el equipo y el proyecto.
+
+Metodología Estrella de Mar:
+Empezar a hacer: continuar a actualizando más seguido el tablero de Trello y utilizar algunas herramientas extra como colores para identificar de que sprint es cada tarea.
+Mas de: incorporar los nuevos conocimientos y practicar.
+Seguir haciendo: seguir comprometidos con el proyecto, aportar cada vez más cosas cada uno.
+Menos de: no tuvimos dificultades
+Dejar de: sin comentarios
+
+Retrospectiva Sprint 5:
+Durante este sprint mantuvimos mucho la comunicación, se nos complicó un poco para reunirnos pero avanzamos satisfactoriamente. Continuamos haciendo pair programming, ya que nos está dando muy buen resultado. Continuamos repasando clases anteriores para fijar conocimientos.
+
+Metodología Estrella de Mar:
+Empezar a hacer: continuar a actualizando más seguido el tablero de Trello y seguir dandole relevancia para ordenar las tareas
+Mas de: continuar compañando a los compañeros que van un poco más lento y explicarnos más el desarrollo de como hizo cada uno su tarea
+Seguir haciendo: continuar con la comunicación fluida y haciendo pair programming
+Menos de: no tuvimos dificultades
+Dejar de: sin comentarios

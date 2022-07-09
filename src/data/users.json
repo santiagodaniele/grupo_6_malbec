@@ -25,5 +25,14 @@
   "email": "santiago_daniele@hotmail.com",
   "password": "$2b$10$tNoIPkLxsYPuYANm2ZzSReyp7zgn.auND5i61p54ksodeeJmWfO/.",
   "avatar": "avatar-1655740654430.jpg"
+ },
+ {
+  "id": 4,
+  "category": "usuario",
+  "firstname": "Federico",
+  "lastname": "Cantos",
+  "email": "fedecantos@gmail.com",
+  "password": "$2b$10$5mRUAAeMDkDHbqBq6nuNQu7Ny.90BgS.cUbDnFIHfZ5t2T2jGFyJC",
+  "avatar": "avatar-1657065338061.jpg"
  }
 ]

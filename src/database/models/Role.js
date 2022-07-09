@@ -8,16 +8,14 @@ module.exports = (sequelize, dataTypes) => {
         },
         name:{
             type: dataTypes.STRING(255),
-            primaryKey: true,
-            autoIncrement: true
+            allowNull: false
         }
     }
     
     let config = {
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        tableName:'roles'
     };
     const Role = sequelize.define(alias, cols, config); 
+    
+    return Role;
 }

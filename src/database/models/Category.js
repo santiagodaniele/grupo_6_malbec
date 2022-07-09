@@ -10,11 +10,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         }
-    }
+    };
     
     let config = {
         tableName:'category'
-    };
+    }
+    
     const Category = sequelize.define(alias, cols, config); 
     
     return Category;

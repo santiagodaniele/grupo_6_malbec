@@ -10,11 +10,11 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         }
-    }
+    };
     
     let config = {
         tableName:'subcategory'
-    };
+    }
     const Subcategory = sequelize.define(alias, cols, config); 
     
     return Subcategory;

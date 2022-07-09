@@ -10,11 +10,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(255),
             allowNull: false
         }
-    }
-    
+    };
     let config = {
         tableName:'roles'
-    };
+    }
     const Role = sequelize.define(alias, cols, config); 
     
     return Role;

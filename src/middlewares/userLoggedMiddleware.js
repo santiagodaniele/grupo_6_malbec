@@ -10,6 +10,13 @@ function userLoggedMiddleware(req, res, next) {
 		req.session.userLogged = userFromCookie;
 	}
 
+	res.locals.adminLogged = false;
+	
+	if (req.session.adminLogged) {
+		res.locals.adminLogged = true;
+		res.locals.adminLogged = req.session.adminLogged;
+	}
+
 	if (req.session.userLogged) {
 		res.locals.isLogged = true;
 		res.locals.userLogged = req.session.userLogged;

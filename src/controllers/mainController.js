@@ -1,24 +1,36 @@
 const path = require('path')
-const fs = require ("fs")
-const fileMain = fs.readFileSync(path.resolve("src/data/productDataBase.json"), "utf-8")
-const productsMain = JSON.parse(fileMain)
+const fs = require("fs")
+// const fileMain = fs.readFileSync(path.resolve("src/data/productDataBase.json"), "utf-8")
+// const productsMain = JSON.parse(fileMain)
+const db = require('../database/models');
+const { Op } = require("sequelize");
+
+const Categories = db.Category;
+const Subcategories = db.subCategory;
+const productsMain = db.Product;
+const Varietys = db.Variety;
+
+
 
 const mainController = {
-    main : (req, res) => {
-        const data = {
-        destacados: productsMain.filter(element => element.subCategory === "destacados")
-    }
-        res.render('main', {productsMain:data})
+    main: (req, res) => {
+        productsMain.findAll({
+            where: {
+                subcategory_id: "1"
+            }
+        }).then(data => {
+            res.render('main', { productsMain: data })
+        }).catch(err=>console.log(err))
     },
-    contact : (req, res) => {
+    contact: (req, res) => {
         res.render('contact')
     },
-    aboutUs : (req, res) => {
+    aboutUs: (req, res) => {
         res.render('aboutUs')
     },
-    faq : (req, res) => {
+    faq: (req, res) => {
         res.render('faq')
-    }  
     }
+}
 
 module.exports = mainController;

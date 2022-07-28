@@ -1,41 +1,123 @@
 const path = require('path')
-const fs = require ("fs")
-const fileProducts = fs.readFileSync(path.resolve("src/data/productDataBase.json"), "utf-8")
-const products = JSON.parse(fileProducts)
+const fs = require("fs")
+// const fileProducts = fs.readFileSync(path.resolve("src/data/productDataBase.json"), "utf-8")
+// const products = JSON.parse(fileProducts)
+const db = require('../database/models');
+const { Op } = require("sequelize");
+
+const Categories = db.Category;
+const Subcategories = db.subCategory;
+const Products = db.Product;
+const Varietys = db.Variety;
 
 
 const productController = {
-    productDetail : (req, res) => {
-        const product = products.find(element => element.id == req.params.id)
-        res.render('./products/productDetail', {product})
-    }, 
-    productList : (req, res) => {
-        const data = {
-           vinosBlancos: products.filter(element => element.category === "vinos-blancos"),
-           vinosTintos: products.filter(element => element.category === "vinos-tintos"),
-           cervezas: products.filter(element => element.category === "cervezas"),
-           spirits: products.filter(element => element.category === "spirits") 
+    productDetail: (req, res) => {
+        try {
+            Products.findByPk(req.params.id,
+                {
+                    include: { association: "category" }
+                })
+                .then(products => {
+                    res.render('./products/productDetail', { products })
+                })
+        } catch (error) {
+            console.log(error);
         }
-        res.render('./products/productList', {products:data})
     },
-    vinos : (req, res) => {
-        const vinos = {
-            vinosBlancos: products.filter(element => element.category === "vinos-blancos"),
-            vinosTintos: products.filter(element => element.category === "vinos-tintos"),
+    productList: async (req, res) => {
+        try {
+            const vinosBlancos = await Products.findAll({
+                where: {
+                    category_id: "1"
+                },
+                // include: { association: "products" }
+            });
+            const vinosTintos = await Products.findAll({
+                where: {
+                    category_id: "2"
+                },
+                // include: { association: "products" }
+            });
+            const cervezas = await Products.findAll({
+                where: {
+                    category_id: "3"
+                },
+                // include: { association: "products" }
+            });
+            const spirits = await Products.findAll({
+                where: {
+                    category_id: "4"
+                },
+                // include: { association: "products" }
+            });
+            const data = {
+                vinosBlancos,
+                vinosTintos,
+                cervezas,
+                spirits
+            }
+            res.render('./products/productList', { products: data })
+
+        } catch (error) {
+            console.log(error);
+
         }
-        res.render('./products/vinos', {products:vinos})
     },
-        cervezas : (req, res) => {
-        const cervezas = {
-        cervezas: products.filter(element => element.category === "cervezas"),
+    vinos: async (req, res) => {
+        try {
+            const vinosBlancos = await Products.findAll({
+                where: {
+                    category_id: "1"}
+                });
+            const vinosTintos = await Products.findAll({
+                where: {
+                    category_id: "2"}
+            })
+                const data = {
+                    vinosBlancos,
+                    vinosTintos                    
+                }
+            res.render('./products/vinos', { data })
+                
+        } catch (error) {
+            console.log(error);
         }
-        res.render('./products/cervezas', {products:cervezas})
+        // const vinos = {
+        //     vinosBlancos: products.filter(element => element.category === "vinos-blancos"),
+        //     vinosTintos: products.filter(element => element.category === "vinos-tintos"),
+        // }
+        // res.render('./products/vinos', { products: vinos })
     },
-        spirits : (req, res) => {
-        const spirits = {
-        spirits: products.filter(element => element.category === "spirits") 
+    cervezas: async (req, res) => {
+            try {
+                const cervezas = await Products.findAll({
+                    where: {
+                        category_id: "3"}
+                    });
+                const data = {
+                        cervezas: cervezas,                   
+                    }
+                res.render('./products/cervezas', { data })
+                    
+            } catch (error) {
+                console.log(error);
+            }
+        },
+    spirits:  async (req, res) => {
+        try {
+            const spirits = await Products.findAll({
+                where: {
+                    category_id: "4"}
+                });
+            const data = {
+                    spirits,                   
+                }
+            res.render('./products/spirits', { data })
+                
+        } catch (error) {
+            console.log(error);
         }
-        res.render('./products/spirits', {products:spirits})
     },
 }
 

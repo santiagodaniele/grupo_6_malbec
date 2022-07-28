@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-----------------------------------------=HEAD=------------------------------------------------------->
+
 <head>
     <title>Lista de productos</title>
-<%- include ('../partials/head') %>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/stylesindex.css">
+    <%- include ('../partials/head') %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/stylesindex.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
@@ -15,55 +16,79 @@
         <section class="last-visit">
             <h3 id="vinos-tinos">VINOS TINTOS</h3>
             <div class="products">
-                <% products.vinosTintos.forEach(element =>{  %>
-                <article>
-                    <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
-                    <div class="main-article">
-                        <p class="price">$<%= element.price%></p>
-                        <p class="discount"><%= element.discount%>% OFF</p>
-                        <h4 class="description"><%= element.name%></h4>
-                    </div>
-                </article>
-                <% }) %>
+                <% products.vinosTintos.forEach(element=>{ %>
+                    <article>
+                        <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave"
+                                class="product_img"></a>
+                        <div class="main-article">
+                            <p class="price">$<%= element.price%>
+                            </p>
+                            <p class="discount">
+                                <%= element.discount%>% OFF
+                            </p>
+                            <h4 class="description">
+                                <%= element.name%>
+                            </h4>
+                        </div>
+                    </article>
+                    <% }) %>
             </div>
             <h3 id="vinos-blancos">VINOS BLANCOS</h3>
             <div class="products">
-                <% products.vinosBlancos.forEach(element =>{  %>
-                <article>
-                    <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
-                    <div class="main-article">
-                        <p class="price">$<%= element.price %></p>
-                        <p class="discount"><%= element.discount %>% OFF</p>
-                        <h4 class="description"><%= element.name %></h4>
-                    </div>
-                </article>
-                <% }) %>
+                <% products.vinosBlancos.forEach(element=>{ %>
+                    <article>
+                        <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave"
+                                class="product_img"></a>
+                        <div class="main-article">
+                            <p class="price">$<%= element.price %>
+                            </p>
+                            <p class="discount">
+                                <%= element.discount %>% OFF
+                            </p>
+                            <h4 class="description">
+                                <%= element.name %>
+                            </h4>
+                        </div>
+                    </article>
+                    <% }) %>
             </div>
             <h3 id="cervezas">CERVEZAS</h3>
             <div class="products">
-                <% products.cervezas.forEach(element =>{  %>
-                <article>
-                    <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
-                    <div class="main-article">
-                        <p class="price">$<%= element.price %></p>
-                        <p class="discount"><%= element.discount %>% OFF</p>
-                        <h4 class="description"><%= element.name %></h4>
-                    </div>
-                </article>
-                <% }) %>
+                <% products.cervezas.forEach(element=>{ %>
+                    <article>
+                        <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave"
+                                class="product_img"></a>
+                        <div class="main-article">
+                            <p class="price">$<%= element.price %>
+                            </p>
+                            <p class="discount">
+                                <%= element.discount %>% OFF
+                            </p>
+                            <h4 class="description">
+                                <%= element.name %>
+                            </h4>
+                        </div>
+                    </article>
+                    <% }) %>
             </div>
             <h3 id="spirits">SPIRITS </h3>
             <div class="products">
-            <% products.spirits.forEach(element =>{  %>
-                <article>
-                    <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave" class="product_img"></a>
-                    <div class="main-article">
-                        <p class="price">$<%= element.price %></p>
-                        <p class="discount"><%= element.discount %>% OFF</p>
-                        <h4 class="description"><%= element.name %></h4>
-                    </div>
-                </article>
-            <% }) %>
+                <% products.spirits.forEach(element=>{ %>
+                    <article>
+                        <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave"
+                                class="product_img"></a>
+                        <div class="main-article">
+                            <p class="price">$<%= element.price %>
+                            </p>
+                            <p class="discount">
+                                <%= element.discount %>% OFF
+                            </p>
+                            <h4 class="description">
+                                <%= element.name %>
+                            </h4>
+                        </div>
+                    </article>
+                    <% }) %>
             </div>
         </section>
     </main>

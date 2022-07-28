@@ -1,7 +1,5 @@
 const path = require('path')
 const fs = require("fs")
-// const fileMain = fs.readFileSync(path.resolve("src/data/productDataBase.json"), "utf-8")
-// const productsMain = JSON.parse(fileMain)
 const db = require('../database/models');
 const { Op } = require("sequelize");
 

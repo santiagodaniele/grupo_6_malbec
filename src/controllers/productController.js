@@ -28,22 +28,22 @@ const productController = {
             const vinosBlancos = await Products.findAll({
                 where: {
                     category_id: "1"
-                },                
+                },
             });
             const vinosTintos = await Products.findAll({
                 where: {
                     category_id: "2"
-                },                
+                },
             });
             const cervezas = await Products.findAll({
                 where: {
                     category_id: "3"
-                },                
+                },
             });
             const spirits = await Products.findAll({
                 where: {
                     category_id: "4"
-                },               
+                },
             });
             const data = {
                 vinosBlancos,
@@ -79,7 +79,7 @@ const productController = {
         } catch (error) {
             console.log(error);
         }
-       },
+    },
     cervezas: async (req, res) => {
         try {
             const cervezas = await Products.findAll({

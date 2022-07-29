@@ -13,7 +13,8 @@ module.exports = (sequelize, dataTypes) => {
     };
     
     let config = {
-        tableName:'subcategory'
+        tableName:'subcategory',
+        timestamps: false 
     }
     const Subcategory = sequelize.define(alias, cols, config); 
 

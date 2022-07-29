@@ -12,7 +12,8 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName:'variety'
+        tableName:'variety',
+        timestamps: false 
     }
     const Variety = sequelize.define(alias, cols, config); 
 

@@ -2,9 +2,6 @@ const path = require('path')
 const { validationResult } = require('express-validator');
 const fs = require("fs")
 const bcrypt = require('bcrypt');
-// const fileUsers = fs.readFileSync(path.resolve("src/data/users.json"), "utf-8")
-// const users = JSON.parse(fileUsers)
-// const User = require('../models/User');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -26,18 +23,6 @@ const controlador = {
                 oldData: req.body
             })
         }
-
-        // let userInDB = Users.findOne({where:{email: req.body.email}});
-        // if (userInDB) {
-        //     return res.render('./users/register', {
-        //         errors: {
-        //             email: {
-        //                 msg: 'Este mail ya está registrado'
-        //             }
-        //         },
-        //         oldData: req.body
-        //     });
-        // }
         const newUser = {
             first_name: req.body.firstname,
             last_name: req.body.lastname,
@@ -131,8 +116,8 @@ const controlador = {
             .then(User => {
                 res.render('./users/userEdit', { User });
             });
-    
-        
+
+
     },
     update: function (req, res) {
         let image = req.body.image = req.file ? req.file.filename : req.body.oldImagen;
@@ -142,8 +127,8 @@ const controlador = {
                 {
                     first_name: req.body.firstname,
                     last_name: req.body.lastname,
-                    email: req.body.email,                    
-                    image,                    
+                    email: req.body.email,
+                    image,
                 },
                 {
                     where: { id: UserId }

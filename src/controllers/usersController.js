@@ -8,6 +8,7 @@ const bcrypt = require('bcrypt');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { update } = require('./adminController');
 
 const Users = db.User;
 const Roles = db.Role;
@@ -98,6 +99,70 @@ const controlador = {
         req.session.destroy();
         res.redirect('/');
     },
+    userList: (req, res) => {
+        try {
+            Users.findAll(
+                {
+                    include: { association: "role" }
+                })
+                .then(usuarios => {
+                    res.render('./users/userList', { usuarios })
+                })
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    show: (req, res) => {
+        db.User.findByPk(req.params.id,
+            {
+                include: { association: "role" }
+
+            })
+            .then(miUser => {
+                res.render('./users/userDetail', { miUser });
+            });
+    },
+    edit: function (req, res) {
+        db.User.findByPk(req.params.id,
+            {
+                include: { association: "role" }
+
+            })
+            .then(User => {
+                res.render('./users/userEdit', { User });
+            });
+    
+        
+    },
+    update: function (req, res) {
+        let image = req.body.image = req.file ? req.file.filename : req.body.oldImagen;
+        let UserId = req.params.id;
+        Users
+            .update(
+                {
+                    first_name: req.body.firstname,
+                    last_name: req.body.lastname,
+                    email: req.body.email,                    
+                    image,                    
+                },
+                {
+                    where: { id: UserId }
+                })
+            .then(() => {
+                return res.redirect('./userList')
+            })
+            .catch(error => res.send(error))
+    },
+    destroy: function (req, res) {
+        let userId = req.params.id;
+        Users
+            .destroy({ where: { id: userId }, force: true }) // force: true es para asegurar que se ejecute la acción
+            .then(() => {
+                return res.redirect('/users/userList')
+            })
+            .catch(error => res.send(error))
+    },
+
     cart: (req, res) => {
         res.render('./users/cart')
     }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+
+<head>
+    <title>Detalle de Producto</title>
+    <%- include ('../partials/head') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/stylesProductDetail.css">
+</head>
+
+<body>
+    <!-----------------------------------------=HEADER=----------------------------------------------------->
+    <%- include ('../partials/header') %>
+
+        <div class="contenedor">
+            <div class="subcotenedor1">
+                <h2 class="titulo">Usuario: <%= miUser.first_name%>
+                </h2>
+            </div>
+            <div class="subcontenedor2">
+                <div class="subcontenedor-imagen">
+                    <img src="/images/users/<%= miUser.image %>" alt="Corona" class="product_img">
+                </div>
+                <div class="subcontenedor-data">
+                    <article>
+                        <h3 class="bodega">
+                            <%= miUser.first_name + " " + miUser.last_name%>
+                        </h3>
+                       <h2 class="nombre-bebida">
+                            <%= miUser.email %>
+                        </h2>                             
+                    </article>
+
+                </div>
+            </div>            
+            <button><a href="/users/userList" class="volver">Volver</a></button>
+            
+        </div>
+</body>
+
+</html>

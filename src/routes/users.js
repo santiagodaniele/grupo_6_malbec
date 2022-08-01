@@ -31,6 +31,22 @@ router.get('/profile', authMiddleware, usersController.profile);
 //Logout
 router.get('/logout/', usersController.logout);
 
+// Listar usuarios
+router.get('/userList', adminMiddleware, usersController.userList);
+
+// Vista de un usuario
+router.get('/userDetail/:id', adminMiddleware, usersController.show);
+
+// Formulario de edicion de usuario
+router.get("/userEdit/:id", adminMiddleware, usersController.edit);
+
+// Editar usuario
+router.put("/userEdit/:id", uploadFile.single('image'), adminMiddleware, usersController.update);
+
+// Eliminar usuario
+router.get('/delete/:id', adminMiddleware, usersController.destroy);
+
+
 // vista del carrito
 router.get("/cart", usersController.cart);
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+<head>
+    <title>Editar producto</title>
+<%- include ('../partials/head') %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/stylesABMProduct.css">
+</head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+<%- include ('../partials/header') %>
+
+      <!--Administrador de productos-->
+      <br>
+      <section class="row">
+        <article class="col-12 ">
+          <h2 class="formularioAdmin">Administrador de Usuarios</h2>
+        </article>
+        <article class="col-12">
+          <a href="#"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
+        </article>
+        <article class="col-12" >
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre y Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Ver</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Borrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% usuarios.forEach(user => { %>
+              <tr>
+                <td><%= user.id%> </td>
+                <td><%= user.first_name + " " + user.last_name%> </td>
+                <td><%= user.email%> </td>
+                <td><a href="./userDetail/<%= user.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                <td><a href="./userEdit/<%= user.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="./delete/<%= user.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table> 
+        </article>       
+      </section>
+      <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    </main>
+  </body>
+</html>

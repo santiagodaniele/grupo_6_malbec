@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+
+<head>
+  <title>Register</title>
+  <%- include ('../partials/head') %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesRegistro.css">
+</head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+<%- include ('../partials/header') %>
+
+  <body>
+    <main>
+      <section class="datospersonales">
+        <form action="/users/userEdit/<%= User.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+          <h5>Edicion de Usuario:</h5>
+          <label class="col-sm-3 col-form-label is-required"><span>
+              Nombre</span></label>
+          <input type="text" name="firstname" value="<%= User.first_name %>" required >
+          
+          <label class="col-sm-3 col-form-label is-required"><span>
+              Apellido</span></label>
+          <input type="text" 
+          name="lastname" value="<%= User.last_name %>" required>
+         <!-- <label class="col-sm-3 col-form-label is-required"><span>
+              Fecha de Nacimiento</span></label>
+          <div class="content-select">
+            <div class="dia-content">
+              <select name="day">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <% if(locals.errors && errors.day) { %>
+                <div class= 'aviso-error'>
+                <%=  errors.day.msg %>
+                </div>
+              <% } %>         
+            </div>           
+            <div class="mes-content">
+              <select name="month">
+                <option value=""></option>
+                <option value="1">Enero</option>
+                <option value="2">Febrero</option>
+                <option value="3">Marzo</option>
+                <option value="4">Abril</option>
+                <option value="5">Mayo</option>
+                <option value="6">Junio</option>
+                <option value="7">Julio</option>
+                <option value="8">Agosto</option>
+                <option value="9">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+              <% if(locals.errors && errors.month) { %>
+                <div class= 'aviso-error'>
+                <%=  errors.month.msg %>
+                </div>
+              <% } %>
+            </div>
+          </div>
+          <input type="text" id="year" 
+          name="year" placeholder="Año"
+          class="input-text  validate-length maximum-length-20  required-entry"
+          value="<%= locals.oldData ? oldData.year : null %>">>
+          <% if(locals.errors && errors.year) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.year.msg %>
+            </div>
+          <% } %> -->
+          <!-- <label class="col-sm-3 col-form-label is-required"><span>
+              Tipo de Documento</span></label>
+          <select class="content-select2" name="documentType">
+            <option value=""></option>
+            <option value="DNI">Documento Nacional de Identidad</option>
+            <option value="P">Pasaporte</option>
+            <option value="LE">Libreta de enrolamiento</option>
+            <option value="LC">Libreta Cívica</option>
+            <option value="DEX">Documento Extranjero</option>
+          </select>
+          <% if(locals.errors && errors.documentType) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.documentType.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="document" placeholder="Número de Documento sin puntos" 
+          class="input-text  validate-length maximum-length-20  required-entry"
+          value="<%= locals.oldData ? oldData.document : null %>">>
+          <% if(locals.errors && errors.document) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.document.msg %>
+            </div>
+          <% } %> -->
+          <!-- <p>
+          <h5>DATOS DE ENVÍO:</h5>
+          </p>
+          <label class="col-sm-3 col-form-label is-required"><span>
+              Dirección</span></label>
+          <input type="text"  
+          name="street" 
+          placeholder="Calle"
+          class="datos3<% locals.errors && errors.street ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.street : null %>">></input>
+          <% if(locals.errors && errors.street) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.street.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="number" placeholder="Número" 
+          class="datos3 <% locals.errors && errors.number ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.number : null %>">></input>
+          <% if(locals.errors && errors.number) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.number.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="location" placeholder="Localidad"
+          class="datos <% locals.errors && errors.location ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.location : null %>">></input>
+          <% if(locals.errors && errors.location) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.location.msg %>
+            </div>
+          <% } %>
+          <input type="text" 
+          name="province" placeholder="Provincia"
+          class="datos <% locals.errors && errors.province ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.province : null %>">></input>
+          <% if(locals.errors && errors.province) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.province.msg %>
+            </div>
+          <% } %>
+          <label class="col-sm-3 col-form-label is-required"><span>
+              Telefono de contacto</span></label>
+          <input type="text" 
+          size="50" name="phone"
+          class="datos <% locals.errors && errors.phone ? 'is invalid' : null %>"
+          value="<%= locals.oldData ? oldData.phone : null %>">></input>
+          <% if(locals.errors && errors.phone) { %>
+            <div class= 'aviso-error'>
+            <%=  errors.phone.msg %>
+            </div>
+          <% } %> -->
+          <!-- <p>
+          <h5>DATOS DE REGISTRO:</h5>
+          </p> -->
+          <label class="col-sm-3 col-form-label is-required"><span>
+              Email</span></label>
+          <input type="email" size="50" name="email" value="<%= User.email %>" required>
+         
+          <!-- <label class="col-sm-3 col-form-label is-required"><span>
+              Contraseña</span></label>
+          <input type="password" size="50" name="password" required>          -->
+          <br>
+          <p>
+            <label class="avatar"><b>Imagen de perfil:</b></label>
+            <input class="avatar" type='file' name='image'>            
+          </p>
+          <br>
+          <figure>
+            <img class="img-view" src="/images/users/<%= User.image%>" alt="bebida <%= User.first_name%>">
+        </figure>
+        <input type="hidden" name="oldImagen" value="<%= User.image%>">
+        <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+        <!-- <p><input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input></p>
+          <p><input type="checkbox" name="newsletter" value="newsletter">Deseo recibir novedades y ofertas</input></p> -->
+          
+          <p>
+            <button type="submit" class="button2">Editar</button>
+            <button class="button2"><a class="volver" href="/users/userList">Volver</a></button>
+        </p>
+        </form>
+      </section>
+    </main>
+  </body>
+  <!-----------------------------------------=FOOTER=----------------------------------------------------->
+  <%- include ('../partials/footer') %>
+
+</html>

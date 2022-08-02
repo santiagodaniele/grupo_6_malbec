@@ -86,10 +86,7 @@ const controlador = {
     },
     userList: (req, res) => {
         try {
-            Users.findAll(
-                {
-                    include: { association: "role" }
-                })
+            Users.findAll()
                 .then(usuarios => {
                     res.render('./users/userList', { usuarios })
                 })
@@ -108,14 +105,11 @@ const controlador = {
             });
     },
     edit: function (req, res) {
-        db.User.findByPk(req.params.id,
-            {
-                include: { association: "role" }
-
-            })
+        db.User.findByPk(req.params.id)
             .then(User => {
                 res.render('./users/userEdit', { User });
-            });
+            })
+            .catch(error => res.send(error));
 
 
     },
@@ -134,7 +128,7 @@ const controlador = {
                     where: { id: UserId }
                 })
             .then(() => {
-                return res.redirect('./userList')
+                return res.redirect('/users/userList')
             })
             .catch(error => res.send(error))
     },

@@ -10,6 +10,7 @@ window.onload = function () {
     let button = document.querySelector(".create-account")
     let errores = []
     let regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
+    let regExMail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     firstName.addEventListener("focus", () => {
         firstName.style.borderColor = "green"
@@ -37,7 +38,7 @@ window.onload = function () {
         email.style.borderColor = "green"
     }),
     email.addEventListener("blur", () => {
-            if (email.value.length < 3) {
+            if (!regExMail.test(email.value) || (email.value.length < 3)) {
                 email.style.borderColor = "red"
                 errores.push(avisoError3.innerText = "Debe ingresar un email válido ")
             } else {

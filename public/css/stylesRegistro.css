@@ -53,7 +53,7 @@ input[type=text],[type=email],[type=password],.content-select2 {
   padding-right:28px ;
 }
 
-select{
+#select{
   font-size: 13px;
   height: 32px;
   margin: 0 0 5px;
@@ -109,7 +109,6 @@ select{
 .avatar {
   font-size: 14px;
   background: rgb(203, 194, 178);
-
 }
 
 .button2 {

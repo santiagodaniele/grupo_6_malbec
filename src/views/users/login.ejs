@@ -14,7 +14,8 @@
        <section class="formulariologin"><h5>Iniciar sesión</h5>
         <form action="/users/login" method="POST" >
         <p>
-            <input class="controls" type="email" name="email" size="20" placeholder="Email">
+            <input class="controls" type="email" name="email" size="20" placeholder="Email" id = "email">
+            <div class= 'aviso-error1'></div>
             <% if(locals.errors && errors.email) { %>
                 <div class= 'aviso-error'>
                 <%=  errors.email.msg %>
@@ -22,7 +23,8 @@
               <% } %>
             </p>
         <p>
-            <input class="controls" type="password" name="password" size="20" placeholder="Contraseña">
+            <input class="controls" type="password" name="password" size="20" placeholder="Contraseña" id = "password">
+            <div class= 'aviso-error2'></div>
         </p>
          <p>  
             <input type="submit" value="Login" class="buttons">
@@ -33,12 +35,13 @@
                  </p> 
             <p>
                 <div>
-                    <a href="#">¿Olvidaste tu Contrasena?</a>
+                    <a href="#">¿Olvidaste tu Contraseña?</a>
             </p></div>
         
         </form>
         </section>
       
     </main>
+    <script src = "/js/loginValidator.js"></script>
     <%- include ('../partials/footer') %> 
 </html>

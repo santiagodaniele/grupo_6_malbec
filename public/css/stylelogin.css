@@ -42,6 +42,18 @@
     font-size: 14px;
     font-weight: bold;
   }
+
+  .aviso-error1 {
+    text-align: left;
+    font-size: 14px;
+    color: #FF0000;
+  }
+  
+  .aviso-error2 {
+    text-align: left;
+    font-size: 14px;
+    color: #FF0000;
+  }
   
   .buttons {
     width: 100%;

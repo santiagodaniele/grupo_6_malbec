@@ -10,7 +10,6 @@
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
-
   <body>
     <main>
       <section class="datospersonales">
@@ -18,12 +17,12 @@
           <h5>Edicion de Usuario:</h5>
           <label class="col-sm-3 col-form-label is-required"><span>
               Nombre</span></label>
-          <input type="text" name="firstname" value="<%= User.first_name %>" required >
+          <input type="text" name="firstname" value="<%= User.first_name %>" readonly >
           
           <label class="col-sm-3 col-form-label is-required"><span>
               Apellido</span></label>
           <input type="text" 
-          name="lastname" value="<%= User.last_name %>" required>
+          name="lastname" value="<%= User.last_name %>" readonly>
          <!-- <label class="col-sm-3 col-form-label is-required"><span>
               Fecha de Nacimiento</span></label>
           <div class="content-select">
@@ -183,15 +182,22 @@
           <label class="col-sm-3 col-form-label is-required"><span>
               Email</span></label>
           <input type="email" size="50" name="email" value="<%= User.email %>" readonly>
-         
+          <p>
+          <label class="col-sm-3 col-form-label is-required"><span>
+            Rol</span></label>
+            <select id="select" name="rol">
+              <option value="2">Administrador</option>
+              <option value="1">Usuario</option>
+              </select>
+            </p>
           <!-- <label class="col-sm-3 col-form-label is-required"><span>
               Contraseña</span></label>
           <input type="password" size="50" name="password" required>          -->
           <br>
-          <p>
+          <!-- <p>
             <label class="avatar"><b>Imagen de perfil:</b></label>
             <input class="avatar" type='file' name='image'>            
-          </p>
+          </p> -->
           <br>
           <figure>
             <img class="img-view" src="/images/users/<%= User.image%>" alt="bebida <%= User.first_name%>">

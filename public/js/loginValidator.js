@@ -23,7 +23,7 @@ window.onload = function () {
         password.style.borderColor = "green"
     }),
     password.addEventListener("blur", () => {
-            if (password.value.length < 8) {
+            if (password.value.length < 5) {
                 password.style.borderColor = "red"
                 errores.push(avisoError2.innerText = "La contraseña debe contener al menos 8 caracteres.")
             } else {

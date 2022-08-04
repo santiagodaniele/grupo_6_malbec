@@ -22,7 +22,8 @@
           name="firstname" 
           class="input-text validate-length maximum-length-20  required-entry
           <% locals.errors && errors.firstname ? 'is invalid' : null %>"
-          value="<%= locals.oldData ? oldData.firstname : null %>">
+          value="<%= locals.oldData ? oldData.firstname : null %>" id = "first-name">
+          <div class= 'aviso-error1'></div>
           <% if(locals.errors && errors.firstname) { %>
             <div class= 'aviso-error'>
             <%=  errors.firstname.msg %>
@@ -34,7 +35,8 @@
           name="lastname" 
           class="input-text  validate-length maximum-length-20  required-entry
           <% locals.errors && errors.lastname ? 'is invalid' : null %>"
-          value="<%= locals.oldData ? oldData.lastname : null %>">
+          value="<%= locals.oldData ? oldData.lastname : null %>" id = "last-name">
+          <div class= 'aviso-error2'></div>
           <% if(locals.errors && errors.lastname) { %>
             <div class= 'aviso-error'>
             <%=  errors.lastname.msg %>
@@ -201,7 +203,8 @@
           <input type="email" 
           size="50" name="email"
           class="datos <% locals.errors && errors.email ? 'is invalid' : null %>"
-          value="<%= locals.oldData ? oldData.email : null %>">></input>
+          value="<%= locals.oldData ? oldData.email : null %>" id = "email">></input>
+          <div class= 'aviso-error3'></div>
           <% if(locals.errors && errors.email) { %>
             <div class= 'aviso-error'>
             <%=  errors.email.msg %>
@@ -211,7 +214,8 @@
               Contraseña</span></label>
           <input type="password" 
           size="50" name="password"
-          class="datos <% locals.errors && errors.password ? 'is invalid' : null %>">
+          class="datos <% locals.errors && errors.password ? 'is invalid' : null %>" id = "password">
+          <div class= 'aviso-error4'></div>
           <% if(locals.errors && errors.password) { %>
             <div class= 'aviso-error'>
             <%=  errors.password.msg %>
@@ -234,6 +238,7 @@
         </form>
       </section>
     </main>
+    <script src = "/js/validator.js"></script>
   </body>
   <!-----------------------------------------=FOOTER=----------------------------------------------------->
   <%- include ('../partials/footer') %>

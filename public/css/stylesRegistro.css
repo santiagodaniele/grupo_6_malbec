@@ -86,6 +86,26 @@ select{
   color: #FF0000;
 }
 
+.aviso-error1 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.aviso-error2 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.aviso-error3 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.aviso-error4 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
 .avatar {
   font-size: 14px;
   background: rgb(203, 194, 178);

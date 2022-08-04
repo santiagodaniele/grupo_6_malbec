@@ -58,3 +58,13 @@ Mas de: continuar compañando a los compañeros que van un poco más lento y exp
 Seguir haciendo: continuar con la comunicación fluida y haciendo pair programming
 Menos de: no tuvimos dificultades
 Dejar de: sin comentarios
+
+Retrospectiva Sprint 6:
+Durante este sprint mantuvimos mucho la comunicación, se nos complicó un poco para reunirnos pero avanzamos satisfactoriamente. Continuamos haciendo pair programming, ya que nos está dando muy buen resultado. Continuamos repasando clases anteriores para fijar conocimientos.
+
+Metodología Estrella de Mar:
+Empezar a hacer: continuar a actualizando más seguido el tablero de Trello y seguir dandole relevancia para ordenar las tareas
+Mas de: continuar compañando a los compañeros que van un poco más lento y explicarnos más el desarrollo de como hizo cada uno su tarea
+Seguir haciendo: continuar con la comunicación fluida y haciendo pair programming
+Menos de: no tuvimos dificultades
+Dejar de: sin comentarios

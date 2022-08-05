@@ -92,7 +92,7 @@ window.onload = function () {
         category.style.borderColor = "green"
     }),
         category.addEventListener("blur", () => {
-            if (category.value = "Seleccione la categoría") {
+            if (category.value == "") {
                 category.style.borderColor = "red"
                 errores.push(avisoError7.innerText = "Debe seleccionar una categoría.")
             } else {
@@ -103,7 +103,7 @@ window.onload = function () {
         subcategory.style.borderColor = "green"
     }),
         subcategory.addEventListener("blur", () => {
-            if (subcategory.value = "Seleccione la Sub-Categoría") {
+            if (subcategory.value == "") {
                 subcategory.style.borderColor = "red"
                 errores.push(avisoError8.innerText = "Debe seleccionar una subcategoría.")
             } else {
@@ -114,7 +114,7 @@ window.onload = function () {
         variedad.style.borderColor = "green"
     }),
         variedad.addEventListener("blur", () => {
-            if (category.value = "Seleccione una variedad") {
+            if (variedad.value == "") {
                 variedad.style.borderColor = "red"
                 errores.push(avisoError9.innerText = "Debe seleccionar una variedad.")
             } else {

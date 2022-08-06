@@ -27,7 +27,7 @@ router.get("/create", adminMiddleware, adminController.create);
 router.post("/create", uploadFile.single('image'), validations, adminMiddleware, adminController.store);
 router.get('/detail/:id', adminMiddleware, adminController.show);
 router.get("/edit/:id", adminMiddleware, adminController.edit);
-router.put("/edit/:id", uploadFile.single('image'), adminMiddleware, adminController.update);
+router.put("/edit/:id", uploadFile.single('image'), validations, adminMiddleware, adminController.update);
 router.get('/delete/:id', adminMiddleware, adminController.destroy);
 
 module.exports = router;

@@ -5,7 +5,7 @@
 <head>
   <title>Register</title>
   <%- include ('../partials/head') %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylesRegistro.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
@@ -18,31 +18,27 @@
           <h5>Datos de registro:</h5>
           <label class="col-sm-3 col-form-label is-required"><span>
               Nombre</span></label>
-          <input type="text"
-          name="firstname" 
-          class="input-text validate-length maximum-length-20  required-entry
+          <input type="text" name="firstname" class="input-text validate-length maximum-length-20  required-entry
           <% locals.errors && errors.firstname ? 'is invalid' : null %>"
-          value="<%= locals.oldData ? oldData.firstname : null %>" id = "first-name">
-          <div class= 'aviso-error1'></div>
+            value="<%= locals.oldData ? oldData.firstname : null %>" id="first-name">
+          <div class='aviso-error1'></div>
           <% if(locals.errors && errors.firstname) { %>
-            <div class= 'aviso-error'>
-            <%=  errors.firstname.msg %>
+            <div class='aviso-error'>
+              <%= errors.firstname.msg %>
             </div>
-          <% } %>
-          <label class="col-sm-3 col-form-label is-required"><span>
-              Apellido</span></label>
-          <input type="text" 
-          name="lastname" 
-          class="input-text  validate-length maximum-length-20  required-entry
+            <% } %>
+              <label class="col-sm-3 col-form-label is-required"><span>
+                  Apellido</span></label>
+              <input type="text" name="lastname" class="input-text  validate-length maximum-length-20  required-entry
           <% locals.errors && errors.lastname ? 'is invalid' : null %>"
-          value="<%= locals.oldData ? oldData.lastname : null %>" id = "last-name">
-          <div class= 'aviso-error2'></div>
-          <% if(locals.errors && errors.lastname) { %>
-            <div class= 'aviso-error'>
-            <%=  errors.lastname.msg %>
-            </div>
-          <% } %>
-          <!-- <label class="col-sm-3 col-form-label is-required"><span>
+                value="<%= locals.oldData ? oldData.lastname : null %>" id="last-name">
+              <div class='aviso-error2'></div>
+              <% if(locals.errors && errors.lastname) { %>
+                <div class='aviso-error'>
+                  <%= errors.lastname.msg %>
+                </div>
+                <% } %>
+                  <!-- <label class="col-sm-3 col-form-label is-required"><span>
               Fecha de Nacimiento</span></label>
           <div class="content-select">
             <div class="dia-content">
@@ -118,7 +114,7 @@
             <%=  errors.year.msg %>
             </div>
           <% } %> -->
-          <!-- <label class="col-sm-3 col-form-label is-required"><span>
+                  <!-- <label class="col-sm-3 col-form-label is-required"><span>
               Tipo de Documento</span></label>
           <select class="content-select2" name="documentType">
             <option value=""></option>
@@ -142,7 +138,7 @@
             <%=  errors.document.msg %>
             </div>
           <% } %> -->
-          <!-- <p>
+                  <!-- <p>
           <h5>DATOS DE ENVÍO:</h5>
           </p>
           <label class="col-sm-3 col-form-label is-required"><span>
@@ -195,50 +191,49 @@
             <%=  errors.phone.msg %>
             </div>
           <% } %> -->
-          <!-- <p>
+                  <!-- <p>
           <h5>DATOS DE REGISTRO:</h5>
           </p> -->
-          <label class="col-sm-3 col-form-label is-required"><span>
-              Email</span></label>
-          <input type="email" 
-          size="50" name="email"
-          class="datos <% locals.errors && errors.email ? 'is invalid' : null %>"
-          value="<%= locals.oldData ? oldData.email : null %>" id = "email">></input>
-          <div class= 'aviso-error3'></div>
-          <% if(locals.errors && errors.email) { %>
-            <div class= 'aviso-error'>
-            <%=  errors.email.msg %>
-            </div>
-          <% } %>
-          <label class="col-sm-3 col-form-label is-required"><span>
-              Contraseña</span></label>
-          <input type="password" 
-          size="50" name="password"
-          class="datos <% locals.errors && errors.password ? 'is invalid' : null %>" id = "password">
-          <div class= 'aviso-error4'></div>
-          <% if(locals.errors && errors.password) { %>
-            <div class= 'aviso-error'>
-            <%=  errors.password.msg %>
-            </div>
-          <% } %>
-          <br>
-          <p>
-            <label class="avatar"><b>Imagen de perfil:</b></label>
-            <input class="avatar" type='file' name='image'>
-            <% if(locals.errors && errors.image) { %>
-              <div class= 'aviso-error'>
-              <%=  errors.image.msg %>
-              </div>
-            <% } %>
-          </p>
-          <!-- <p><input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input></p>
+                  <label class="col-sm-3 col-form-label is-required"><span>
+                      Email</span></label>
+                  <input type="email" size="50" name="email"
+                    class="datos <% locals.errors && errors.email ? 'is invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.email : null %>" id="email">></input>
+                  <div class='aviso-error3'></div>
+                  <% if(locals.errors && errors.email) { %>
+                    <div class='aviso-error'>
+                      <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                      <label class="col-sm-3 col-form-label is-required"><span>
+                          Contraseña</span></label>
+                      <input type="password" size="50" name="password"
+                        class="datos <% locals.errors && errors.password ? 'is invalid' : null %>" id="password">
+                      <div class='aviso-error4'></div>
+                      <% if(locals.errors && errors.password) { %>
+                        <div class='aviso-error'>
+                          <%= errors.password.msg %>
+                        </div>
+                        <% } %>
+                          <br>
+                          <p>
+                            <label class="avatar"><b>Imagen de perfil:</b></label>
+                            <input class="avatar" type='file' name='image'>
+                            <% if(locals.errors && errors.image) { %>
+                              <div class='aviso-error'>
+                                <%= errors.image.msg %>
+                              </div>
+                              <% } %>
+                          </p>
+                          <!-- <p><input type="checkbox" name="terms" value="terms" required>Acepto los términos y condiciones</input></p>
           <p><input type="checkbox" name="newsletter" value="newsletter">Deseo recibir novedades y ofertas</input></p> -->
-          
-          <button type="submit" class="create-account" title="Crear cuenta"><span>Crear cuenta</span></button>
+
+                          <button type="submit" class="create-account" title="Crear cuenta"><span>Crear
+                              cuenta</span></button>
         </form>
       </section>
     </main>
-    <script src = "/js/validator.js"></script>
+    <script src="/js/validator.js"></script>
   </body>
   <!-----------------------------------------=FOOTER=----------------------------------------------------->
   <%- include ('../partials/footer') %>

@@ -39,7 +39,7 @@ window.onload = function () {
         brand.addEventListener("blur", () => {
             if (brand.value.length < 3) {
                 brand.style.borderColor = "red"
-                errores.push(avisoError2.innerText = "El apellido debe contener al menos 3 caracteres")
+                errores.push(avisoError2.innerText = "La marca debe contener al menos 3 caracteres")
             } else {
                 avisoError2.innerText = ""
             }

@@ -55,31 +55,31 @@ const adminController = {
 
                     })
                 })
-        }else {
-        let image = "default-image.jpg"
-        if (req.file) {
-            image = req.file.filename;
-        };
-        Products
-            .create(
-                {
-                    name: req.body.name,
-                    brand: req.body.brand,
-                    price: req.body.price,
-                    description: req.body.description,
-                    stock: req.body.stock,
-                    discount: req.body.discount,
-                    category_id: req.body.category_id,
-                    subcategory_id: req.body.subcategory_id,
-                    variety_id: req.body.variety_id,
-                    image,
+        } else {
+            let image = "default-image.jpg"
+            if (req.file) {
+                image = req.file.filename;
+            };
+            Products
+                .create(
+                    {
+                        name: req.body.name,
+                        brand: req.body.brand,
+                        price: req.body.price,
+                        description: req.body.description,
+                        stock: req.body.stock,
+                        discount: req.body.discount,
+                        category_id: req.body.category_id,
+                        subcategory_id: req.body.subcategory_id,
+                        variety_id: req.body.variety_id,
+                        image,
 
-                }
-            )
-            .then(() => {
-                return res.redirect('/admin/administrar')
-            })
-            .catch(error => res.send(error))
+                    }
+                )
+                .then(() => {
+                    return res.redirect('/admin/administrar')
+                })
+                .catch(error => res.send(error))
         }
     },
     show: (req, res) => {
@@ -106,29 +106,50 @@ const adminController = {
             .catch(error => res.send(error))
     },
     update: function (req, res) {
-        let image = req.body.image = req.file ? req.file.filename : req.body.oldImagen;
         let productId = req.params.id;
-        Products
-            .update(
-                {
-                    name: req.body.name,
-                    brand: req.body.brand,
-                    price: req.body.price,
-                    description: req.body.description,
-                    stock: req.body.stock,
-                    discount: req.body.discount,
-                    category_id: req.body.category_id,
-                    subcategory_id: req.body.subcategory_id,
-                    variety_id: req.body.variety_id,
-                    image,
-                },
-                {
-                    where: { id: productId }
+        const resultValidation = validationResult(req);
+        if (!resultValidation.isEmpty()) {
+            let promProducts = Products.findByPk(productId, { include: ['category', 'subcategory', 'variety'] });
+            let promCategories = Categories.findAll();
+            let promSubcategories = Subcategories.findAll();
+            let promVarieties = Varieties.findAll();
+            Promise
+                .all([promProducts, promCategories, promSubcategories, promVarieties])
+                .then(([Product, allCategories, allSubcategories, allVarieties]) => {
+                    res.render(path.resolve(__dirname, '..', 'views', 'admin/edit'), {
+                        Product,
+                        errors: resultValidation.mapped(),
+                        allCategories,
+                        allSubcategories,
+                        allVarieties
+
+                    })
                 })
-            .then(() => {
-                return res.redirect('/admin/administrar')
-            })
-            .catch(error => res.send(error))
+        } else {
+            let image = req.body.image = req.file ? req.file.filename : req.body.oldImagen;
+
+            Products
+                .update(
+                    {
+                        name: req.body.name,
+                        brand: req.body.brand,
+                        price: req.body.price,
+                        description: req.body.description,
+                        stock: req.body.stock,
+                        discount: req.body.discount,
+                        category_id: req.body.category_id,
+                        subcategory_id: req.body.subcategory_id,
+                        variety_id: req.body.variety_id,
+                        image,
+                    },
+                    {
+                        where: { id: productId }
+                    })
+                .then(() => {
+                    return res.redirect('/admin/administrar')
+                })
+                .catch(error => res.send(error))
+        }
     },
     destroy: function (req, res) {
         let productId = req.params.id;

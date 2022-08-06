@@ -1,17 +1,14 @@
 const path = require('path');
 const { check } = require('express-validator');
-// const db = require('../database/models');
-// const Users = db.User;
-// const Roles = db.Role;
 
 module.exports = [
-    check('name').notEmpty().withMessage('Ingrese el nombre del producto'),
-    check('brand').notEmpty().withMessage('Ingrese la marca del producto'),
-    check('price').notEmpty().withMessage('Ingrese un precio'),
-    check('description').notEmpty().withMessage('Ingrese la descripción del producto'),
+	check('name').notEmpty().withMessage('Ingrese el nombre del producto').isLength(5).withMessage('Minimo de 5 caracteres'),
+	check('brand').notEmpty().withMessage('Ingrese la marca del producto'),
+	check('price').notEmpty().withMessage('Ingrese un precio'),
+	check('description').notEmpty().withMessage('Ingrese la descripción del producto').isLength(20).withMessage('Minimo de 20 caracteres'),
 	check('stock').notEmpty().withMessage('Ingrese el stock del producto'),
 	check('discount').notEmpty().withMessage('Ingrese el descuento del producto'),
-    check('image').custom((value, { req }) => {
+	check('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
 

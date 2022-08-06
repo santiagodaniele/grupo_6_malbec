@@ -116,6 +116,7 @@ const controlador = {
     update: function (req, res) {
         let image = req.body.image = req.file ? req.file.filename : req.body.oldImagen;
         let UserId = req.params.id;
+        
         Users
             .update(
                 {

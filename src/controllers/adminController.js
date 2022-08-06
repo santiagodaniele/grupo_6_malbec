@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require("fs")
+const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const { Op } = require("sequelize");
 
@@ -36,6 +37,25 @@ const adminController = {
             .catch(error => res.send(error))
     },
     store: function (req, res) {
+
+        const resultValidation = validationResult(req);
+        if (!resultValidation.isEmpty()) {
+            let promCategories = Categories.findAll();
+            let promSubcategories = Subcategories.findAll();
+            let promVarieties = Varieties.findAll();
+            Promise
+                .all([promCategories, promSubcategories, promVarieties])
+                .then(([allCategories, allSubcategories, allVarieties]) => {
+                    res.render('./admin/create', {
+                        errors: resultValidation.mapped(),
+                        oldData: req.body,
+                        allCategories,
+                        allSubcategories,
+                        allVarieties
+
+                    })
+                })
+        }else {
         let image = "default-image.jpg"
         if (req.file) {
             image = req.file.filename;
@@ -60,6 +80,7 @@ const adminController = {
                 return res.redirect('/admin/administrar')
             })
             .catch(error => res.send(error))
+        }
     },
     show: (req, res) => {
         db.Product.findByPk(req.params.id,

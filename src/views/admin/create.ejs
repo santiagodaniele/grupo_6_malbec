@@ -18,23 +18,74 @@
                 <h5>FORMULARIO DE CARGA DE PRODUCTOS</h5>
                 <form action="/admin/create" method="POST" enctype="multipart/form-data">
                     <label class="col-sm-3 col-form-label is-required" for="name"><span>Nombre:</span></label>
-                    <input type="text" id="name" name="name" placeholder="Ej: Cerveza-Quilmes">
+                    <input type="text" id="name" name="name" 
+                    class="input-text validate-length maximum-length-20  required-entry
+                    <% locals.errors && errors.name ? 'is invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.name : null %>" id = "name"
+                    placeholder="Ej: Cerveza-Quilmes">
+                    <% if(locals.errors && errors.name) { %>
+                        <div class= 'aviso-error'>
+                        <%=  errors.name.msg %>
+                        </div>
+                      <% } %>
 
                     <label class="col-sm-3 col-form-label is-required" for="bodega"><span>Marca:</span></label>
-                    <input type="text" id="bodega" name="brand" placeholder="Ej: Quilmes">
+                    <input type="text" id="bodega" name="brand" 
+                    class="input-text validate-length maximum-length-20  required-entry
+                    <% locals.errors && errors.brand ? 'is invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.brand : null %>" id = "brand"
+                    placeholder="Ej: Quilmes">
+                    <% if(locals.errors && errors.brand) { %>
+                        <div class= 'aviso-error'>
+                        <%=  errors.brand.msg %>
+                        </div>
+                      <% } %>
 
                     <label class="col-sm-3 col-form-label is-required" for="price"><span>Precio:</span></label>
-                    <input type="text" id="price" name="price" placeholder="Ej: 5678">
+                    <input type="text" id="price" name="price" 
+                    class="input-text validate-length maximum-length-20  required-entry
+                    <% locals.errors && errors.price ? 'is invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.price : null %>" id = "price"
+                    placeholder="Ej: 5678">
+                    <% if(locals.errors && errors.price) { %>
+                        <div class= 'aviso-error'>
+                        <%=  errors.price.msg %>
+                        </div>
+                      <% } %>
 
                     <label class="col-sm-3 col-form-label is-required"
                         for="description"><span>Descripción:</span></label>
-                    <textarea name="description" id="description" class="description"></textarea>
+                    <textarea name="description" id="description" class="description required-entry
+                    <% locals.errors && errors.description ? 'is invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.description : null %>" id = "description"></textarea>
+                    <% if(locals.errors && errors.description) { %>
+                        <div class= 'aviso-error'>
+                        <%=  errors.description.msg %>
+                        </div>
+                      <% } %>
 
                     <label class="col-sm-3 col-form-label is-required" for="stock"><span>Stock:</span></label>
-                    <input type="text" id="stock" name="stock">
+                    <input type="text" id="stock" name="stock"
+                    class="input-text validate-length maximum-length-20  required-entry
+                    <% locals.errors && errors.stock ? 'is invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.stock : null %>" id = "stock">
+                    <% if(locals.errors && errors.stock) { %>
+                        <div class= 'aviso-error'>
+                        <%=  errors.stock.msg %>
+                        </div>
+                      <% } %>
 
                     <label class="col-sm-3 col-form-label is-required" for="discount"><span>Descuento:</span></label>
-                    <input type="text" id="discount" name="discount" placeholder="Ej: 15">
+                    <input type="text" id="discount" name="discount" 
+                    class="input-text validate-length maximum-length-20  required-entry
+                    <% locals.errors && errors.discount ? 'is invalid' : null %>"
+                    value="<%= locals.oldData ? oldData.discount : null %>" id = "discount"
+                    placeholder="Ej: 15">
+                    <% if(locals.errors && errors.discount) { %>
+                        <div class= 'aviso-error'>
+                        <%=  errors.discount.msg %>
+                        </div>
+                      <% } %>                      
 
                     <label class="col-sm-3 col-form-label is-required" for="category"><span>Categoría:</span></label>
                     <select name="category_id" id="category" required class="content-select2">
@@ -71,7 +122,13 @@
 
                     <label class="col-sm-3 col-form-label is-required" for="image"><span>Foto:</span></label>
                     <br>
-                    <input name="image" id="image" class="buttons" type="file"></input>
+                    <input name="image" id="image" class="buttons" type="file"
+                    value="<%= locals.oldImage ? oldImage.image : null %>"></input>
+                    <% if(locals.errors && errors.image) { %>
+                        <div class= 'aviso-error'>
+                        <%=  errors.image.msg %>
+                        </div>
+                      <% } %>
                     <br>
                     <br>
 

@@ -68,3 +68,13 @@ Mas de: continuar compañando a los compañeros que van un poco más lento y exp
 Seguir haciendo: continuar con la comunicación fluida y haciendo pair programming
 Menos de: no tuvimos dificultades
 Dejar de: sin comentarios
+
+Retrospectiva Sprint 7:
+Durante este sprint nos distribuimos el tiempo para poder cumplir con las tareas que se solicitaban. No pudimos reunirnos muy seguido pero sin embargo pudimos llegar al objetivo. Fue indispensable repasar contenido de clases anteriores y googlear bastante sobre problemas que íbamos teniendo en el camino.
+
+Metodología Estrella de Mar:
+Empezar a hacer: Le dimos prioridad al tablero de Trello para poder organizar bien las tareas pendientes y las mejoras que teníamos que realizar.
+Mas de: continuar explicándonos a medida que vamos construyendo para que todos estemos en la misma sintonía y en conocimiento sobre todo lo que vamos desarrollando
+Seguir haciendo: continuar con la comunicación fluida, investigar mucho en google y repasar clases anteriores del Playground para reafirmar conocimientos
+Menos de: no tuvimos dificultades
+Dejar de: sin comentarios

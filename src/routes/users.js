@@ -28,6 +28,10 @@ router.post("/login", usersController.processLogin);
 // Perfil del usuario
 router.get('/profile', authMiddleware, usersController.profile);
 
+// Editar perfil
+router.get('/profileEdit/:id', usersController.profileEdit);
+router.put("/profileEdit/:id", uploadFile.single('image'), usersController.updateProfile);
+
 //Logout
 router.get('/logout/', usersController.logout);
 

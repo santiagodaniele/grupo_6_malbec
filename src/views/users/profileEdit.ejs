@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+
+<head>
+	<title>Perfil</title>
+	<%- include ('../partials/head') %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/styleProfile.css">
+</head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+
+<body>
+	<%- include ('../partials/header') %>
+		<!-- Container -->
+		<form action="/users/profileEdit/id?_method=PUT" method="POST" enctype="multipart/form-data">
+			<div class="contenedor">
+				<div class="contenedor1">
+					<div class="contenedor2">
+						<h2 class="nombre">Editar Perfil</h2>
+
+						<label class="col-sm-3 col-form-label is-required"><span>Nombre</span></label>
+						<input type="text" name="first_name" class="input-text validate-length maximum-length-20" value="<%= User.first_name %>" is required>
+
+						<label class="col-sm-3 col-form-label is-required"><span>Apellido</span></label>
+						<input type="text" name="last_name" class="input-text validate-length maximum-length-20" value="<%= User.last_name %>" is required>
+
+						<label class="col-sm-3 col-form-label is-required"><span>Email</span></label>
+						<input type="text" name="email" class="input-text validate-length maximum-length-20" value="<%= User.email %>" is required>
+
+						
+
+							<br>
+							<br>
+							<br>
+
+							<label class="cambiar_imagen"><b>Cambiar Imagen de perfil:</b></label>
+							<input class="cambiar_imagen" type='file' name='image'>
+
+							<br>
+							<br>
+							<br>
+							<br>
+
+							<button class="volver" type="submit" class="button2">Editar</button>
+							<br>
+							<button class="volver"><a class="volver" href="/users/profile">Volver</a></button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- //Container -->
+
+		<%- include ('../partials/footer') %>
+</body>
+
+</html>

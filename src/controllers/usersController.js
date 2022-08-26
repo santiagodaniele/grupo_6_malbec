@@ -75,9 +75,40 @@ const controlador = {
     },
     profile: (req, res) => {
         console.log(req.cookies.userEmail);
+        console.log(req.session.userLogged);
         res.render('./users/profile', {
             user: req.session.userLogged
         });
+    },
+    profileEdit: (req, res) => {
+        db.User.findOne({ where: { email: req.session.userLogged.email } })
+            .then(User => {
+                res.render('./users/profileEdit', {
+                    User
+                });
+            })
+            .catch(error => res.send(error));
+    },
+
+    updateProfile: (req, res) => {
+        let image = req.body.image = req.file ? req.file.filename : req.body.oldImagen;
+        Users
+            .update(
+                {
+                    first_name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    email: req.body.email,
+                    image,
+                },
+                {
+                    where: { email: req.session.userLogged.email }
+                })
+            .then(() => {
+                res.clearCookie('userEmail');
+                req.session.destroy();
+                return res.redirect('/users/login')
+            })
+            .catch(error => res.send(error))
     },
     logout: (req, res) => {
         res.clearCookie('userEmail');
@@ -116,13 +147,14 @@ const controlador = {
     update: function (req, res) {
         let image = req.body.image = req.file ? req.file.filename : req.body.oldImagen;
         let UserId = req.params.id;
-        
+
         Users
             .update(
                 {
                     first_name: req.body.firstname,
                     last_name: req.body.lastname,
                     email: req.body.email,
+                    rol_id: req.body.rol,
                     image,
                 },
                 {

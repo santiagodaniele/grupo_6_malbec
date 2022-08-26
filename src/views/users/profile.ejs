@@ -3,28 +3,36 @@
 <!-----------------------------------------=HEAD=------------------------------------------------------->
 
 <head>
-    <title>Perfil</title>
-    <%- include ('../partials/head') %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/styleProfile.css">
+	<title>Perfil</title>
+	<%- include ('../partials/head') %>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/styleProfile.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
+
 <body>
-	<%- include ('../partials/header') %>	
-	<!-- Container -->
-	<div class="contenedor">
-		<div class="contenedor1">
-			<div class="contenedor2">
-				<h2 class="nombre">Hola <%= user.firstname %> <%= user.lastname %></h2>
-				<img src="/images/users/<%= user.image %>" width="300" height="300">
-				<br>
-				<br>
-				<div class="email"> <%= user.email %> </div>
-			</div>					
+	<%- include ('../partials/header') %>
+		<!-- Container -->
+		<div class="contenedor">
+			<div class="contenedor1">
+				<div class="contenedor2">
+					<h2 class="nombre">Hola <%= user.first_name %>
+							<%= user.last_name %>
+					</h2>
+					<!-- <h3 class="email"> <%= user.email %> </h3> -->
+					<img src="/images/users/<%= user.image %>" width="300" height="300">
+					<br>
+					<br>
+
+				</div>
+			</div>
+			<button class="button2"><a class="volver" href="/users/profileEdit/<%= user.id %>">Editar
+					Perfil</a></button>
 		</div>
-	</div>
-	<!-- //Container -->
-	
-    <%- include ('../partials/footer') %>
+
+		<!-- //Container -->
+
+		<%- include ('../partials/footer') %>
 </body>
+
 </html>

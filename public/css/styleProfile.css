@@ -7,35 +7,212 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
- 
-  .contenedor {
-      text-align: center;
-   display: block;
-   margin: 10px;
+
+.contenedor {
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+
+.contendor1 {
+  display: row;
+}
+
+.contendor2 {
+  display: column;
+}
+
+.nombre {
+  font-size: 20px;
+}
+
+.email {
+  font-size: 20px;
+}
+
+.volver {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 5%;
+
+}
+
+.cambiar_imagen {
+  font-size: 1.5rem;
+
+}
+
+.button2 {
+  width: 50%;
+  height: 40px;
+  font-weight: 700;
+  background: #000;
+  border-radius: 5px;
+  border: transparent;
+  font-family: initial;
+  text-transform: uppercase;
+  padding: 0;
+  color: white;
+  margin: 5px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.datospersonales h5 {
+  font-size: 20px;
+  padding-top: 5px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #000
+}
+
+span {
+  font-size: 13px;
+}
+
+.is-required:after {
+  font-size: 13px;
+  content: '*';
+  margin-left: 3px;
+  color: red;
+  font-weight: bold;
+}
+
+input[type=text],
+[type=email],
+[type=password],
+.content-select2 {
+  background: #f1e8dd;
+  background-clip: padding-box;
+  border: 1px solid #0e0e0e;
+  border-radius: 1px;
+  margin: 0 0 5px;
+  font-size: 14px;
+  height: 32px;
+  line-height: 1.428571429;
+  padding: 0 9px;
+  vertical-align: baseline;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.dia-content {
+  padding-right: 1px;
+}
+
+.content-select {
+  display: flex;
+}
+
+.dia-content {
+  padding-right: 28px;
+}
+
+#select {
+  font-size: 13px;
+  height: 32px;
+  margin: 0 0 5px;
+  padding: 0 9px;
+  border: 1px solid #c2c2c2;
+  border-radius: 1px;
+  line-height: 1.428571429;
+  background: #f1e8dd;
+}
+
+.create-account {
+
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  background: #000;
+  border-radius: 5px;
+  border: transparent;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: white;
+  margin: 5px;
+}
+
+.aviso-error {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.aviso-error1 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.aviso-error2 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.aviso-error3 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.aviso-error4 {
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.avatar {
+  font-size: 14px;
+  background: rgb(203, 194, 178);
+}
+
+.button2 {
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  background: #000;
+  border-radius: 5px;
+  border: transparent;
+  font-family: initial;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: white;
+  margin: 5px;
+}
+
+.volver {
+  width: 30%;
+  height: 40px;
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 5px;
+}
+
+@media(min-width:760px) {
+
+  .datospersonales h5 {
+    width: 75%;
   }
 
-  .contendor1 {
-    display: row;
+  input[type=text],
+  [type=email],
+  [type=password],
+  .content-select2 {
+    width: 75%;
   }
 
-  .contendor2 {
-    display: column;
+  .create-account {
+    width: 75%;
   }
-
-  .nombre{
-    font-size: 20px;
-  }
-
-  .email {
-      font-size: 20px;
-  }
-
-  .volver {
-    font-size: 20px;
-    color: white;
-    background-color: black;
-    border-radius: 5%;
-
-  }
-
-  
+}

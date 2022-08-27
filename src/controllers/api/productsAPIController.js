@@ -46,6 +46,23 @@ const productsAPIController = {
                 res.json(respuesta);
             });
     },
+    'ranking': (req, res) => {
+        db.Product.findOne({
+            order: [[ 'stock', 'ASC' ]],
+            include : ['category', "variety"],
+            })
+            .then(product => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        total: product.length,
+                        url: '/api/products/ranking'
+                    },
+                    data: product
+                }
+                res.json(respuesta);
+            });
+    },
 }
 
 module.exports = productsAPIController;

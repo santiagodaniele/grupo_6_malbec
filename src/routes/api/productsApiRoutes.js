@@ -7,5 +7,7 @@ const productsAPIController = require('../../controllers/api/productsAPIControll
 router.get('/', productsAPIController.list);
 //Detalle de un producto
 router.get('/detail', productsAPIController.detail);
+//Ranking de productos
+router.get('/ranking', productsAPIController.ranking);
 
 module.exports = router;

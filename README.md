@@ -22,3 +22,5 @@ Hemos visitado distintos comercios electrónicos del rubro, para considerar dist
 Si bien cada uno tiene su impronta, elegimos estas referencias porque son paginas diseñadas con una estética bastantes sobria pero, que a la vez resultar ser amigable y fácil de entender para la distintas edades del público. Endendemos la necesidad de que el sitio sea sencillo de navegar para hacer crecer las ventas.
 
 Tablero de trabajo: https://trello.com/b/0x6O8i6g/grupo-6-open-bar
+
+Repositoria del Dashboard: https://github.com/agufelice/dashboardOpenBar.git

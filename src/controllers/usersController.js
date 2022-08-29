@@ -22,13 +22,16 @@ const controlador = {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             })
-        }
+        }else {let image = "default-image.jpg"
+        if (req.file) {
+            image = req.file.filename;
+        };
         const newUser = {
             first_name: req.body.firstname,
             last_name: req.body.lastname,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file.filename,
+            image,
             rol_id: 1
 
         };
@@ -37,6 +40,7 @@ const controlador = {
                 res.redirect('./login');
             })
             .catch(error => res.send(error))
+        }
     },
     login: (req, res) => {
         res.render('./users/login')

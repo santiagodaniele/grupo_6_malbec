@@ -1,28 +1,15 @@
 window.onload = function () {
-    document.getElementById("menu-bar").addEventListener('click', modificarMenu);
+    let menubar=document.getElementById("menu-bar");
+    let links=document.getElementById("links-menu-bar");
+    
+    menubar.addEventListener('click', () =>{
+if (links.style.display === 'none') {
+    links.style.display = 'flex'
+}
+else {
+    links.style.display = 'none'
+}
 
-    var discriminador = true;
-
-    window.addEventListener('scroll', ocultarMenu);
-
-    function modificarMenu() {
-        if (discriminador) {
-            document.querySelector('nav').style.left = '-0px';
-            discriminador = false
-        }
-        else {
-            document.querySelector('nav').style.left = '-140px';
-            discriminador = true;
-        }
-
-    }
-    function ocultarMenu() {
-        if (window.innerWidth <= 768) {
-            document.querySelector('nav').style.left = '-140px';
-            discriminador = true;
-        }
-
-    }
-
+    })
 
 }

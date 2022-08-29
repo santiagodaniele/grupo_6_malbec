@@ -39,9 +39,7 @@
                     <% if (locals.adminLogged) { %>
                         <a href="/users/userList">ABM Usuarios</a>
                         <% } %>
-
         </nav>
-
 
         <div class="icons">
             <a href="/users/cart" class="fa-solid fa-cart-shopping"></a>
@@ -72,8 +70,19 @@
         </div>
 
     </div>
-  
-
+    <div id="links-menu-bar" class="navbarCel">
+        <i class="fa-brands fa-product-hunt"><a href="/product/list">Productos</a></i>
+         <i class="fa-solid fa-wine-bottle"><a href="/product/vinos">Vinos</a></i>
+         <i class="fa-solid fa-beer-mug-empty"><a href="/product/cervezas">Cervezas</a></i>
+         <i class="fa-solid fa-martini-glass-citrus"> <a href="/product/spirits">Spirits</a></i>
        
+        <% if (locals.adminLogged) { %>
+            <a href="/admin/administrar">ABM Productos</a>
+            <% } %>
+                <% if (locals.adminLogged) { %>
+                    <a href="/users/userList">ABM Usuarios</a>
+                    <% } %>
+
+                      </div>
     <script src="/js/hamburguer.js"></script>
 </header>

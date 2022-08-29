@@ -64,7 +64,7 @@ section {
   display: flex;
   height: 5rem;
   margin-left: 12rem;
-  
+
 }
 
 .header-1 .search-box-container #search-box {
@@ -140,11 +140,12 @@ section {
   transition: 0.8s;
 }
 
+
 .header-2 .icons a {
   font-size: 3.0rem;
   color: var(--black);
   padding-left: 1rem;
-  padding-top: 0,5rem;
+  padding-top: 0, 5rem;
 }
 
 .header-2 .icons a:hover {
@@ -159,6 +160,26 @@ section {
   padding: .8rem 1.5rem;
   color: var(--black);
   cursor: pointer;
+  display: none;
+}
+#links-menu-bar {
+  flex-direction: column;
+  background-color: orange;
+  width: 100%;
+  height: 30vh;
+ display:none;
+}
+
+.navbarCel a,i {
+  padding: 2rem;
+  font-size: 1.8rem ;
+  font-weight: bold;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+ }
+
+
+#check {
   display: none;
 }
 
@@ -200,30 +221,17 @@ section {
 @media(max-width:768px) {
 
   #menu-bar {
-    display: initial;
+    display: block;
   }
+
+  .slider{
+    display: none;
+  }
+
+  
 
   .header-2 .navbar {
-    position: absolute;
-    top: 41px;
-    background: var(--orange);
-    flex-direction: column;
-    
-  }
-
-  /* .header-2 .navbar.active{
-      display: initial;
-    }
-   */
-  .header-2 .navbar a {
-    font-size: 2.5rem;
-    display: block;
-    text-align: center;
-    background: none;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    flex-direction: column;
-    
+    display: none;
   }
 
 
@@ -262,7 +270,6 @@ section {
 
 @media(max-width:800px) {
   .slogan {
-    display: none;
+    display: block;
   }
 }
-

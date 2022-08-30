@@ -22,10 +22,12 @@ color: white;
   
   .footer .box-container .box .share a{
     padding:0;
-    height:4rem;
-    width:4rem;
+    height:3rem;
+    width:3rem;
     line-height: 4rem;
     text-align: center;
+    margin-left: 30px;
+   
     
   }
   
@@ -34,17 +36,22 @@ color: white;
     color: white;
     font-weight: 700;
     width: 100%;
+    margin-left: 80px;
+    
     }
-  
+
+       
   .footer .box-container .box p{
     font-size: 1.5rem;
     /* color:#666; */
     color: white;
     padding:.7rem 0;
+    margin-left: 80px;
   }
   
   .footer .box-container .box .links{
     padding:1rem 0;
+    margin-left: 80px;
   }
   
   .footer .box-container .box .links a{
@@ -58,6 +65,7 @@ color: white;
   
   .footer .box-container .box .links a:hover{
     color:var(--orange);
+    transition: 0.8s;
   }
   
   .footer .credit{
@@ -70,7 +78,7 @@ color: white;
   }
   .btn{
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 0,5rem;
     background:var(--orange);
     color:#fff;
     padding:.8rem 3rem;

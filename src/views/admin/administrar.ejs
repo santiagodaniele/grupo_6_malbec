@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-----------------------------------------=HEAD=------------------------------------------------------->
+
 <head>
-    <title>Administrar productos</title>
-<%- include ('../partials/head') %>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/stylesABMProduct.css">
+  <title>Administrar productos</title>
+  <%- include ('../partials/head') %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesABMProduct.css">
 </head>
 <!-----------------------------------------=HEADER=----------------------------------------------------->
 <%- include ('../partials/header') %>
 
-      <!--Administrador de productos-->
-      <br>
-      <section class="row">
-        <article class="col-12 ">
-          <h2 class="formularioAdmin">Administrador de Productos</h2>
-        </article>
-        <article class="col-12">
-          <a href="./create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
-        </article>
-        <article class="col-12" >
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Ver</th>
-                <th scope="col">Editar</th>
-                <th scope="col">Borrar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% bebidas.forEach(bebida => { %>
-              <tr>
-                <td><%= bebida.id%> </td>
-                <td><%= bebida.name%> </td>
-                <td><a href="./detail/<%= bebida.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
-                <td><a href="./edit/<%= bebida.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
-                <td><a href="./delete/<%= bebida.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
-              </tr>
-              <% }); %>
-            </tbody>
-          </table> 
-        </article>       
-      </section>
-      <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    </main>
+  <!--Administrador de productos-->
+  <br>
+  <section class="row">
+    <article class="col-12 ">
+      <h2 class="formularioAdmin">Administrador de Productos</h2>
+    </article>
+    <article class="col-12">
+      <a href="./create">
+        <ion-icon name="add-circle-outline"></ion-icon>Agregar
+      </a>
+    </article>
+    <article class="col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Ver</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bebidas.forEach(bebida=> { %>
+            <tr>
+              <td>
+                <%= bebida.id%>
+              </td>
+              <td>
+                <%= bebida.name%>
+              </td>
+              <td><a href="./detail/<%= bebida.id%> ">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </a></td>
+              <td><a href="./edit/<%= bebida.id%> ">
+                  <ion-icon name="pencil-outline"></ion-icon>
+                </a></td>
+              <td>
+                <form action="./delete/<%= bebida.id%>?_method=DELETE" method="post">
+                  <button type="submit"
+                    onclick="return confirm('Seguro quiere eliminar el producto <%= bebida.id%> <%= bebida.name%>')">
+                    <ion-icon name="trash-outline"></ion-icon>
+                  </button>
+              </td>
+              </form>
+            </tr>
+            <% }); %>
+        </tbody>
+      </table>
+    </article>
+  </section>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/sweetAlert.js"></script>
+  </main>
   </body>
+
 </html>

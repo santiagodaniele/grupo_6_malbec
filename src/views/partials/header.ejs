@@ -17,9 +17,10 @@
                 <h5>AQUELLA BEBIDA QUE BUSCAS, LA ENCONTRAS</h5>
             </li>
         </ul>
-        <form action="" class="search-box-container">
-            <input type="search" id="search-box" placeholder="¿Qué estás buscando?">
-            <label for="search-box" class="fas fa-search"></label>
+        <form action="/product/searchProducts" class="search-box-container">
+            <input type="search" id="search-box" placeholder="¿Qué estás buscando?" name="searchAllProds">
+
+            <button class="button" type="submit"> <label for="search-box" class="fas fa-search"></label></button>
         </form>
 
     </div>
@@ -72,10 +73,10 @@
     </div>
     <div id="links-menu-bar" class="navbarCel">
         <i class="fa-brands fa-product-hunt"><a href="/product/list">Productos</a></i>
-         <i class="fa-solid fa-wine-bottle"><a href="/product/vinos">Vinos</a></i>
-         <i class="fa-solid fa-beer-mug-empty"><a href="/product/cervezas">Cervezas</a></i>
-         <i class="fa-solid fa-martini-glass-citrus"> <a href="/product/spirits">Spirits</a></i>
-       
+        <i class="fa-solid fa-wine-bottle"><a href="/product/vinos">Vinos</a></i>
+        <i class="fa-solid fa-beer-mug-empty"><a href="/product/cervezas">Cervezas</a></i>
+        <i class="fa-solid fa-martini-glass-citrus"> <a href="/product/spirits">Spirits</a></i>
+
         <% if (locals.adminLogged) { %>
             <a href="/admin/administrar">ABM Productos</a>
             <% } %>
@@ -83,6 +84,6 @@
                     <a href="/users/userList">ABM Usuarios</a>
                     <% } %>
 
-                      </div>
+    </div>
     <script src="/js/hamburguer.js"></script>
 </header>

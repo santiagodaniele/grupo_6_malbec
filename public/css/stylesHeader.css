@@ -43,6 +43,13 @@ section {
   width: 30%;
 }
 
+.button {
+  border:none; 
+  background:none; 
+  padding:0px;
+  margin-bottom: 10px;  
+}
+
 .crear-cuenta {
   /* border: solid 1px; */
   /* border-radius: 20px; */
@@ -88,9 +95,9 @@ section {
   cursor: pointer;
 }
 
-.header-1 .search-box-container label:hover {
+/* .header-1 .search-box-container label:hover {
   background: var(--orange);
-}
+} */
 
 .slogan {
   text-align: center;
@@ -185,10 +192,12 @@ section {
 
 .usuario {
   font-size: 2rem;
+  margin-right: 20px;
 }
 
 .usuario-menu {
   font-size: 2rem;
+  margin-right: 20px;
 }
 
 .lista-usuario {

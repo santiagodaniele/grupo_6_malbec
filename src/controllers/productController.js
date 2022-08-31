@@ -112,6 +112,24 @@ const productController = {
             console.log(error);
         }
     },
+    search: (req, res) => {
+        let busqueda = req.query.searchAllProds.trim()
+        Products.findAll({
+            where: {
+                [Op.or]: [
+                    {name: {[Op.substring]:`%${busqueda}%`}},
+                    {description: {[Op.substring]:`%${busqueda}%`}},
+                    {price: {[Op.substring]:`%${busqueda}%`}},
+
+                ]
+            },
+            // include: [{assotiation: "images"}]
+        })
+        .then(products => {
+            console.log(products)
+            res.render('./products/searchProducts', {products})
+        })
+    }
 }
 
 module.exports = productController;

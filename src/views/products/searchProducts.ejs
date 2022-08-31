@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-----------------------------------------=HEAD=------------------------------------------------------->
+
+<head>
+    <title>Lista de productos</title>
+    <%- include ('../partials/head') %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/stylesindex.css">
+</head>
+<!-----------------------------------------=HEADER=----------------------------------------------------->
+<%- include ('../partials/header') %>
+
+    <!-----------------------------------------=SECTION=----------------------------------------------------->
+    <main>
+        <section class="last-visit">            
+            
+                <% if (products.length > 0) { %>
+                    <h3 id="vinos-tinos">Productos Encontrados</h3>
+            <div class="products"> 
+                    <% products.forEach(element=>{ %>
+                        <article>
+                            <a href="/product/<%= element.id %>"><img src="/images/<%= element.image %>" alt="FondDeCave"
+                                    class="product_img"></a>
+                            <div class="main-article">
+                                <p class="price">$<%= element.price%>
+                                </p>
+                                <p class="discount">
+                                    <%= element.discount%>% OFF
+                                </p>
+                                <h4 class="description">
+                                    <%= element.name%>
+                                </h4>
+                            </div>
+                        </article>
+                        <% }) %>
+                    </div>
+               <% }else { %> 
+                <h3 id="vinos-tinos">No hay productos</h3>
+                <% }  %> 
+
+                
+            
+        </section>
+    </main>
+    <!-----------------------------------------=FOOTER=----------------------------------------------------->
+    <%- include ('../partials/footer') %>

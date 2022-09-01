@@ -17,6 +17,7 @@ window.onload = function () {
                 errores.push(avisoError1.innerText = "Debe ingresar un email válido ")
             } else {
                 avisoError1.innerText = ""
+                errores.pop()
             }
         })
     password.addEventListener("focus", () => {
@@ -28,6 +29,7 @@ window.onload = function () {
                 errores.push(avisoError2.innerText = "La contraseña debe contener al menos 8 caracteres.")
             } else {
                 avisoError2.innerText = ""
+                errores.pop()
             }
         })
     button.addEventListener("click", function (e) {

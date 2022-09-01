@@ -48,7 +48,7 @@ router.get("/userEdit/:id", adminMiddleware, usersController.edit);
 router.put("/userEdit/:id", uploadFile.single('image'), adminMiddleware, usersController.update);
 
 // Eliminar usuario
-router.get('/delete/:id', adminMiddleware, usersController.destroy);
+router.delete('/delete/:id', adminMiddleware, usersController.destroy);
 
 
 // vista del carrito

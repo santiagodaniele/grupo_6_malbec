@@ -21,6 +21,7 @@ window.onload = function () {
                 errores.push(avisoError1.innerText = "El nombre debe contener al menos 3 caracteres")
             } else {
                 avisoError1.innerText = ""
+                errores.pop()
             }
         })
     lastName.addEventListener("focus", () => {
@@ -32,6 +33,7 @@ window.onload = function () {
                 errores.push(avisoError2.innerText = "El apellido debe contener al menos 3 caracteres")
             } else {
                 avisoError2.innerText = ""
+                errores.pop()
             }
         })
     email.addEventListener("focus", () => {
@@ -43,6 +45,7 @@ window.onload = function () {
                 errores.push(avisoError3.innerText = "Debe ingresar un email válido ")
             } else {
                 avisoError3.innerText = ""
+                errores.pop()
             }
         })
     password.addEventListener("focus", () => {
@@ -54,15 +57,13 @@ window.onload = function () {
                 errores.push(avisoError4.innerText = "La contraseña debe contener al menos 8 caracteres.")
             } else {
                 avisoError4.innerText = ""
+                errores.pop()
             }
         })
     button.addEventListener("click", function (e) {
         if (errores.length > 0) {
             e.preventDefault()
-        }
-        else {
-            button.submit
-        }
+        }        
     }
     )
 }

@@ -31,6 +31,7 @@ window.onload = function () {
                 errores.push(avisoError1.innerText = "El nombre debe contener al menos 3 caracteres")
             } else {
                 avisoError1.innerText = ""
+                errores.pop()
             }
         })
     brand.addEventListener("focus", () => {
@@ -42,6 +43,7 @@ window.onload = function () {
                 errores.push(avisoError2.innerText = "La marca debe contener al menos 3 caracteres")
             } else {
                 avisoError2.innerText = ""
+                errores.pop()
             }
         })
     price.addEventListener("focus", () => {
@@ -53,6 +55,7 @@ window.onload = function () {
                 errores.push(avisoError3.innerText = "El precio debe ser indicado en números mayores a 0")
             } else {
                 avisoError3.innerText = ""
+                errores.pop()
             }
         })
     description.addEventListener("focus", () => {
@@ -64,6 +67,7 @@ window.onload = function () {
                 errores.push(avisoError4.innerText = "La descripción debe contener al menos 20 caracteres")
             } else {
                 avisoError4.innerText = ""
+                errores.pop()
             }
         })
     stock.addEventListener("focus", () => {
@@ -75,6 +79,7 @@ window.onload = function () {
                 errores.push(avisoError5.innerText = "El stock debe ser indicado en números mayores a 0")
             } else {
                 avisoError5.innerText = ""
+                errores.pop()
             }
         })
     discount.addEventListener("focus", () => {
@@ -86,6 +91,7 @@ window.onload = function () {
                 errores.push(avisoError6.innerText = "El descuento debe ser indicado en números mayores a 0")
             } else {
                 avisoError6.innerText = ""
+                errores.pop()
             }
         })
     category.addEventListener("focus", () => {
@@ -97,6 +103,7 @@ window.onload = function () {
                 errores.push(avisoError7.innerText = "Debe seleccionar una categoría.")
             } else {
                 avisoError7.innerText = ""
+                errores.pop()
             }
         })
     subcategory.addEventListener("focus", () => {
@@ -108,6 +115,7 @@ window.onload = function () {
                 errores.push(avisoError8.innerText = "Debe seleccionar una subcategoría.")
             } else {
                 avisoError8.innerText = ""
+                errores.pop()
             }
         })
     variedad.addEventListener("focus", () => {
@@ -119,6 +127,7 @@ window.onload = function () {
                 errores.push(avisoError9.innerText = "Debe seleccionar una variedad.")
             } else {
                 avisoError9.innerText = ""
+                errores.pop()
             }
         })
     button.addEventListener("click", function (e) {

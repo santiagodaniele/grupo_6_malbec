@@ -37,7 +37,7 @@
           </tr>
         </thead>
         <tbody>
-          <% usuarios.forEach(user=> { %>
+          <% users.forEach(user=> { %>
             <tr>
               <td>
                 <%= user.id%>
@@ -49,7 +49,10 @@
                 <%= user.email%>
               </td>
               <td>
-                <%= user.rol_id%>
+                <%= user.role.name%>
+              </td>
+
+                        
               </td>
               <td><a href="./userDetail/<%= user.id%> ">
                   <ion-icon name="eye-outline"></ion-icon>
@@ -57,9 +60,16 @@
               <td><a href="./userEdit/<%= user.id%> ">
                   <ion-icon name="pencil-outline"></ion-icon>
                 </a></td>
-              <td><a href="./delete/<%= user.id%>">
+              <!-- <td><a href="./delete/<%= user.id%>">
                   <ion-icon name="trash-outline"></ion-icon>
-                </a></td>
+                </a></td> -->
+                <td><form action="./delete/<%= user.id%>?_method=DELETE" method="post">
+                  <button type="submit"
+                    onclick="return confirm('Seguro quiere eliminar el usuario <%= user.id%> <%= user.first_name%>')">
+                    <ion-icon name="trash-outline"></ion-icon>
+                  </button>
+              </td>
+              </form>
             </tr>
             <% }); %>
         </tbody>
@@ -67,6 +77,8 @@
     </article>
   </section>
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/sweetAlert.js"></script>
   </main>
   </body>
 

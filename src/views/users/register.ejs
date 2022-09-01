@@ -42,7 +42,7 @@
                       Email</span></label>
                   <input type="email" size="50" name="email"
                     class="datos <% locals.errors && errors.email ? 'is invalid' : null %>"
-                    value="<%= locals.oldData ? oldData.email : null %>" id="email">></input>
+                    value="<%= locals.oldData ? oldData.email : null %>" id="email"></input>
                   <div class='aviso-error3'></div>
                   <% if(locals.errors && errors.email) { %>
                     <div class='aviso-error'>

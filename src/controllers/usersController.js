@@ -51,7 +51,7 @@ const controlador = {
             if (userToLogin) {
                 let isOkThePassword = bcrypt.compare(req.body.password, userToLogin.password)
                 if (isOkThePassword) {
-                    if (userToLogin.rol_id == 2) {
+                    if (userToLogin.rol_id == 1) {
                         delete userToLogin.password;
                         req.session.adminLogged = userToLogin;
                         res.locals.adminLogged = true;
@@ -120,19 +120,18 @@ const controlador = {
         res.redirect('/');
     },
     userList: (req, res) => {
-        try {
-            Users.findAll()
-                .then(usuarios => {
-                    res.render('./users/userList', { usuarios })
-                })
-        } catch (error) {
-            console.log(error);
-        }
+        let promUsers = Users.findAll({include: ["role"]})
+        let promRoles = Roles.findAll();
+        Promise
+        .all([promUsers, promRoles])       
+        .then(([users, roles]) => {
+            res.render(path.resolve(__dirname, '..', 'views', 'users/userList'), {users, roles})})
+            .catch(error => res.send(error))
     },
     show: (req, res) => {
         db.User.findByPk(req.params.id,
             {
-                include: { association: "role" }
+                include: { association: "Role" }
 
             })
             .then(miUser => {

@@ -23,4 +23,4 @@ Si bien cada uno tiene su impronta, elegimos estas referencias porque son pagina
 
 Tablero de trabajo: https://trello.com/b/0x6O8i6g/grupo-6-open-bar
 
-Repositoria del Dashboard: https://github.com/agufelice/dashboardOpenBar.git
+Repositorio del Dashboard: https://github.com/agufelice/dashboardOpenBar.git

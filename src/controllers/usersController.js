@@ -32,7 +32,7 @@ const controlador = {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             image,
-            rol_id: 1
+            rol_id: 2
 
         };
         Users.create(newUser)

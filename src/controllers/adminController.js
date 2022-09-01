@@ -12,10 +12,7 @@ const Varieties = db.Variety;
 const adminController = {
     index: (req, res) => {
         try {
-            Products.findAll()
-                // {
-                //     include: { association: "category" }
-                // })
+            Products.findAll()               
                 .then(bebidas => {
                     res.render('./admin/administrar', { bebidas })
                 })

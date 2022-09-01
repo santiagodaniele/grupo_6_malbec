@@ -131,7 +131,7 @@ const controlador = {
     show: (req, res) => {
         db.User.findByPk(req.params.id,
             {
-                include: { association: "Role" }
+                include: { association: "role" }
 
             })
             .then(miUser => {

@@ -12,7 +12,9 @@ const Roles = db.Role;
 
 const productsAPIController = {
     'list': (req, res) => {
-        db.User.findAll({ atributes: { include: ['role'], exclude: ["password"] } })
+        db.User.findAll({include: [{association: "role"}],
+        attributes: {exclude: ["password"]} 
+        })
             .then(users => {
                 const usersData = users.map(user => ({
                     ...user.dataValues,

@@ -57,6 +57,23 @@ Clase extra base de datos. Pair programming. Creamos el diagrama de flujo, la ba
 Jueves 07-07
 Acomodamos Trello, subimos imagen de diagrama de flujo y realizamos la retro.
 
+Lunes 11-07 
+Arrancamos con el Sprint 6. Empezamos a armar las tablas en la base de datos para luego migrar de los archivos Json a base de datos (Mysql) con sequelize.
+
+Viernes 15-07
+Creamos el Script de estructura structure.sql. Para ellos escribimos todas las sentencias de sql para las tablas y sus relaciones. Luego creamos el script de datos para que cualquier desarrollador que descargue el proyecto pueda ver el sitio  funcionando sin hacer más pasos.
+
+Martes 19-07
+Creamos la carpeta Sequelize y archivos de modelos para representar las tablas de Usuarios, productos, categorias, roles, subcategorías, variedades e index.
+
+Viernes 22-07
+Modificamos todo el CRUD para que sea funcional con sequelize tanto para productos como para usuarios
+
+Viernes 29-07
+Terminamos con el CRUD, revisamos funcionalidad y entregables para realizar la entrega final del sprint.
+
+Jueves 04-08
+Arrancamos a organizarnos y planificar el sprint 7. Empezamos configurando bien la base de datos
 
 
 

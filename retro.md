@@ -78,3 +78,13 @@ Mas de: continuar explicándonos a medida que vamos construyendo para que todos 
 Seguir haciendo: continuar con la comunicación fluida, investigar mucho en google y repasar clases anteriores del Playground para reafirmar conocimientos
 Menos de: no tuvimos dificultades
 Dejar de: sin comentarios
+
+Retrospectiva Sprint 8:
+En este Sprint nos distribuimos las tareas pero tuvimos la ventaja de que veniamos bastante avanzados ya que pudimos empezar con algunas cosas mientras estábamos realizando el sprint anterior..Esto nos permitió por primera vez tomarnos las cosas con más calma y poder enfocarnos más en resolver problemas y mejorar la funcionalidad de todo el sitio, mejorar las vistas y pulir bien en detalle las validaciones que son una de las cosas más importantes en este sprint. Nuevamente nos fue súmamente indispensable repasar contenido de clases anteriores, reveer videos, googlear bastante y consultar a los profesores por errores que no podíamos solucionar y resultaron ser simples dentro de todo.
+
+Metodología Estrella de Mar:
+Empezar a hacer: Mediante Trello nos enfocamos en las tareas que teníamos inconclusas y en mejorar la funcionalidad del sitio
+Mas de: continuar explicándonos lo que vamos construyendo cada uno para que al momento de juntarnos y mostrar el código se entienda en detalle el paso a paso y el funcionamiento del mismo.
+Seguir haciendo: Seguir manteniendo la comunicación fluida, estudiar y repasar contenido anterior, buscar en google distintas alternativas de resolver o nuevas funcionalidades que nos puedan servir para generar un valor agregado a nuestro proyecto.
+Menos de: no tuvimos dificultades
+Dejar de: sin comentarios

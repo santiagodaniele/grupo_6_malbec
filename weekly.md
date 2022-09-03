@@ -73,7 +73,45 @@ Viernes 29-07
 Terminamos con el CRUD, revisamos funcionalidad y entregables para realizar la entrega final del sprint.
 
 Jueves 04-08
-Arrancamos a organizarnos y planificar el sprint 7. Empezamos configurando bien la base de datos
+Arrancamos a organizarnos y planificar el sprint 7. Empezamos configurando bien la base de datos.
+
+Martes 09-08
+Hacemos la restro del sprint anterior que nos había quedado pendiente y reiniciamos el tablero de trabajo en Trello. Reorganizamos algunas tareas de trabajo para estimar la dificultad de las mismas y asignar quien desarrollará cada una
+
+Viernes 12-08
+Arrancamos con las validaciones de los formularios de registro y login.
+
+Martes 16-08
+Continuamos con las validaciones, en este caso realizamos las de Crud de productos y Crud de usuarios.
+
+Viernes 19-08
+Seguimos con las validaciones del CRUD de productos y usuarios, tuvimos algunos problemas que intentamos resolver
+
+Martes 23-08
+Arrancamos con las validaciones de Back-end 
+
+Jueves 25-08
+Arrancamos con las validaciones de Front-end
+
+Viernes 26-08
+Empezamos con el Sprint 8. Reiniciamos el tablero Trello y planificamos el sprint. Empezamos a armar la API de usuarios y productos
+
+Lunes 29-08
+Terminamos con las APIs y realizamos un paginado api/user api/product. Empezamos con el dashboard
+
+Miércoles 31-08
+Continuamos con el dashboard y completamos los paneles smallcard de cantidad de usuarios, productos en base de datos, total de ventas, último producto creado y categorías en la base de datos. Agregamos también una tabla completa de productos en la base de datos la vista home.
+
+Jueves 01-09
+Agregamos al sidebar categorías, variedades y usuarios. Tuvimos algunos problemas que consultamos con los profesores para poder solucionarlos.
+
+Viernes 02-09
+Modifcamos algunas cosas de ambos proyectos para mejorar la funcionalidad y usabilidad del sitio. Actualizamos Trello y nos preparamos para la presentación demo del día Lunes 05-09
+
+
+
+
+
 
 
 
